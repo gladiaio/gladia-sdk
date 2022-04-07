@@ -30,7 +30,7 @@ feature -- API Access
 			-- 
 			-- argument: image  (required)
 			-- 
-			-- argument: model  (optional, default to rembg)
+			-- argument: model  (optional, default to xception)
 			-- 
 			-- 
 			-- Result ANY

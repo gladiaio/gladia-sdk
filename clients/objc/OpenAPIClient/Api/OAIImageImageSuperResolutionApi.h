@@ -27,7 +27,7 @@ extern NSInteger kOAIImageImageSuperResolutionApiMissingParamErrorCode;
 /// 
 ///
 /// @param image 
-/// @param model  (optional) (default to @"esrgan")
+/// @param model  (optional) (default to @"idealo-psnr-small")
 /// 
 ///  code:200 message:"Successful Response",
 ///  code:422 message:"Validation Error"

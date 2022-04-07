@@ -11,13 +11,20 @@ import Alamofire
 
 public class ImageImageSuperResolutionAPI: APIBase {
     /**
+     * enum for parameter model
+     */
+    public enum Model_applyImageImageSuperResolutionPost: String { 
+        case IdealoPsnrSmall = "idealo-psnr-small"
+    }
+
+    /**
      Apply model for the super-resolution task for a given models
      
      - parameter image: (form)  
      - parameter model: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    public class func applyImageImageSuperResolutionPost(image image: NSURL, model: String? = nil, completion: ((data: AnyObject?, error: ErrorType?) -> Void)) {
+    public class func applyImageImageSuperResolutionPost(image image: NSURL, model: Model_applyImageImageSuperResolutionPost? = nil, completion: ((data: AnyObject?, error: ErrorType?) -> Void)) {
         applyImageImageSuperResolutionPostWithRequestBuilder(image: image, model: model).execute { (response, error) -> Void in
             completion(data: response?.body, error: error);
         }
@@ -31,12 +38,12 @@ public class ImageImageSuperResolutionAPI: APIBase {
 
      - returns: RequestBuilder<AnyObject> 
      */
-    public class func applyImageImageSuperResolutionPostWithRequestBuilder(image image: NSURL, model: String? = nil) -> RequestBuilder<AnyObject> {
+    public class func applyImageImageSuperResolutionPostWithRequestBuilder(image image: NSURL, model: Model_applyImageImageSuperResolutionPost? = nil) -> RequestBuilder<AnyObject> {
         let path = "/image/image/super-resolution/"
         let URLString = OpenAPIClientAPI.basePath + path
 
         let nillableParameters: [String:AnyObject?] = [
-            "model": model
+            "model": model?.rawValue
         ]
  
         let parameters = APIHelper.rejectNil(nillableParameters)

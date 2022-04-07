@@ -32,7 +32,7 @@ export class ImageImageBackgroundRemovalApi {
      * @param image 
      * @param model 
      */
-    public applyImageImageBackgroundRemovalPost (image: any, model?: 'xception' | 'mobilenet', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
+    public applyImageImageBackgroundRemovalPost (image: any, model?: 'mobilenet' | 'xception', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
         const localVarPath = this.basePath + '/image/image/background-removal/';
 
         let queryParameters: any = {};

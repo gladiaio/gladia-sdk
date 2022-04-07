@@ -72,8 +72,8 @@ applyImageTextAsciifyPost (Image image) =
     `_addMultiFormPart` NH.partFileSource "image" image
 
 data ApplyImageTextAsciifyPost  
-instance HasOptionalParam ApplyImageTextAsciifyPost Model5 where
-  applyOptionalParam req (Model5 xs) =
+instance HasOptionalParam ApplyImageTextAsciifyPost Model6 where
+  applyOptionalParam req (Model6 xs) =
     req `setQuery` toQuery ("model", Just xs)
 
 -- | @multipart/form-data@

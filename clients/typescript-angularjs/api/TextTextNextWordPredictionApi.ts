@@ -32,7 +32,7 @@ export class TextTextNextWordPredictionApi {
      * @param sentence 
      * @param model 
      */
-    public applyTextTextNextWordPredictionPost (sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
+    public applyTextTextNextWordPredictionPost (sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
         const localVarPath = this.basePath + '/text/text/next-word-prediction/';
 
         let queryParameters: any = {};

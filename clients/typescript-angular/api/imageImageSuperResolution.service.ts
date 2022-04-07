@@ -67,10 +67,10 @@ export class ImageImageSuperResolutionService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public applyImageImageSuperResolutionPost(image: Blob, model?: string, observe?: 'body', reportProgress?: boolean): Observable<object>;
-    public applyImageImageSuperResolutionPost(image: Blob, model?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<object>>;
-    public applyImageImageSuperResolutionPost(image: Blob, model?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<object>>;
-    public applyImageImageSuperResolutionPost(image: Blob, model?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public applyImageImageSuperResolutionPost(image: Blob, model?: 'idealo-psnr-small', observe?: 'body', reportProgress?: boolean): Observable<object>;
+    public applyImageImageSuperResolutionPost(image: Blob, model?: 'idealo-psnr-small', observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<object>>;
+    public applyImageImageSuperResolutionPost(image: Blob, model?: 'idealo-psnr-small', observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<object>>;
+    public applyImageImageSuperResolutionPost(image: Blob, model?: 'idealo-psnr-small', observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (image === null || image === undefined) {
             throw new Error('Required parameter image was null or undefined when calling applyImageImageSuperResolutionPost.');
         }

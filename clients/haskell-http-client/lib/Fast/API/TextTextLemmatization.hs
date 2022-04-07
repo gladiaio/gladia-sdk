@@ -72,8 +72,8 @@ data ApplyTextTextLemmatizationPost
 instance HasOptionalParam ApplyTextTextLemmatizationPost Sentence where
   applyOptionalParam req (Sentence xs) =
     req `setQuery` toQuery ("sentence", Just xs)
-instance HasOptionalParam ApplyTextTextLemmatizationPost Model14 where
-  applyOptionalParam req (Model14 xs) =
+instance HasOptionalParam ApplyTextTextLemmatizationPost Model15 where
+  applyOptionalParam req (Model15 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextLemmatizationPost MimeJSON

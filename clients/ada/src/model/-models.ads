@@ -166,36 +166,6 @@ package .Models is
 
 
    --  ------------------------------
-   --  Body_apply_image_image_restoration__post
-   --  ------------------------------
-   type BodyApplyImageImageRestorationPostType is
-     record
-       Image : Swagger.Http_Content_Type;
-     end record;
-
-   package BodyApplyImageImageRestorationPostType_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => BodyApplyImageImageRestorationPostType);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in BodyApplyImageImageRestorationPostType);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in BodyApplyImageImageRestorationPostType_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyImageImageRestorationPostType);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyImageImageRestorationPostType_Vectors.Vector);
-
-
-
-   --  ------------------------------
    --  Body_apply_image_image_super_resolution__post
    --  ------------------------------
    type BodyApplyImageImageSuperResolutionPostType is
@@ -312,36 +282,6 @@ package .Models is
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
                           Value : out BodyApplyImageTextOcrPostType_Vectors.Vector);
-
-
-
-   --  ------------------------------
-   --  Body_apply_video_video_frame_interpolation__post
-   --  ------------------------------
-   type BodyApplyVideoVideoFrameInterpolationPostType is
-     record
-       Video : Swagger.Http_Content_Type;
-     end record;
-
-   package BodyApplyVideoVideoFrameInterpolationPostType_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => BodyApplyVideoVideoFrameInterpolationPostType);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in BodyApplyVideoVideoFrameInterpolationPostType);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in BodyApplyVideoVideoFrameInterpolationPostType_Vectors.Vector);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyVideoVideoFrameInterpolationPostType);
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyVideoVideoFrameInterpolationPostType_Vectors.Vector);
 
 
 

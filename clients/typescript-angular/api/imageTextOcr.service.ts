@@ -68,10 +68,10 @@ export class ImageTextOcrService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', observe?: 'body', reportProgress?: boolean): Observable<object>;
-    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<object>>;
-    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<object>>;
-    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', observe?: 'body', reportProgress?: boolean): Observable<object>;
+    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<object>>;
+    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<object>>;
+    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (image === null || image === undefined) {
             throw new Error('Required parameter image was null or undefined when calling applyImageTextOcrPost.');
         }

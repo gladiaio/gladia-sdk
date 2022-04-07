@@ -52,7 +52,7 @@ export class TextTextNextWordPredictionApi {
      * @param sentence 
      * @param model 
      */
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: object;  },
     { response: JQueryXHR; errorThrown: string }
     > {

@@ -43,9 +43,9 @@ export class TextTextNextWordPredictionService {
      * @param model 
      
      */
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', observe?: 'body', headers?: Headers): Observable<object>;
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', observe: any = 'body', headers: Headers = {}): Observable<any> {
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', observe?: 'body', headers?: Headers): Observable<object>;
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', observe: any = 'body', headers: Headers = {}): Observable<any> {
         let queryParameters: string[] = [];
         if (sentence !== undefined) {
             queryParameters.push("sentence="+encodeURIComponent(String(sentence)));

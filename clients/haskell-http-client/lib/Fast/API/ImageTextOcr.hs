@@ -75,8 +75,8 @@ data ApplyImageTextOcrPost
 instance HasOptionalParam ApplyImageTextOcrPost SourceLanguage where
   applyOptionalParam req (SourceLanguage xs) =
     req `setQuery` toQuery ("source_language", Just xs)
-instance HasOptionalParam ApplyImageTextOcrPost Model6 where
-  applyOptionalParam req (Model6 xs) =
+instance HasOptionalParam ApplyImageTextOcrPost Model7 where
+  applyOptionalParam req (Model7 xs) =
     req `setQuery` toQuery ("model", Just xs)
 
 -- | @multipart/form-data@

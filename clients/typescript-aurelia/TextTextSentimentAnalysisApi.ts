@@ -22,7 +22,7 @@ import {
  */
 export interface IApplyTextTextSentimentAnalysisPostParams {
   text?: string;
-  model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli';
+  model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english';
 }
 
 /**

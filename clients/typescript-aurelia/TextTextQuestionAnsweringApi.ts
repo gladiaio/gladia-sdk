@@ -23,7 +23,7 @@ import {
 export interface IApplyTextTextQuestionAnsweringPostParams {
   context?: string;
   question?: string;
-  model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad';
+  model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2';
 }
 
 /**

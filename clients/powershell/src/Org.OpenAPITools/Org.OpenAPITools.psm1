@@ -25,9 +25,6 @@ $Script:ImageImageColorizationApi= New-Object -TypeName Org.OpenAPITools.Api.Ima
 'Creating object: Org.OpenAPITools.Api.ImageImageFaceBluringApi' | Write-Verbose
 $Script:ImageImageFaceBluringApi= New-Object -TypeName Org.OpenAPITools.Api.ImageImageFaceBluringApi -ArgumentList @($null)
 
-'Creating object: Org.OpenAPITools.Api.ImageImageRestorationApi' | Write-Verbose
-$Script:ImageImageRestorationApi= New-Object -TypeName Org.OpenAPITools.Api.ImageImageRestorationApi -ArgumentList @($null)
-
 'Creating object: Org.OpenAPITools.Api.ImageImageSuperResolutionApi' | Write-Verbose
 $Script:ImageImageSuperResolutionApi= New-Object -TypeName Org.OpenAPITools.Api.ImageImageSuperResolutionApi -ArgumentList @($null)
 
@@ -42,12 +39,6 @@ $Script:ImageTextOcrApi= New-Object -TypeName Org.OpenAPITools.Api.ImageTextOcrA
 
 'Creating object: Org.OpenAPITools.Api.TextTextAutocorrectApi' | Write-Verbose
 $Script:TextTextAutocorrectApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextAutocorrectApi -ArgumentList @($null)
-
-'Creating object: Org.OpenAPITools.Api.TextTextBooleanQuestionGenerationApi' | Write-Verbose
-$Script:TextTextBooleanQuestionGenerationApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextBooleanQuestionGenerationApi -ArgumentList @($null)
-
-'Creating object: Org.OpenAPITools.Api.TextTextDependencyTrackingApi' | Write-Verbose
-$Script:TextTextDependencyTrackingApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextDependencyTrackingApi -ArgumentList @($null)
 
 'Creating object: Org.OpenAPITools.Api.TextTextEmotionRecognitionApi' | Write-Verbose
 $Script:TextTextEmotionRecognitionApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextEmotionRecognitionApi -ArgumentList @($null)
@@ -85,14 +76,8 @@ $Script:TextTextPluralApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextPlu
 'Creating object: Org.OpenAPITools.Api.TextTextProgrammingLanguageGenerationApi' | Write-Verbose
 $Script:TextTextProgrammingLanguageGenerationApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextProgrammingLanguageGenerationApi -ArgumentList @($null)
 
-'Creating object: Org.OpenAPITools.Api.TextTextProgrammingLanguageIdentificationApi' | Write-Verbose
-$Script:TextTextProgrammingLanguageIdentificationApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextProgrammingLanguageIdentificationApi -ArgumentList @($null)
-
 'Creating object: Org.OpenAPITools.Api.TextTextQuestionAnsweringApi' | Write-Verbose
 $Script:TextTextQuestionAnsweringApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextQuestionAnsweringApi -ArgumentList @($null)
-
-'Creating object: Org.OpenAPITools.Api.TextTextSentencePairModelingApi' | Write-Verbose
-$Script:TextTextSentencePairModelingApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextSentencePairModelingApi -ArgumentList @($null)
 
 'Creating object: Org.OpenAPITools.Api.TextTextSentenceParaphraserApi' | Write-Verbose
 $Script:TextTextSentenceParaphraserApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextSentenceParaphraserApi -ArgumentList @($null)
@@ -103,20 +88,8 @@ $Script:TextTextSentimentAnalysisApi= New-Object -TypeName Org.OpenAPITools.Api.
 'Creating object: Org.OpenAPITools.Api.TextTextSimilarityApi' | Write-Verbose
 $Script:TextTextSimilarityApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextSimilarityApi -ArgumentList @($null)
 
-'Creating object: Org.OpenAPITools.Api.TextTextSummarizationApi' | Write-Verbose
-$Script:TextTextSummarizationApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextSummarizationApi -ArgumentList @($null)
-
-'Creating object: Org.OpenAPITools.Api.TextTextTranslationApi' | Write-Verbose
-$Script:TextTextTranslationApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextTranslationApi -ArgumentList @($null)
-
-'Creating object: Org.OpenAPITools.Api.TextTextTransliterationApi' | Write-Verbose
-$Script:TextTextTransliterationApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextTransliterationApi -ArgumentList @($null)
-
 'Creating object: Org.OpenAPITools.Api.TextTextWordAlignmentApi' | Write-Verbose
 $Script:TextTextWordAlignmentApi= New-Object -TypeName Org.OpenAPITools.Api.TextTextWordAlignmentApi -ArgumentList @($null)
-
-'Creating object: Org.OpenAPITools.Api.VideoVideoFrameInterpolationApi' | Write-Verbose
-$Script:VideoVideoFrameInterpolationApi= New-Object -TypeName Org.OpenAPITools.Api.VideoVideoFrameInterpolationApi -ArgumentList @($null)
 
 
 #endregion

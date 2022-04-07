@@ -22,7 +22,7 @@ module OpenapiClient
     # Apply model for the background-removal task for a given models
     # @param image [File] 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :model  (default to 'rembg')
+    # @option opts [String] :model  (default to 'xception')
     # @return [Object]
     def apply_image_image_background_removal_post(image, opts = {})
       data, _status_code, _headers = apply_image_image_background_removal_post_with_http_info(image, opts)
@@ -42,7 +42,7 @@ module OpenapiClient
       if @api_client.config.client_side_validation && image.nil?
         fail ArgumentError, "Missing the required parameter 'image' when calling ImageImageBackgroundRemovalApi.apply_image_image_background_removal_post"
       end
-      allowable_values = ["xception", "mobilenet"]
+      allowable_values = ["mobilenet", "xception"]
       if @api_client.config.client_side_validation && opts[:'model'] && !allowable_values.include?(opts[:'model'])
         fail ArgumentError, "invalid value for \"model\", must be one of #{allowable_values}"
       end

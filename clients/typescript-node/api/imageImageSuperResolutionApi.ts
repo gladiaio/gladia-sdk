@@ -75,7 +75,7 @@ export class ImageImageSuperResolutionApi {
      * @param image 
      * @param model 
      */
-    public async applyImageImageSuperResolutionPost (image: Buffer, model?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
+    public async applyImageImageSuperResolutionPost (image: Buffer, model?: 'idealo-psnr-small', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/image/image/super-resolution/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -87,7 +87,7 @@ export class ImageImageSuperResolutionApi {
         }
 
         if (model !== undefined) {
-            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "string");
+            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'idealo-psnr-small'");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

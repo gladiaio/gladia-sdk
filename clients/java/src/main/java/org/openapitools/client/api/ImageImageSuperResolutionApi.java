@@ -58,7 +58,7 @@ public class ImageImageSuperResolutionApi {
     /**
      * Build call for applyImageImageSuperResolutionPost
      * @param image  (required)
-     * @param model  (optional, default to &quot;esrgan&quot;)
+     * @param model  (optional, default to idealo-psnr-small)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -117,7 +117,7 @@ public class ImageImageSuperResolutionApi {
      * Apply model for the super-resolution task for a given models
      * 
      * @param image  (required)
-     * @param model  (optional, default to &quot;esrgan&quot;)
+     * @param model  (optional, default to idealo-psnr-small)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -130,7 +130,7 @@ public class ImageImageSuperResolutionApi {
      * Apply model for the super-resolution task for a given models
      * 
      * @param image  (required)
-     * @param model  (optional, default to &quot;esrgan&quot;)
+     * @param model  (optional, default to idealo-psnr-small)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -144,7 +144,7 @@ public class ImageImageSuperResolutionApi {
      * Apply model for the super-resolution task for a given models (asynchronously)
      * 
      * @param image  (required)
-     * @param model  (optional, default to &quot;esrgan&quot;)
+     * @param model  (optional, default to idealo-psnr-small)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

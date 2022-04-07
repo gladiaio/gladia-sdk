@@ -121,13 +121,13 @@ class ImageImageBackgroundRemovalApi
      * Apply model for the background-removal task for a given models
      *
      * @param  \SplFileObject $image image (required)
-     * @param  string $model model (optional, default to 'rembg')
+     * @param  string $model model (optional, default to 'xception')
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object|\OpenAPI\Client\Model\HTTPValidationError
      */
-    public function applyImageImageBackgroundRemovalPost($image, $model = 'rembg')
+    public function applyImageImageBackgroundRemovalPost($image, $model = 'xception')
     {
         list($response) = $this->applyImageImageBackgroundRemovalPostWithHttpInfo($image, $model);
         return $response;
@@ -139,13 +139,13 @@ class ImageImageBackgroundRemovalApi
      * Apply model for the background-removal task for a given models
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'rembg')
+     * @param  string $model (optional, default to 'xception')
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function applyImageImageBackgroundRemovalPostWithHttpInfo($image, $model = 'rembg')
+    public function applyImageImageBackgroundRemovalPostWithHttpInfo($image, $model = 'xception')
     {
         $request = $this->applyImageImageBackgroundRemovalPostRequest($image, $model);
 
@@ -248,12 +248,12 @@ class ImageImageBackgroundRemovalApi
      * Apply model for the background-removal task for a given models
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'rembg')
+     * @param  string $model (optional, default to 'xception')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function applyImageImageBackgroundRemovalPostAsync($image, $model = 'rembg')
+    public function applyImageImageBackgroundRemovalPostAsync($image, $model = 'xception')
     {
         return $this->applyImageImageBackgroundRemovalPostAsyncWithHttpInfo($image, $model)
             ->then(
@@ -269,12 +269,12 @@ class ImageImageBackgroundRemovalApi
      * Apply model for the background-removal task for a given models
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'rembg')
+     * @param  string $model (optional, default to 'xception')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function applyImageImageBackgroundRemovalPostAsyncWithHttpInfo($image, $model = 'rembg')
+    public function applyImageImageBackgroundRemovalPostAsyncWithHttpInfo($image, $model = 'xception')
     {
         $returnType = 'object';
         $request = $this->applyImageImageBackgroundRemovalPostRequest($image, $model);
@@ -317,12 +317,12 @@ class ImageImageBackgroundRemovalApi
      * Create request for operation 'applyImageImageBackgroundRemovalPost'
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'rembg')
+     * @param  string $model (optional, default to 'xception')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function applyImageImageBackgroundRemovalPostRequest($image, $model = 'rembg')
+    protected function applyImageImageBackgroundRemovalPostRequest($image, $model = 'xception')
     {
         // verify the required parameter 'image' is set
         if ($image === null || (is_array($image) && count($image) === 0)) {

@@ -53,7 +53,7 @@ export class TextTextQuestionAnsweringApi {
      * @param question 
      * @param model 
      */
-    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: object;  },
     { response: JQueryXHR; errorThrown: string }
     > {

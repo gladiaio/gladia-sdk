@@ -16,25 +16,20 @@ import ApiClient from './ApiClient';
 import BodyApplyImageImageBackgroundRemovalPost from './model/BodyApplyImageImageBackgroundRemovalPost';
 import BodyApplyImageImageColorizationPost from './model/BodyApplyImageImageColorizationPost';
 import BodyApplyImageImageFaceBluringPost from './model/BodyApplyImageImageFaceBluringPost';
-import BodyApplyImageImageRestorationPost from './model/BodyApplyImageImageRestorationPost';
 import BodyApplyImageImageSuperResolutionPost from './model/BodyApplyImageImageSuperResolutionPost';
 import BodyApplyImageImageUncolorizationPost from './model/BodyApplyImageImageUncolorizationPost';
 import BodyApplyImageTextAsciifyPost from './model/BodyApplyImageTextAsciifyPost';
 import BodyApplyImageTextOcrPost from './model/BodyApplyImageTextOcrPost';
-import BodyApplyVideoVideoFrameInterpolationPost from './model/BodyApplyVideoVideoFrameInterpolationPost';
 import HTTPValidationError from './model/HTTPValidationError';
 import ValidationError from './model/ValidationError';
 import ImageImageBackgroundRemovalApi from './api/ImageImageBackgroundRemovalApi';
 import ImageImageColorizationApi from './api/ImageImageColorizationApi';
 import ImageImageFaceBluringApi from './api/ImageImageFaceBluringApi';
-import ImageImageRestorationApi from './api/ImageImageRestorationApi';
 import ImageImageSuperResolutionApi from './api/ImageImageSuperResolutionApi';
 import ImageImageUncolorizationApi from './api/ImageImageUncolorizationApi';
 import ImageTextAsciifyApi from './api/ImageTextAsciifyApi';
 import ImageTextOcrApi from './api/ImageTextOcrApi';
 import TextTextAutocorrectApi from './api/TextTextAutocorrectApi';
-import TextTextBooleanQuestionGenerationApi from './api/TextTextBooleanQuestionGenerationApi';
-import TextTextDependencyTrackingApi from './api/TextTextDependencyTrackingApi';
 import TextTextEmotionRecognitionApi from './api/TextTextEmotionRecognitionApi';
 import TextTextEntityExtractionApi from './api/TextTextEntityExtractionApi';
 import TextTextHateSpeechDetectionApi from './api/TextTextHateSpeechDetectionApi';
@@ -47,17 +42,11 @@ import TextTextNextSentencePredictionApi from './api/TextTextNextSentencePredict
 import TextTextNextWordPredictionApi from './api/TextTextNextWordPredictionApi';
 import TextTextPluralApi from './api/TextTextPluralApi';
 import TextTextProgrammingLanguageGenerationApi from './api/TextTextProgrammingLanguageGenerationApi';
-import TextTextProgrammingLanguageIdentificationApi from './api/TextTextProgrammingLanguageIdentificationApi';
 import TextTextQuestionAnsweringApi from './api/TextTextQuestionAnsweringApi';
-import TextTextSentencePairModelingApi from './api/TextTextSentencePairModelingApi';
 import TextTextSentenceParaphraserApi from './api/TextTextSentenceParaphraserApi';
 import TextTextSentimentAnalysisApi from './api/TextTextSentimentAnalysisApi';
 import TextTextSimilarityApi from './api/TextTextSimilarityApi';
-import TextTextSummarizationApi from './api/TextTextSummarizationApi';
-import TextTextTranslationApi from './api/TextTextTranslationApi';
-import TextTextTransliterationApi from './api/TextTextTransliterationApi';
 import TextTextWordAlignmentApi from './api/TextTextWordAlignmentApi';
-import VideoVideoFrameInterpolationApi from './api/VideoVideoFrameInterpolationApi';
 
 
 /**
@@ -117,12 +106,6 @@ export {
     BodyApplyImageImageFaceBluringPost,
 
     /**
-     * The BodyApplyImageImageRestorationPost model constructor.
-     * @property {module:model/BodyApplyImageImageRestorationPost}
-     */
-    BodyApplyImageImageRestorationPost,
-
-    /**
      * The BodyApplyImageImageSuperResolutionPost model constructor.
      * @property {module:model/BodyApplyImageImageSuperResolutionPost}
      */
@@ -145,12 +128,6 @@ export {
      * @property {module:model/BodyApplyImageTextOcrPost}
      */
     BodyApplyImageTextOcrPost,
-
-    /**
-     * The BodyApplyVideoVideoFrameInterpolationPost model constructor.
-     * @property {module:model/BodyApplyVideoVideoFrameInterpolationPost}
-     */
-    BodyApplyVideoVideoFrameInterpolationPost,
 
     /**
      * The HTTPValidationError model constructor.
@@ -183,12 +160,6 @@ export {
     ImageImageFaceBluringApi,
 
     /**
-    * The ImageImageRestorationApi service constructor.
-    * @property {module:api/ImageImageRestorationApi}
-    */
-    ImageImageRestorationApi,
-
-    /**
     * The ImageImageSuperResolutionApi service constructor.
     * @property {module:api/ImageImageSuperResolutionApi}
     */
@@ -217,18 +188,6 @@ export {
     * @property {module:api/TextTextAutocorrectApi}
     */
     TextTextAutocorrectApi,
-
-    /**
-    * The TextTextBooleanQuestionGenerationApi service constructor.
-    * @property {module:api/TextTextBooleanQuestionGenerationApi}
-    */
-    TextTextBooleanQuestionGenerationApi,
-
-    /**
-    * The TextTextDependencyTrackingApi service constructor.
-    * @property {module:api/TextTextDependencyTrackingApi}
-    */
-    TextTextDependencyTrackingApi,
 
     /**
     * The TextTextEmotionRecognitionApi service constructor.
@@ -303,22 +262,10 @@ export {
     TextTextProgrammingLanguageGenerationApi,
 
     /**
-    * The TextTextProgrammingLanguageIdentificationApi service constructor.
-    * @property {module:api/TextTextProgrammingLanguageIdentificationApi}
-    */
-    TextTextProgrammingLanguageIdentificationApi,
-
-    /**
     * The TextTextQuestionAnsweringApi service constructor.
     * @property {module:api/TextTextQuestionAnsweringApi}
     */
     TextTextQuestionAnsweringApi,
-
-    /**
-    * The TextTextSentencePairModelingApi service constructor.
-    * @property {module:api/TextTextSentencePairModelingApi}
-    */
-    TextTextSentencePairModelingApi,
 
     /**
     * The TextTextSentenceParaphraserApi service constructor.
@@ -339,32 +286,8 @@ export {
     TextTextSimilarityApi,
 
     /**
-    * The TextTextSummarizationApi service constructor.
-    * @property {module:api/TextTextSummarizationApi}
-    */
-    TextTextSummarizationApi,
-
-    /**
-    * The TextTextTranslationApi service constructor.
-    * @property {module:api/TextTextTranslationApi}
-    */
-    TextTextTranslationApi,
-
-    /**
-    * The TextTextTransliterationApi service constructor.
-    * @property {module:api/TextTextTransliterationApi}
-    */
-    TextTextTransliterationApi,
-
-    /**
     * The TextTextWordAlignmentApi service constructor.
     * @property {module:api/TextTextWordAlignmentApi}
     */
-    TextTextWordAlignmentApi,
-
-    /**
-    * The VideoVideoFrameInterpolationApi service constructor.
-    * @property {module:api/VideoVideoFrameInterpolationApi}
-    */
-    VideoVideoFrameInterpolationApi
+    TextTextWordAlignmentApi
 };

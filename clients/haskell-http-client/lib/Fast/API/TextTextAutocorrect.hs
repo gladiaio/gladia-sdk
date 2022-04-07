@@ -72,8 +72,8 @@ data ApplyTextTextAutocorrectPost
 instance HasOptionalParam ApplyTextTextAutocorrectPost Sentence where
   applyOptionalParam req (Sentence xs) =
     req `setQuery` toQuery ("sentence", Just xs)
-instance HasOptionalParam ApplyTextTextAutocorrectPost Model7 where
-  applyOptionalParam req (Model7 xs) =
+instance HasOptionalParam ApplyTextTextAutocorrectPost Model8 where
+  applyOptionalParam req (Model8 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextAutocorrectPost MimeJSON

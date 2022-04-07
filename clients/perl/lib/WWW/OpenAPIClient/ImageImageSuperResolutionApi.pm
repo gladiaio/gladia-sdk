@@ -54,7 +54,7 @@ sub new {
 # Apply model for the super-resolution task for a given models
 # 
 # @param string $image  (required)
-# @param string $model  (optional, default to 'esrgan')
+# @param string $model  (optional, default to 'idealo-psnr-small')
 {
     my $params = {
     'image' => {

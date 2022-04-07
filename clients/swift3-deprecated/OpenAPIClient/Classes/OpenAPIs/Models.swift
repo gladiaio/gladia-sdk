@@ -348,26 +348,6 @@ class Decoders {
                 return .failure(.typeMismatch(expected: "BodyApplyImageImageFaceBluringPost", actual: "\(source)"))
             }
         }
-        // Decoder for [BodyApplyImageImageRestorationPost]
-        Decoders.addDecoder(clazz: [BodyApplyImageImageRestorationPost].self) { (source: AnyObject, instance: AnyObject?) -> Decoded<[BodyApplyImageImageRestorationPost]> in
-            return Decoders.decode(clazz: [BodyApplyImageImageRestorationPost].self, source: source)
-        }
-
-        // Decoder for BodyApplyImageImageRestorationPost
-        Decoders.addDecoder(clazz: BodyApplyImageImageRestorationPost.self) { (source: AnyObject, instance: AnyObject?) -> Decoded<BodyApplyImageImageRestorationPost> in
-            if let sourceDictionary = source as? [AnyHashable: Any] {
-                let _result = instance == nil ? BodyApplyImageImageRestorationPost() : instance as! BodyApplyImageImageRestorationPost
-                switch Decoders.decodeOptional(clazz: URL.self, source: sourceDictionary["image"] as AnyObject?) {
-                
-                case let .success(value): _result.image = value
-                case let .failure(error): break
-                
-                }
-                return .success(_result)
-            } else {
-                return .failure(.typeMismatch(expected: "BodyApplyImageImageRestorationPost", actual: "\(source)"))
-            }
-        }
         // Decoder for [BodyApplyImageImageSuperResolutionPost]
         Decoders.addDecoder(clazz: [BodyApplyImageImageSuperResolutionPost].self) { (source: AnyObject, instance: AnyObject?) -> Decoded<[BodyApplyImageImageSuperResolutionPost]> in
             return Decoders.decode(clazz: [BodyApplyImageImageSuperResolutionPost].self, source: source)
@@ -446,26 +426,6 @@ class Decoders {
                 return .success(_result)
             } else {
                 return .failure(.typeMismatch(expected: "BodyApplyImageTextOcrPost", actual: "\(source)"))
-            }
-        }
-        // Decoder for [BodyApplyVideoVideoFrameInterpolationPost]
-        Decoders.addDecoder(clazz: [BodyApplyVideoVideoFrameInterpolationPost].self) { (source: AnyObject, instance: AnyObject?) -> Decoded<[BodyApplyVideoVideoFrameInterpolationPost]> in
-            return Decoders.decode(clazz: [BodyApplyVideoVideoFrameInterpolationPost].self, source: source)
-        }
-
-        // Decoder for BodyApplyVideoVideoFrameInterpolationPost
-        Decoders.addDecoder(clazz: BodyApplyVideoVideoFrameInterpolationPost.self) { (source: AnyObject, instance: AnyObject?) -> Decoded<BodyApplyVideoVideoFrameInterpolationPost> in
-            if let sourceDictionary = source as? [AnyHashable: Any] {
-                let _result = instance == nil ? BodyApplyVideoVideoFrameInterpolationPost() : instance as! BodyApplyVideoVideoFrameInterpolationPost
-                switch Decoders.decodeOptional(clazz: URL.self, source: sourceDictionary["video"] as AnyObject?) {
-                
-                case let .success(value): _result.video = value
-                case let .failure(error): break
-                
-                }
-                return .success(_result)
-            } else {
-                return .failure(.typeMismatch(expected: "BodyApplyVideoVideoFrameInterpolationPost", actual: "\(source)"))
             }
         }
         // Decoder for [HTTPValidationError]

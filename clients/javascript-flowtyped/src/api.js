@@ -115,20 +115,6 @@ export type BodyApplyImageImageFaceBluringPost = {
  * 
  * @export
  */
-export type BodyApplyImageImageRestorationPost = {
-    /**
-     * 
-     * @type {any}
-     * @memberof BodyApplyImageImageRestorationPost
-     */
-    image: any;
-}
-
-
-/**
- * 
- * @export
- */
 export type BodyApplyImageImageSuperResolutionPost = {
     /**
      * 
@@ -185,20 +171,6 @@ export type BodyApplyImageTextOcrPost = {
  * 
  * @export
  */
-export type BodyApplyVideoVideoFrameInterpolationPost = {
-    /**
-     * 
-     * @type {any}
-     * @memberof BodyApplyVideoVideoFrameInterpolationPost
-     */
-    video: any;
-}
-
-
-/**
- * 
- * @export
- */
 export type HTTPValidationError = {
     /**
      * 
@@ -248,7 +220,7 @@ export const ImageImageBackgroundRemovalApiFetchParamCreator = function (configu
          * @summary Apply model for the background-removal task for a given models
          * @throws {RequiredError}
          */
-        applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', options: RequestOptions): FetchArgs {
+        applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', options: RequestOptions): FetchArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageBackgroundRemovalPost.');
@@ -305,7 +277,7 @@ export const ImageImageBackgroundRemovalApiFetchParamCreator = function (configu
 };
 
 export type ImageImageBackgroundRemovalApiType = { 
-    applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', options?: RequestOptions): Promise<Object>,
+    applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', options?: RequestOptions): Promise<Object>,
 
     getVersionsImageImageBackgroundRemovalGet(options?: RequestOptions): Promise<Object>,
 }
@@ -322,7 +294,7 @@ export const ImageImageBackgroundRemovalApi = function(configuration?: Configura
          * @summary Apply model for the background-removal task for a given models
          * @throws {RequiredError}
          */
-        applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', options?: RequestOptions = {}): Promise<Object> {
+        applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = ImageImageBackgroundRemovalApiFetchParamCreator(configuration).applyImageImageBackgroundRemovalPost(image, model, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -361,7 +333,7 @@ export const ImageImageColorizationApiFetchParamCreator = function (configuratio
          * @summary Apply model for the colorization task for a given models
          * @throws {RequiredError}
          */
-        applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', options: RequestOptions): FetchArgs {
+        applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', options: RequestOptions): FetchArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageColorizationPost.');
@@ -418,7 +390,7 @@ export const ImageImageColorizationApiFetchParamCreator = function (configuratio
 };
 
 export type ImageImageColorizationApiType = { 
-    applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', options?: RequestOptions): Promise<Object>,
+    applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', options?: RequestOptions): Promise<Object>,
 
     getVersionsImageImageColorizationGet(options?: RequestOptions): Promise<Object>,
 }
@@ -435,7 +407,7 @@ export const ImageImageColorizationApi = function(configuration?: Configuration,
          * @summary Apply model for the colorization task for a given models
          * @throws {RequiredError}
          */
-        applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', options?: RequestOptions = {}): Promise<Object> {
+        applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = ImageImageColorizationApiFetchParamCreator(configuration).applyImageImageColorizationPost(image, model, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -577,119 +549,6 @@ export const ImageImageFaceBluringApi = function(configuration?: Configuration, 
 };
 
 /**
- * ImageImageRestorationApi - fetch parameter creator
- * @export
- */
-export const ImageImageRestorationApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the restoration task for a given models
-         * @throws {RequiredError}
-         */
-        applyImageImageRestorationPost(image: any, model?: string, options: RequestOptions): FetchArgs {
-            // verify required parameter 'image' is not null or undefined
-            if (image === null || image === undefined) {
-                throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageRestorationPost.');
-            }
-            const localVarPath = `/image/image/restoration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            const localVarFormParams = new FormData();
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            if (image !== undefined) {
-                localVarFormParams.set('image', ((image:any):string));
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams;
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for restoration
-         * @throws {RequiredError}
-         */
-        getVersionsImageImageRestorationGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/image/image/restoration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type ImageImageRestorationApiType = { 
-    applyImageImageRestorationPost(image: any, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsImageImageRestorationGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * ImageImageRestorationApi - factory function to inject configuration 
- * @export
- */
-export const ImageImageRestorationApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): ImageImageRestorationApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the restoration task for a given models
-         * @throws {RequiredError}
-         */
-        applyImageImageRestorationPost(image: any, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = ImageImageRestorationApiFetchParamCreator(configuration).applyImageImageRestorationPost(image, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for restoration
-         * @throws {RequiredError}
-         */
-        getVersionsImageImageRestorationGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = ImageImageRestorationApiFetchParamCreator(configuration).getVersionsImageImageRestorationGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
  * ImageImageSuperResolutionApi - fetch parameter creator
  * @export
  */
@@ -700,7 +559,7 @@ export const ImageImageSuperResolutionApiFetchParamCreator = function (configura
          * @summary Apply model for the super-resolution task for a given models
          * @throws {RequiredError}
          */
-        applyImageImageSuperResolutionPost(image: any, model?: string, options: RequestOptions): FetchArgs {
+        applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', options: RequestOptions): FetchArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageSuperResolutionPost.');
@@ -757,7 +616,7 @@ export const ImageImageSuperResolutionApiFetchParamCreator = function (configura
 };
 
 export type ImageImageSuperResolutionApiType = { 
-    applyImageImageSuperResolutionPost(image: any, model?: string, options?: RequestOptions): Promise<Object>,
+    applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', options?: RequestOptions): Promise<Object>,
 
     getVersionsImageImageSuperResolutionGet(options?: RequestOptions): Promise<Object>,
 }
@@ -774,7 +633,7 @@ export const ImageImageSuperResolutionApi = function(configuration?: Configurati
          * @summary Apply model for the super-resolution task for a given models
          * @throws {RequiredError}
          */
-        applyImageImageSuperResolutionPost(image: any, model?: string, options?: RequestOptions = {}): Promise<Object> {
+        applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = ImageImageSuperResolutionApiFetchParamCreator(configuration).applyImageImageSuperResolutionPost(image, model, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -1039,7 +898,7 @@ export const ImageTextOcrApiFetchParamCreator = function (configuration?: Config
          * @summary Apply model for the ocr task for a given models
          * @throws {RequiredError}
          */
-        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options: RequestOptions): FetchArgs {
+        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options: RequestOptions): FetchArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageTextOcrPost.');
@@ -1100,7 +959,7 @@ export const ImageTextOcrApiFetchParamCreator = function (configuration?: Config
 };
 
 export type ImageTextOcrApiType = { 
-    applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options?: RequestOptions): Promise<Object>,
+    applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options?: RequestOptions): Promise<Object>,
 
     getVersionsImageTextOcrGet(options?: RequestOptions): Promise<Object>,
 }
@@ -1117,7 +976,7 @@ export const ImageTextOcrApi = function(configuration?: Configuration, fetch: Fe
          * @summary Apply model for the ocr task for a given models
          * @throws {RequiredError}
          */
-        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options?: RequestOptions = {}): Promise<Object> {
+        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = ImageTextOcrApiFetchParamCreator(configuration).applyImageTextOcrPost(image, sourceLanguage, model, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -1241,220 +1100,6 @@ export const TextTextAutocorrectApi = function(configuration?: Configuration, fe
          */
         getVersionsTextTextAutocorrectGet(options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = TextTextAutocorrectApiFetchParamCreator(configuration).getVersionsTextTextAutocorrectGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
- * TextTextBooleanQuestionGenerationApi - fetch parameter creator
- * @export
- */
-export const TextTextBooleanQuestionGenerationApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the boolean-question-generation task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextBooleanQuestionGenerationPost(text?: string, model?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/boolean-question-generation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = ((text:any):string);
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for boolean-question-generation
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextBooleanQuestionGenerationGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/boolean-question-generation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type TextTextBooleanQuestionGenerationApiType = { 
-    applyTextTextBooleanQuestionGenerationPost(text?: string, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsTextTextBooleanQuestionGenerationGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * TextTextBooleanQuestionGenerationApi - factory function to inject configuration 
- * @export
- */
-export const TextTextBooleanQuestionGenerationApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TextTextBooleanQuestionGenerationApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the boolean-question-generation task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextBooleanQuestionGenerationPost(text?: string, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextBooleanQuestionGenerationApiFetchParamCreator(configuration).applyTextTextBooleanQuestionGenerationPost(text, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for boolean-question-generation
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextBooleanQuestionGenerationGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextBooleanQuestionGenerationApiFetchParamCreator(configuration).getVersionsTextTextBooleanQuestionGenerationGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
- * TextTextDependencyTrackingApi - fetch parameter creator
- * @export
- */
-export const TextTextDependencyTrackingApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the dependency-tracking task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextDependencyTrackingPost(inputString?: string, model?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/dependency-tracking/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (inputString !== undefined) {
-                localVarQueryParameter['input_string'] = ((inputString:any):string);
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for dependency-tracking
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextDependencyTrackingGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/dependency-tracking/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type TextTextDependencyTrackingApiType = { 
-    applyTextTextDependencyTrackingPost(inputString?: string, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsTextTextDependencyTrackingGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * TextTextDependencyTrackingApi - factory function to inject configuration 
- * @export
- */
-export const TextTextDependencyTrackingApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TextTextDependencyTrackingApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the dependency-tracking task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextDependencyTrackingPost(inputString?: string, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextDependencyTrackingApiFetchParamCreator(configuration).applyTextTextDependencyTrackingPost(inputString, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for dependency-tracking
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextDependencyTrackingGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextDependencyTrackingApiFetchParamCreator(configuration).getVersionsTextTextDependencyTrackingGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -2444,7 +2089,7 @@ export const TextTextNextWordPredictionApiFetchParamCreator = function (configur
          * @summary Apply model for the next-word-prediction task for a given models
          * @throws {RequiredError}
          */
-        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options: RequestOptions): FetchArgs {
+        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options: RequestOptions): FetchArgs {
             const localVarPath = `/text/text/next-word-prediction/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
@@ -2495,7 +2140,7 @@ export const TextTextNextWordPredictionApiFetchParamCreator = function (configur
 };
 
 export type TextTextNextWordPredictionApiType = { 
-    applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options?: RequestOptions): Promise<Object>,
+    applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options?: RequestOptions): Promise<Object>,
 
     getVersionsTextTextNextWordPredictionGet(options?: RequestOptions): Promise<Object>,
 }
@@ -2512,7 +2157,7 @@ export const TextTextNextWordPredictionApi = function(configuration?: Configurat
          * @summary Apply model for the next-word-prediction task for a given models
          * @throws {RequiredError}
          */
-        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options?: RequestOptions = {}): Promise<Object> {
+        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = TextTextNextWordPredictionApiFetchParamCreator(configuration).applyTextTextNextWordPredictionPost(sentence, model, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -2759,113 +2404,6 @@ export const TextTextProgrammingLanguageGenerationApi = function(configuration?:
 };
 
 /**
- * TextTextProgrammingLanguageIdentificationApi - fetch parameter creator
- * @export
- */
-export const TextTextProgrammingLanguageIdentificationApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the programming-language-identification task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextProgrammingLanguageIdentificationPost(text?: string, model?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/programming-language-identification/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = ((text:any):string);
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for programming-language-identification
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextProgrammingLanguageIdentificationGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/programming-language-identification/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type TextTextProgrammingLanguageIdentificationApiType = { 
-    applyTextTextProgrammingLanguageIdentificationPost(text?: string, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsTextTextProgrammingLanguageIdentificationGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * TextTextProgrammingLanguageIdentificationApi - factory function to inject configuration 
- * @export
- */
-export const TextTextProgrammingLanguageIdentificationApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TextTextProgrammingLanguageIdentificationApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the programming-language-identification task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextProgrammingLanguageIdentificationPost(text?: string, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextProgrammingLanguageIdentificationApiFetchParamCreator(configuration).applyTextTextProgrammingLanguageIdentificationPost(text, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for programming-language-identification
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextProgrammingLanguageIdentificationGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextProgrammingLanguageIdentificationApiFetchParamCreator(configuration).getVersionsTextTextProgrammingLanguageIdentificationGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
  * TextTextQuestionAnsweringApi - fetch parameter creator
  * @export
  */
@@ -2876,7 +2414,7 @@ export const TextTextQuestionAnsweringApiFetchParamCreator = function (configura
          * @summary Apply model for the question-answering task for a given models
          * @throws {RequiredError}
          */
-        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options: RequestOptions): FetchArgs {
+        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options: RequestOptions): FetchArgs {
             const localVarPath = `/text/text/question-answering/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
@@ -2931,7 +2469,7 @@ export const TextTextQuestionAnsweringApiFetchParamCreator = function (configura
 };
 
 export type TextTextQuestionAnsweringApiType = { 
-    applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options?: RequestOptions): Promise<Object>,
+    applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options?: RequestOptions): Promise<Object>,
 
     getVersionsTextTextQuestionAnsweringGet(options?: RequestOptions): Promise<Object>,
 }
@@ -2948,7 +2486,7 @@ export const TextTextQuestionAnsweringApi = function(configuration?: Configurati
          * @summary Apply model for the question-answering task for a given models
          * @throws {RequiredError}
          */
-        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options?: RequestOptions = {}): Promise<Object> {
+        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = TextTextQuestionAnsweringApiFetchParamCreator(configuration).applyTextTextQuestionAnsweringPost(context, question, model, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -2965,113 +2503,6 @@ export const TextTextQuestionAnsweringApi = function(configuration?: Configurati
          */
         getVersionsTextTextQuestionAnsweringGet(options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = TextTextQuestionAnsweringApiFetchParamCreator(configuration).getVersionsTextTextQuestionAnsweringGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
- * TextTextSentencePairModelingApi - fetch parameter creator
- * @export
- */
-export const TextTextSentencePairModelingApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the sentence-pair-modeling task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextSentencePairModelingPost(sentence?: string, model?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/sentence-pair-modeling/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (sentence !== undefined) {
-                localVarQueryParameter['sentence'] = ((sentence:any):string);
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for sentence-pair-modeling
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSentencePairModelingGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/sentence-pair-modeling/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type TextTextSentencePairModelingApiType = { 
-    applyTextTextSentencePairModelingPost(sentence?: string, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsTextTextSentencePairModelingGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * TextTextSentencePairModelingApi - factory function to inject configuration 
- * @export
- */
-export const TextTextSentencePairModelingApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TextTextSentencePairModelingApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the sentence-pair-modeling task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextSentencePairModelingPost(sentence?: string, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextSentencePairModelingApiFetchParamCreator(configuration).applyTextTextSentencePairModelingPost(sentence, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for sentence-pair-modeling
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSentencePairModelingGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextSentencePairModelingApiFetchParamCreator(configuration).getVersionsTextTextSentencePairModelingGet(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -3201,7 +2632,7 @@ export const TextTextSentimentAnalysisApiFetchParamCreator = function (configura
          * @summary Apply model for the sentiment-analysis task for a given models
          * @throws {RequiredError}
          */
-        applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options: RequestOptions): FetchArgs {
+        applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options: RequestOptions): FetchArgs {
             const localVarPath = `/text/text/sentiment-analysis/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
@@ -3252,7 +2683,7 @@ export const TextTextSentimentAnalysisApiFetchParamCreator = function (configura
 };
 
 export type TextTextSentimentAnalysisApiType = { 
-    applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options?: RequestOptions): Promise<Object>,
+    applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options?: RequestOptions): Promise<Object>,
 
     getVersionsTextTextSentimentAnalysisGet(options?: RequestOptions): Promise<Object>,
 }
@@ -3269,7 +2700,7 @@ export const TextTextSentimentAnalysisApi = function(configuration?: Configurati
          * @summary Apply model for the sentiment-analysis task for a given models
          * @throws {RequiredError}
          */
-        applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options?: RequestOptions = {}): Promise<Object> {
+        applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options?: RequestOptions = {}): Promise<Object> {
             const localVarFetchArgs = TextTextSentimentAnalysisApiFetchParamCreator(configuration).applyTextTextSentimentAnalysisPost(text, model, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -3409,351 +2840,6 @@ export const TextTextSimilarityApi = function(configuration?: Configuration, fet
 };
 
 /**
- * TextTextSummarizationApi - fetch parameter creator
- * @export
- */
-export const TextTextSummarizationApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the summarization task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextSummarizationPost(text?: string, sourceLanguage?: string, maxLength?: number, minLength?: number, model?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/summarization/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = ((text:any):string);
-            }
-
-            if (sourceLanguage !== undefined) {
-                localVarQueryParameter['source_language'] = ((sourceLanguage:any):string);
-            }
-
-            if (maxLength !== undefined) {
-                localVarQueryParameter['max_length'] = ((maxLength:any):string);
-            }
-
-            if (minLength !== undefined) {
-                localVarQueryParameter['min_length'] = ((minLength:any):string);
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for summarization
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSummarizationGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/summarization/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type TextTextSummarizationApiType = { 
-    applyTextTextSummarizationPost(text?: string, sourceLanguage?: string, maxLength?: number, minLength?: number, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsTextTextSummarizationGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * TextTextSummarizationApi - factory function to inject configuration 
- * @export
- */
-export const TextTextSummarizationApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TextTextSummarizationApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the summarization task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextSummarizationPost(text?: string, sourceLanguage?: string, maxLength?: number, minLength?: number, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextSummarizationApiFetchParamCreator(configuration).applyTextTextSummarizationPost(text, sourceLanguage, maxLength, minLength, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for summarization
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSummarizationGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextSummarizationApiFetchParamCreator(configuration).getVersionsTextTextSummarizationGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
- * TextTextTranslationApi - fetch parameter creator
- * @export
- */
-export const TextTextTranslationApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the translation task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextTranslationPost(inputString?: string, sourceLanguage?: string, targetLanguage?: string, model?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/translation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (inputString !== undefined) {
-                localVarQueryParameter['input_string'] = ((inputString:any):string);
-            }
-
-            if (sourceLanguage !== undefined) {
-                localVarQueryParameter['source_language'] = ((sourceLanguage:any):string);
-            }
-
-            if (targetLanguage !== undefined) {
-                localVarQueryParameter['target_language'] = ((targetLanguage:any):string);
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for translation
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTranslationGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/translation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type TextTextTranslationApiType = { 
-    applyTextTextTranslationPost(inputString?: string, sourceLanguage?: string, targetLanguage?: string, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsTextTextTranslationGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * TextTextTranslationApi - factory function to inject configuration 
- * @export
- */
-export const TextTextTranslationApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TextTextTranslationApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the translation task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextTranslationPost(inputString?: string, sourceLanguage?: string, targetLanguage?: string, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextTranslationApiFetchParamCreator(configuration).applyTextTextTranslationPost(inputString, sourceLanguage, targetLanguage, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for translation
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTranslationGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextTranslationApiFetchParamCreator(configuration).getVersionsTextTextTranslationGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
- * TextTextTransliterationApi - fetch parameter creator
- * @export
- */
-export const TextTextTransliterationApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the transliteration task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextTransliterationPost(text?: string, language?: string, model?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/transliteration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = ((text:any):string);
-            }
-
-            if (language !== undefined) {
-                localVarQueryParameter['language'] = ((language:any):string);
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for transliteration
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTransliterationGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/text/text/transliteration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type TextTextTransliterationApiType = { 
-    applyTextTextTransliterationPost(text?: string, language?: string, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsTextTextTransliterationGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * TextTextTransliterationApi - factory function to inject configuration 
- * @export
- */
-export const TextTextTransliterationApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): TextTextTransliterationApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the transliteration task for a given models
-         * @throws {RequiredError}
-         */
-        applyTextTextTransliterationPost(text?: string, language?: string, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextTransliterationApiFetchParamCreator(configuration).applyTextTextTransliterationPost(text, language, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for transliteration
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTransliterationGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = TextTextTransliterationApiFetchParamCreator(configuration).getVersionsTextTextTransliterationGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
-/**
  * TextTextWordAlignmentApi - fetch parameter creator
  * @export
  */
@@ -3864,127 +2950,12 @@ export const TextTextWordAlignmentApi = function(configuration?: Configuration, 
     }
 };
 
-/**
- * VideoVideoFrameInterpolationApi - fetch parameter creator
- * @export
- */
-export const VideoVideoFrameInterpolationApiFetchParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the frame-interpolation task for a given models
-         * @throws {RequiredError}
-         */
-        applyVideoVideoFrameInterpolationPost(video: any, model?: string, options: RequestOptions): FetchArgs {
-            // verify required parameter 'video' is not null or undefined
-            if (video === null || video === undefined) {
-                throw new RequiredError('video','Required parameter video was null or undefined when calling applyVideoVideoFrameInterpolationPost.');
-            }
-            const localVarPath = `/video/video/frame-interpolation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            const localVarFormParams = new FormData();
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = ((model:any):string);
-            }
-
-            if (video !== undefined) {
-                localVarFormParams.set('video', ((video:any):string));
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            localVarRequestOptions.body = localVarFormParams;
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for frame-interpolation
-         * @throws {RequiredError}
-         */
-        getVersionsVideoVideoFrameInterpolationGet(options: RequestOptions): FetchArgs {
-            const localVarPath = `/video/video/frame-interpolation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-export type VideoVideoFrameInterpolationApiType = { 
-    applyVideoVideoFrameInterpolationPost(video: any, model?: string, options?: RequestOptions): Promise<Object>,
-
-    getVersionsVideoVideoFrameInterpolationGet(options?: RequestOptions): Promise<Object>,
-}
-
-/**
- * VideoVideoFrameInterpolationApi - factory function to inject configuration 
- * @export
- */
-export const VideoVideoFrameInterpolationApi = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): VideoVideoFrameInterpolationApiType {
-    const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
-    return {
-        /**
-         * 
-         * @summary Apply model for the frame-interpolation task for a given models
-         * @throws {RequiredError}
-         */
-        applyVideoVideoFrameInterpolationPost(video: any, model?: string, options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = VideoVideoFrameInterpolationApiFetchParamCreator(configuration).applyVideoVideoFrameInterpolationPost(video, model, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @summary Get list of models available for frame-interpolation
-         * @throws {RequiredError}
-         */
-        getVersionsVideoVideoFrameInterpolationGet(options?: RequestOptions = {}): Promise<Object> {
-            const localVarFetchArgs = VideoVideoFrameInterpolationApiFetchParamCreator(configuration).getVersionsVideoVideoFrameInterpolationGet(options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-    }
-};
-
 export type ApiTypes = { 
     ImageImageBackgroundRemovalApi: ImageImageBackgroundRemovalApiType,
 
     ImageImageColorizationApi: ImageImageColorizationApiType,
 
     ImageImageFaceBluringApi: ImageImageFaceBluringApiType,
-
-    ImageImageRestorationApi: ImageImageRestorationApiType,
 
     ImageImageSuperResolutionApi: ImageImageSuperResolutionApiType,
 
@@ -3995,10 +2966,6 @@ export type ApiTypes = {
     ImageTextOcrApi: ImageTextOcrApiType,
 
     TextTextAutocorrectApi: TextTextAutocorrectApiType,
-
-    TextTextBooleanQuestionGenerationApi: TextTextBooleanQuestionGenerationApiType,
-
-    TextTextDependencyTrackingApi: TextTextDependencyTrackingApiType,
 
     TextTextEmotionRecognitionApi: TextTextEmotionRecognitionApiType,
 
@@ -4024,11 +2991,7 @@ export type ApiTypes = {
 
     TextTextProgrammingLanguageGenerationApi: TextTextProgrammingLanguageGenerationApiType,
 
-    TextTextProgrammingLanguageIdentificationApi: TextTextProgrammingLanguageIdentificationApiType,
-
     TextTextQuestionAnsweringApi: TextTextQuestionAnsweringApiType,
-
-    TextTextSentencePairModelingApi: TextTextSentencePairModelingApiType,
 
     TextTextSentenceParaphraserApi: TextTextSentenceParaphraserApiType,
 
@@ -4036,13 +2999,5 @@ export type ApiTypes = {
 
     TextTextSimilarityApi: TextTextSimilarityApiType,
 
-    TextTextSummarizationApi: TextTextSummarizationApiType,
-
-    TextTextTranslationApi: TextTextTranslationApiType,
-
-    TextTextTransliterationApi: TextTextTransliterationApiType,
-
     TextTextWordAlignmentApi: TextTextWordAlignmentApiType,
-
-    VideoVideoFrameInterpolationApi: VideoVideoFrameInterpolationApiType,
  }

@@ -43,9 +43,9 @@ export class ImageImageSuperResolutionService {
      * @param model 
      
      */
-    public applyImageImageSuperResolutionPost(image: Blob, model?: string, observe?: 'body', headers?: Headers): Observable<object>;
-    public applyImageImageSuperResolutionPost(image: Blob, model?: string, observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
-    public applyImageImageSuperResolutionPost(image: Blob, model?: string, observe: any = 'body', headers: Headers = {}): Observable<any> {
+    public applyImageImageSuperResolutionPost(image: Blob, model?: 'idealo-psnr-small', observe?: 'body', headers?: Headers): Observable<object>;
+    public applyImageImageSuperResolutionPost(image: Blob, model?: 'idealo-psnr-small', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
+    public applyImageImageSuperResolutionPost(image: Blob, model?: 'idealo-psnr-small', observe: any = 'body', headers: Headers = {}): Observable<any> {
         if (!image){
             throw new Error('Required parameter image was null or undefined when calling applyImageImageSuperResolutionPost.');
         }

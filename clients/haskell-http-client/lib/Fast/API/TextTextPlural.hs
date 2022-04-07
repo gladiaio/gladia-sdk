@@ -75,8 +75,8 @@ instance HasOptionalParam ApplyTextTextPluralPost Word where
 instance HasOptionalParam ApplyTextTextPluralPost Count where
   applyOptionalParam req (Count xs) =
     req `setQuery` toQuery ("count", Just xs)
-instance HasOptionalParam ApplyTextTextPluralPost Model17 where
-  applyOptionalParam req (Model17 xs) =
+instance HasOptionalParam ApplyTextTextPluralPost Model18 where
+  applyOptionalParam req (Model18 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextPluralPost MimeJSON

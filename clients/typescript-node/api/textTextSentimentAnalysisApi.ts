@@ -75,7 +75,7 @@ export class TextTextSentimentAnalysisApi {
      * @param text 
      * @param model 
      */
-    public async applyTextTextSentimentAnalysisPost (text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
+    public async applyTextTextSentimentAnalysisPost (text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/text/text/sentiment-analysis/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -86,7 +86,7 @@ export class TextTextSentimentAnalysisApi {
         }
 
         if (model !== undefined) {
-            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli'");
+            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english'");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

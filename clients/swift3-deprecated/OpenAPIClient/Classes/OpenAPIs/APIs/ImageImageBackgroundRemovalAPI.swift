@@ -14,8 +14,8 @@ open class ImageImageBackgroundRemovalAPI: APIBase {
      * enum for parameter model
      */
     public enum Model_applyImageImageBackgroundRemovalPost: String { 
-        case xception = "xception"
         case mobilenet = "mobilenet"
+        case xception = "xception"
     }
 
     /**

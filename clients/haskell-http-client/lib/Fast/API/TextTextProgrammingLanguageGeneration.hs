@@ -72,8 +72,8 @@ data ApplyTextTextProgrammingLanguageGenerationPost
 instance HasOptionalParam ApplyTextTextProgrammingLanguageGenerationPost CodeSnippet where
   applyOptionalParam req (CodeSnippet xs) =
     req `setQuery` toQuery ("code_snippet", Just xs)
-instance HasOptionalParam ApplyTextTextProgrammingLanguageGenerationPost Model18 where
-  applyOptionalParam req (Model18 xs) =
+instance HasOptionalParam ApplyTextTextProgrammingLanguageGenerationPost Model19 where
+  applyOptionalParam req (Model19 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextProgrammingLanguageGenerationPost MimeJSON

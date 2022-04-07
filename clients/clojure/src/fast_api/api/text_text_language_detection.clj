@@ -6,12 +6,10 @@
             [fast-api.specs.body-apply-image-image-background-removal--post :refer :all]
             [fast-api.specs.body-apply-image-image-colorization--post :refer :all]
             [fast-api.specs.body-apply-image-image-uncolorization--post :refer :all]
-            [fast-api.specs.body-apply-video-video-frame-interpolation--post :refer :all]
             [fast-api.specs.body-apply-image-image-super-resolution--post :refer :all]
             [fast-api.specs.validation-error :refer :all]
             [fast-api.specs.http-validation-error :refer :all]
             [fast-api.specs.body-apply-image-image-face-bluring--post :refer :all]
-            [fast-api.specs.body-apply-image-image-restoration--post :refer :all]
             [fast-api.specs.body-apply-image-text-ocr--post :refer :all]
             [fast-api.specs.body-apply-image-text-asciify--post :refer :all]
             )

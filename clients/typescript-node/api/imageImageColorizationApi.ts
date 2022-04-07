@@ -75,7 +75,7 @@ export class ImageImageColorizationApi {
      * @param image 
      * @param model 
      */
-    public async applyImageImageColorizationPost (image: Buffer, model?: 'deoldify-artistic' | 'deoldify-stable', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
+    public async applyImageImageColorizationPost (image: Buffer, model?: 'deoldify-stable' | 'deoldify-artistic', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/image/image/colorization/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -87,7 +87,7 @@ export class ImageImageColorizationApi {
         }
 
         if (model !== undefined) {
-            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'deoldify-artistic' | 'deoldify-stable'");
+            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'deoldify-stable' | 'deoldify-artistic'");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

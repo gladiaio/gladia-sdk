@@ -52,7 +52,7 @@ export class ImageImageSuperResolutionApi {
      * @param image 
      * @param model 
      */
-    public applyImageImageSuperResolutionPost(image: any, model?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: object;  },
     { response: JQueryXHR; errorThrown: string }
     > {

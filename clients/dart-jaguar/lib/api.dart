@@ -11,14 +11,11 @@ import 'package:jaguar_mimetype/jaguar_mimetype.dart';
 import 'package:openapi/api/image_image_background_removal_api.dart';
 import 'package:openapi/api/image_image_colorization_api.dart';
 import 'package:openapi/api/image_image_face_bluring_api.dart';
-import 'package:openapi/api/image_image_restoration_api.dart';
 import 'package:openapi/api/image_image_super_resolution_api.dart';
 import 'package:openapi/api/image_image_uncolorization_api.dart';
 import 'package:openapi/api/image_text_asciify_api.dart';
 import 'package:openapi/api/image_text_ocr_api.dart';
 import 'package:openapi/api/text_text_autocorrect_api.dart';
-import 'package:openapi/api/text_text_boolean_question_generation_api.dart';
-import 'package:openapi/api/text_text_dependency_tracking_api.dart';
 import 'package:openapi/api/text_text_emotion_recognition_api.dart';
 import 'package:openapi/api/text_text_entity_extraction_api.dart';
 import 'package:openapi/api/text_text_hate_speech_detection_api.dart';
@@ -31,27 +28,19 @@ import 'package:openapi/api/text_text_next_sentence_prediction_api.dart';
 import 'package:openapi/api/text_text_next_word_prediction_api.dart';
 import 'package:openapi/api/text_text_plural_api.dart';
 import 'package:openapi/api/text_text_programming_language_generation_api.dart';
-import 'package:openapi/api/text_text_programming_language_identification_api.dart';
 import 'package:openapi/api/text_text_question_answering_api.dart';
-import 'package:openapi/api/text_text_sentence_pair_modeling_api.dart';
 import 'package:openapi/api/text_text_sentence_paraphraser_api.dart';
 import 'package:openapi/api/text_text_sentiment_analysis_api.dart';
 import 'package:openapi/api/text_text_similarity_api.dart';
-import 'package:openapi/api/text_text_summarization_api.dart';
-import 'package:openapi/api/text_text_translation_api.dart';
-import 'package:openapi/api/text_text_transliteration_api.dart';
 import 'package:openapi/api/text_text_word_alignment_api.dart';
-import 'package:openapi/api/video_video_frame_interpolation_api.dart';
 
 import 'package:openapi/model/body_apply_image_image_background_removal_post.dart';
 import 'package:openapi/model/body_apply_image_image_colorization_post.dart';
 import 'package:openapi/model/body_apply_image_image_face_bluring_post.dart';
-import 'package:openapi/model/body_apply_image_image_restoration_post.dart';
 import 'package:openapi/model/body_apply_image_image_super_resolution_post.dart';
 import 'package:openapi/model/body_apply_image_image_uncolorization_post.dart';
 import 'package:openapi/model/body_apply_image_text_asciify_post.dart';
 import 'package:openapi/model/body_apply_image_text_ocr_post.dart';
-import 'package:openapi/model/body_apply_video_video_frame_interpolation_post.dart';
 import 'package:openapi/model/http_validation_error.dart';
 import 'package:openapi/model/validation_error.dart';
 
@@ -61,12 +50,10 @@ final _jsonJaguarRepo = JsonRepo()
 ..add(BodyApplyImageImageBackgroundRemovalPostSerializer())
 ..add(BodyApplyImageImageColorizationPostSerializer())
 ..add(BodyApplyImageImageFaceBluringPostSerializer())
-..add(BodyApplyImageImageRestorationPostSerializer())
 ..add(BodyApplyImageImageSuperResolutionPostSerializer())
 ..add(BodyApplyImageImageUncolorizationPostSerializer())
 ..add(BodyApplyImageTextAsciifyPostSerializer())
 ..add(BodyApplyImageTextOcrPostSerializer())
-..add(BodyApplyVideoVideoFrameInterpolationPostSerializer())
 ..add(HTTPValidationErrorSerializer())
 ..add(ValidationErrorSerializer())
 ;
@@ -164,21 +151,6 @@ class JaguarApiGen {
 
     
     /**
-    * Get ImageImageRestorationApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    ImageImageRestorationApi getImageImageRestorationApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return ImageImageRestorationApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
     * Get ImageImageSuperResolutionApi instance, base route and serializer can be overridden by a given but be careful,
     * by doing that all interceptors will not be executed
     */
@@ -250,36 +222,6 @@ class JaguarApiGen {
             converters = _converters;
         }
         return TextTextAutocorrectApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
-    * Get TextTextBooleanQuestionGenerationApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    TextTextBooleanQuestionGenerationApi getTextTextBooleanQuestionGenerationApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return TextTextBooleanQuestionGenerationApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
-    * Get TextTextDependencyTrackingApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    TextTextDependencyTrackingApi getTextTextDependencyTrackingApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return TextTextDependencyTrackingApi(base: base, converters: converters, timeout: timeout);
     }
 
     
@@ -464,21 +406,6 @@ class JaguarApiGen {
 
     
     /**
-    * Get TextTextProgrammingLanguageIdentificationApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    TextTextProgrammingLanguageIdentificationApi getTextTextProgrammingLanguageIdentificationApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return TextTextProgrammingLanguageIdentificationApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
     * Get TextTextQuestionAnsweringApi instance, base route and serializer can be overridden by a given but be careful,
     * by doing that all interceptors will not be executed
     */
@@ -490,21 +417,6 @@ class JaguarApiGen {
             converters = _converters;
         }
         return TextTextQuestionAnsweringApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
-    * Get TextTextSentencePairModelingApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    TextTextSentencePairModelingApi getTextTextSentencePairModelingApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return TextTextSentencePairModelingApi(base: base, converters: converters, timeout: timeout);
     }
 
     
@@ -554,51 +466,6 @@ class JaguarApiGen {
 
     
     /**
-    * Get TextTextSummarizationApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    TextTextSummarizationApi getTextTextSummarizationApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return TextTextSummarizationApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
-    * Get TextTextTranslationApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    TextTextTranslationApi getTextTextTranslationApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return TextTextTranslationApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
-    * Get TextTextTransliterationApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    TextTextTransliterationApi getTextTextTransliterationApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return TextTextTransliterationApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
     * Get TextTextWordAlignmentApi instance, base route and serializer can be overridden by a given but be careful,
     * by doing that all interceptors will not be executed
     */
@@ -610,21 +477,6 @@ class JaguarApiGen {
             converters = _converters;
         }
         return TextTextWordAlignmentApi(base: base, converters: converters, timeout: timeout);
-    }
-
-    
-    /**
-    * Get VideoVideoFrameInterpolationApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    VideoVideoFrameInterpolationApi getVideoVideoFrameInterpolationApi({Route base, Map<String, CodecRepo> converters}) {
-        if(base == null) {
-            base = _baseRoute;
-        }
-        if(converters == null) {
-            converters = _converters;
-        }
-        return VideoVideoFrameInterpolationApi(base: base, converters: converters, timeout: timeout);
     }
 
     

@@ -190,19 +190,6 @@ class Decoders {
             }
 
 
-            // Decoder for [BodyApplyImageImageRestorationPost]
-            Decoders.addDecoder(clazz: [BodyApplyImageImageRestorationPost].self) { (source: AnyObject) -> [BodyApplyImageImageRestorationPost] in
-                return Decoders.decode(clazz: [BodyApplyImageImageRestorationPost].self, source: source)
-            }
-            // Decoder for BodyApplyImageImageRestorationPost
-            Decoders.addDecoder(clazz: BodyApplyImageImageRestorationPost.self) { (source: AnyObject) -> BodyApplyImageImageRestorationPost in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = BodyApplyImageImageRestorationPost()
-                instance.image = Decoders.decodeOptional(clazz: NSURL.self, source: sourceDictionary["image"])
-                return instance
-            }
-
-
             // Decoder for [BodyApplyImageImageSuperResolutionPost]
             Decoders.addDecoder(clazz: [BodyApplyImageImageSuperResolutionPost].self) { (source: AnyObject) -> [BodyApplyImageImageSuperResolutionPost] in
                 return Decoders.decode(clazz: [BodyApplyImageImageSuperResolutionPost].self, source: source)
@@ -251,19 +238,6 @@ class Decoders {
                 let sourceDictionary = source as! [NSObject:AnyObject]
                 let instance = BodyApplyImageTextOcrPost()
                 instance.image = Decoders.decodeOptional(clazz: NSURL.self, source: sourceDictionary["image"])
-                return instance
-            }
-
-
-            // Decoder for [BodyApplyVideoVideoFrameInterpolationPost]
-            Decoders.addDecoder(clazz: [BodyApplyVideoVideoFrameInterpolationPost].self) { (source: AnyObject) -> [BodyApplyVideoVideoFrameInterpolationPost] in
-                return Decoders.decode(clazz: [BodyApplyVideoVideoFrameInterpolationPost].self, source: source)
-            }
-            // Decoder for BodyApplyVideoVideoFrameInterpolationPost
-            Decoders.addDecoder(clazz: BodyApplyVideoVideoFrameInterpolationPost.self) { (source: AnyObject) -> BodyApplyVideoVideoFrameInterpolationPost in
-                let sourceDictionary = source as! [NSObject:AnyObject]
-                let instance = BodyApplyVideoVideoFrameInterpolationPost()
-                instance.video = Decoders.decodeOptional(clazz: NSURL.self, source: sourceDictionary["video"])
                 return instance
             }
 

@@ -32,7 +32,7 @@ export class ImageImageColorizationApi {
      * @param image 
      * @param model 
      */
-    public applyImageImageColorizationPost (image: any, model?: 'deoldify-artistic' | 'deoldify-stable', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
+    public applyImageImageColorizationPost (image: any, model?: 'deoldify-stable' | 'deoldify-artistic', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
         const localVarPath = this.basePath + '/image/image/colorization/';
 
         let queryParameters: any = {};

@@ -21,7 +21,7 @@ import {
 
 export interface ApplyImageImageSuperResolutionPostRequest {
     image: Blob;
-    model?: string;
+    model?: ApplyImageImageSuperResolutionPostModelEnum;
 }
 
 /**
@@ -95,4 +95,12 @@ export class ImageImageSuperResolutionApi extends runtime.BaseAPI {
         return await response.value();
     }
 
+}
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ApplyImageImageSuperResolutionPostModelEnum {
+    IdealoPsnrSmall = 'idealo-psnr-small'
 }

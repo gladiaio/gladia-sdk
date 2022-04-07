@@ -22,7 +22,7 @@ import {
  */
 export interface IApplyImageImageColorizationPostParams {
   image: any;
-  model?: 'deoldify-artistic' | 'deoldify-stable';
+  model?: 'deoldify-stable' | 'deoldify-artistic';
 }
 
 /**

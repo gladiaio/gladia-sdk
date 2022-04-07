@@ -44,9 +44,9 @@ export class ImageTextOcrService {
      * @param model 
      
      */
-    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', observe?: 'body', headers?: Headers): Observable<object>;
-    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
-    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', observe: any = 'body', headers: Headers = {}): Observable<any> {
+    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', observe?: 'body', headers?: Headers): Observable<object>;
+    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
+    public applyImageTextOcrPost(image: Blob, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', observe: any = 'body', headers: Headers = {}): Observable<any> {
         if (!image){
             throw new Error('Required parameter image was null or undefined when calling applyImageTextOcrPost.');
         }

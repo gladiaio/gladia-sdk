@@ -31,7 +31,7 @@ class ImageImageSuperResolutionApi(basePath: kotlin.String = "http://localhost")
     * Apply model for the super-resolution task for a given models
     * 
     * @param image  
-    * @param model  (optional, default to 'esrgan')
+    * @param model  (optional, default to 'idealo-psnr-small')
     * @return kotlin.Any
     */
     @Suppress("UNCHECKED_CAST")

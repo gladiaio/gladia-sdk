@@ -75,7 +75,7 @@ export class ImageImageBackgroundRemovalApi {
      * @param image 
      * @param model 
      */
-    public async applyImageImageBackgroundRemovalPost (image: Buffer, model?: 'xception' | 'mobilenet', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
+    public async applyImageImageBackgroundRemovalPost (image: Buffer, model?: 'mobilenet' | 'xception', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/image/image/background-removal/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -87,7 +87,7 @@ export class ImageImageBackgroundRemovalApi {
         }
 
         if (model !== undefined) {
-            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'xception' | 'mobilenet'");
+            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'mobilenet' | 'xception'");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

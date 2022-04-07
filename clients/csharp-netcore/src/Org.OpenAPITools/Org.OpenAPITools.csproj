@@ -13,7 +13,7 @@ The version of the OpenAPI document: 0.1.0
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7634295D-CA8A-4454-9366-17EE155A5125}</ProjectGuid>
+    <ProjectGuid>{4421424E-FB84-4719-AAE9-948FE8AE4B30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Org.OpenAPITools</RootNamespace>

@@ -71,9 +71,9 @@ class TextTextQuestionAnsweringApiSimulation extends Simulation {
         .feed(apply_text_text_question_answering__postQUERYFeeder)
         .exec(http("applyTextTextQuestionAnsweringPost")
         .httpRequest("POST","/text/text/question-answering/")
-        .queryParam("model","${model}")
         .queryParam("context","${context}")
         .queryParam("question","${question}")
+        .queryParam("model","${model}")
 )
 
     // Run scnapplyTextTextQuestionAnsweringPost with warm up and reach a constant rate for entire duration

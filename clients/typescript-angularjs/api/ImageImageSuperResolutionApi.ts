@@ -32,7 +32,7 @@ export class ImageImageSuperResolutionApi {
      * @param image 
      * @param model 
      */
-    public applyImageImageSuperResolutionPost (image: any, model?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
+    public applyImageImageSuperResolutionPost (image: any, model?: 'idealo-psnr-small', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
         const localVarPath = this.basePath + '/image/image/super-resolution/';
 
         let queryParameters: any = {};

@@ -69,10 +69,6 @@ public class JsonUtil {
       return new TypeToken<List<BodyApplyImageImageFaceBluringPost>>(){}.getType();
     }
     
-    if ("BodyApplyImageImageRestorationPost".equalsIgnoreCase(className)) {
-      return new TypeToken<List<BodyApplyImageImageRestorationPost>>(){}.getType();
-    }
-    
     if ("BodyApplyImageImageSuperResolutionPost".equalsIgnoreCase(className)) {
       return new TypeToken<List<BodyApplyImageImageSuperResolutionPost>>(){}.getType();
     }
@@ -87,10 +83,6 @@ public class JsonUtil {
     
     if ("BodyApplyImageTextOcrPost".equalsIgnoreCase(className)) {
       return new TypeToken<List<BodyApplyImageTextOcrPost>>(){}.getType();
-    }
-    
-    if ("BodyApplyVideoVideoFrameInterpolationPost".equalsIgnoreCase(className)) {
-      return new TypeToken<List<BodyApplyVideoVideoFrameInterpolationPost>>(){}.getType();
     }
     
     if ("HTTPValidationError".equalsIgnoreCase(className)) {
@@ -119,10 +111,6 @@ public class JsonUtil {
       return new TypeToken<BodyApplyImageImageFaceBluringPost>(){}.getType();
     }
     
-    if ("BodyApplyImageImageRestorationPost".equalsIgnoreCase(className)) {
-      return new TypeToken<BodyApplyImageImageRestorationPost>(){}.getType();
-    }
-    
     if ("BodyApplyImageImageSuperResolutionPost".equalsIgnoreCase(className)) {
       return new TypeToken<BodyApplyImageImageSuperResolutionPost>(){}.getType();
     }
@@ -137,10 +125,6 @@ public class JsonUtil {
     
     if ("BodyApplyImageTextOcrPost".equalsIgnoreCase(className)) {
       return new TypeToken<BodyApplyImageTextOcrPost>(){}.getType();
-    }
-    
-    if ("BodyApplyVideoVideoFrameInterpolationPost".equalsIgnoreCase(className)) {
-      return new TypeToken<BodyApplyVideoVideoFrameInterpolationPost>(){}.getType();
     }
     
     if ("HTTPValidationError".equalsIgnoreCase(className)) {

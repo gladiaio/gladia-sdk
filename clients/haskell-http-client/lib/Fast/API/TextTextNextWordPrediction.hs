@@ -72,8 +72,8 @@ data ApplyTextTextNextWordPredictionPost
 instance HasOptionalParam ApplyTextTextNextWordPredictionPost Sentence where
   applyOptionalParam req (Sentence xs) =
     req `setQuery` toQuery ("sentence", Just xs)
-instance HasOptionalParam ApplyTextTextNextWordPredictionPost Model16 where
-  applyOptionalParam req (Model16 xs) =
+instance HasOptionalParam ApplyTextTextNextWordPredictionPost Model17 where
+  applyOptionalParam req (Model17 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextNextWordPredictionPost MimeJSON

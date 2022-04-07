@@ -75,8 +75,8 @@ instance HasOptionalParam ApplyTextTextSimilarityPost Sentence1 where
 instance HasOptionalParam ApplyTextTextSimilarityPost Sentence2 where
   applyOptionalParam req (Sentence2 xs) =
     req `setQuery` toQuery ("sentence_2", Just xs)
-instance HasOptionalParam ApplyTextTextSimilarityPost Model22 where
-  applyOptionalParam req (Model22 xs) =
+instance HasOptionalParam ApplyTextTextSimilarityPost Model23 where
+  applyOptionalParam req (Model23 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextSimilarityPost MimeJSON

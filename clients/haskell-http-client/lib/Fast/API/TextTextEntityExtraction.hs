@@ -72,8 +72,8 @@ data ApplyTextTextEntityExtractionPost
 instance HasOptionalParam ApplyTextTextEntityExtractionPost InputString where
   applyOptionalParam req (InputString xs) =
     req `setQuery` toQuery ("input_string", Just xs)
-instance HasOptionalParam ApplyTextTextEntityExtractionPost Model9 where
-  applyOptionalParam req (Model9 xs) =
+instance HasOptionalParam ApplyTextTextEntityExtractionPost Model10 where
+  applyOptionalParam req (Model10 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextEntityExtractionPost MimeJSON

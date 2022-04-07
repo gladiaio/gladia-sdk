@@ -35,7 +35,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>Object</returns>
         Object ApplyImageImageSuperResolutionPost (System.IO.Stream image, string model = null);
 
@@ -47,7 +47,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ApplyImageImageSuperResolutionPostWithHttpInfo (System.IO.Stream image, string model = null);
         /// <summary>
@@ -86,7 +86,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> ApplyImageImageSuperResolutionPostAsync (System.IO.Stream image, string model = null);
 
@@ -98,7 +98,7 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ApplyImageImageSuperResolutionPostAsyncWithHttpInfo (System.IO.Stream image, string model = null);
         /// <summary>
@@ -245,7 +245,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>Object</returns>
         public Object ApplyImageImageSuperResolutionPost (System.IO.Stream image, string model = null)
         {
@@ -258,7 +258,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>ApiResponse of Object</returns>
         public Org.OpenAPITools.Client.ApiResponse< Object > ApplyImageImageSuperResolutionPostWithHttpInfo (System.IO.Stream image, string model = null)
         {
@@ -317,7 +317,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> ApplyImageImageSuperResolutionPostAsync (System.IO.Stream image, string model = null)
         {
@@ -331,7 +331,7 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
-        /// <param name="model"> (optional, default to &quot;esrgan&quot;)</param>
+        /// <param name="model"> (optional, default to idealo-psnr-small)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> ApplyImageImageSuperResolutionPostAsyncWithHttpInfo (System.IO.Stream image, string model = null)
         {

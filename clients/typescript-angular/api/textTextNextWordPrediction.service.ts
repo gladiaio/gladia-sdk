@@ -67,10 +67,10 @@ export class TextTextNextWordPredictionService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', observe?: 'body', reportProgress?: boolean): Observable<object>;
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<object>>;
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<object>>;
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', observe?: 'body', reportProgress?: boolean): Observable<object>;
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<object>>;
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<object>>;
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
         let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
         if (sentence !== undefined && sentence !== null) {

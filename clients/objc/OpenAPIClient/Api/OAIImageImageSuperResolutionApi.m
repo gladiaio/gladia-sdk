@@ -54,7 +54,7 @@ NSInteger kOAIImageImageSuperResolutionApiMissingParamErrorCode = 234513;
 /// 
 ///  @param image  
 ///
-///  @param model  (optional, default to @"esrgan")
+///  @param model  (optional, default to @"idealo-psnr-small")
 ///
 ///  @returns NSObject*
 ///

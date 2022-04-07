@@ -14,8 +14,8 @@ public class ImageImageColorizationAPI: APIBase {
      * enum for parameter model
      */
     public enum Model_applyImageImageColorizationPost: String { 
-        case DeoldifyArtistic = "deoldify-artistic"
         case DeoldifyStable = "deoldify-stable"
+        case DeoldifyArtistic = "deoldify-artistic"
     }
 
     /**

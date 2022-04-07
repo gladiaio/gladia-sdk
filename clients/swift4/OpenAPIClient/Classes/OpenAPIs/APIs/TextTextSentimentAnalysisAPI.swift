@@ -15,10 +15,10 @@ open class TextTextSentimentAnalysisAPI {
      * enum for parameter model
      */
     public enum Model_applyTextTextSentimentAnalysisPost: String {
-        case nlptownBertBaseMultilingualUncasedSentiment = "nlptown-bert-base-multilingual-uncased-sentiment"
-        case distilbertBaseUncased = "distilbert-base-uncased"
-        case distilbertBaseUncasedFinetunedSst2English = "distilbert-base-uncased-finetuned-sst-2-english"
         case zeroShotClassificationFacebookBartLargeMnli = "zero-shot-classification-facebook-bart-large-mnli"
+        case distilbertBaseUncased = "distilbert-base-uncased"
+        case nlptownBertBaseMultilingualUncasedSentiment = "nlptown-bert-base-multilingual-uncased-sentiment"
+        case distilbertBaseUncasedFinetunedSst2English = "distilbert-base-uncased-finetuned-sst-2-english"
     }
 
     /**

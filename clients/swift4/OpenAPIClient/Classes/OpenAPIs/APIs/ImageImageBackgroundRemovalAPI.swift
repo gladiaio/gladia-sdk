@@ -15,15 +15,15 @@ open class ImageImageBackgroundRemovalAPI {
      * enum for parameter model
      */
     public enum Model_applyImageImageBackgroundRemovalPost: String {
-        case xception = "xception"
         case mobilenet = "mobilenet"
+        case xception = "xception"
     }
 
     /**
      Apply model for the background-removal task for a given models
      
      - parameter image: (form)  
-     - parameter model: (query)  (optional, default to .rembg)
+     - parameter model: (query)  (optional, default to .xception)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func applyImageImageBackgroundRemovalPost(image: URL, model: Model_applyImageImageBackgroundRemovalPost? = nil, completion: @escaping ((_ data: Any?,_ error: Error?) -> Void)) {
@@ -36,7 +36,7 @@ open class ImageImageBackgroundRemovalAPI {
      Apply model for the background-removal task for a given models
      - POST /image/image/background-removal/
      - parameter image: (form)  
-     - parameter model: (query)  (optional, default to .rembg)
+     - parameter model: (query)  (optional, default to .xception)
      - returns: RequestBuilder<Any> 
      */
     open class func applyImageImageBackgroundRemovalPostWithRequestBuilder(image: URL, model: Model_applyImageImageBackgroundRemovalPost? = nil) -> RequestBuilder<Any> {

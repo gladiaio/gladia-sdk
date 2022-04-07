@@ -14,7 +14,7 @@
 // Apply model for the super-resolution task for a given models
 //
 object_t*
-ImageImageSuperResolutionAPI_applyImageImageSuperResolutionPost(apiClient_t *apiClient ,binary_t* image ,char * model)
+ImageImageSuperResolutionAPI_applyImageImageSuperResolutionPost(apiClient_t *apiClient ,binary_t* image ,model_e model)
 {
     list_t    *localVarQueryParameters = list_create();
     list_t    *localVarHeaderParameters = NULL;
@@ -33,13 +33,13 @@ ImageImageSuperResolutionAPI_applyImageImageSuperResolutionPost(apiClient_t *api
 
     // query parameters
     char *keyQuery_model;
-    char * valueQuery_model;
+    model_e valueQuery_model;
     keyValuePair_t *keyPairQuery_model = 0;
     if (model)
     {
         keyQuery_model = strdup("model");
-        valueQuery_model = strdup((model));
-        keyPairQuery_model = keyValuePair_create(keyQuery_model, valueQuery_model);
+        valueQuery_model = (model);
+        keyPairQuery_model = keyValuePair_create(keyQuery_model, (void *)valueQuery_model);
         list_addElement(localVarQueryParameters,keyPairQuery_model);
     }
 

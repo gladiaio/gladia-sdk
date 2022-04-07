@@ -15,9 +15,9 @@ open class ImageTextOcrAPI {
      * enum for parameter model
      */
     public enum Model_applyImageTextOcrPost: String {
-        case tesseractDefault = "tesseract-default"
         case tesseractDenoising = "tesseract-denoising"
         case easyOcr = "easy-ocr"
+        case tesseractDefault = "tesseract-default"
     }
 
     /**

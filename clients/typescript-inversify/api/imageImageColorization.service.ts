@@ -43,9 +43,9 @@ export class ImageImageColorizationService {
      * @param model 
      
      */
-    public applyImageImageColorizationPost(image: Blob, model?: 'deoldify-artistic' | 'deoldify-stable', observe?: 'body', headers?: Headers): Observable<object>;
-    public applyImageImageColorizationPost(image: Blob, model?: 'deoldify-artistic' | 'deoldify-stable', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
-    public applyImageImageColorizationPost(image: Blob, model?: 'deoldify-artistic' | 'deoldify-stable', observe: any = 'body', headers: Headers = {}): Observable<any> {
+    public applyImageImageColorizationPost(image: Blob, model?: 'deoldify-stable' | 'deoldify-artistic', observe?: 'body', headers?: Headers): Observable<object>;
+    public applyImageImageColorizationPost(image: Blob, model?: 'deoldify-stable' | 'deoldify-artistic', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
+    public applyImageImageColorizationPost(image: Blob, model?: 'deoldify-stable' | 'deoldify-artistic', observe: any = 'body', headers: Headers = {}): Observable<any> {
         if (!image){
             throw new Error('Required parameter image was null or undefined when calling applyImageImageColorizationPost.');
         }

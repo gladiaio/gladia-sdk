@@ -50,18 +50,6 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out Swagger.Object);
 
-   --  Apply model for the restoration task for a given models
-   procedure Apply_Image_Image_Restoration_Post
-      (Client : in out Client_Type;
-       Image : in Swagger.File_Part_Type;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for restoration
-   procedure Get_Versions_Image_Image_Restoration_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
    --  Apply model for the super_resolution task for a given models
    procedure Apply_Image_Image_Super_Resolution_Post
       (Client : in out Client_Type;
@@ -120,30 +108,6 @@ package .Clients is
 
    --  Get list of models available for autocorrect
    procedure Get_Versions_Text_Text_Autocorrect_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
-   --  Apply model for the boolean_question_generation task for a given models
-   procedure Apply_Text_Text_Boolean_Question_Generation_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for boolean_question_generation
-   procedure Get_Versions_Text_Text_Boolean_Question_Generation_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
-   --  Apply model for the dependency_tracking task for a given models
-   procedure Apply_Text_Text_Dependency_Tracking_Post
-      (Client : in out Client_Type;
-       Input_String : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for dependency_tracking
-   procedure Get_Versions_Text_Text_Dependency_Tracking_Get
       (Client : in out Client_Type;
        Result : out Swagger.Object);
 
@@ -293,18 +257,6 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out Swagger.Object);
 
-   --  Apply model for the programming_language_identification task for a given models
-   procedure Apply_Text_Text_Programming_Language_Identification_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for programming_language_identification
-   procedure Get_Versions_Text_Text_Programming_Language_Identification_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
    --  Apply model for the question_answering task for a given models
    procedure Apply_Text_Text_Question_Answering_Post
       (Client : in out Client_Type;
@@ -315,18 +267,6 @@ package .Clients is
 
    --  Get list of models available for question_answering
    procedure Get_Versions_Text_Text_Question_Answering_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
-   --  Apply model for the sentence_pair_modeling task for a given models
-   procedure Apply_Text_Text_Sentence_Pair_Modeling_Post
-      (Client : in out Client_Type;
-       Sentence : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for sentence_pair_modeling
-   procedure Get_Versions_Text_Text_Sentence_Pair_Modeling_Get
       (Client : in out Client_Type;
        Result : out Swagger.Object);
 
@@ -367,48 +307,6 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out Swagger.Object);
 
-   --  Apply model for the summarization task for a given models
-   procedure Apply_Text_Text_Summarization_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Source_Language : in Swagger.Nullable_UString;
-       Max_Length : in Swagger.Nullable_Integer;
-       Min_Length : in Swagger.Nullable_Integer;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for summarization
-   procedure Get_Versions_Text_Text_Summarization_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
-   --  Apply model for the translation task for a given models
-   procedure Apply_Text_Text_Translation_Post
-      (Client : in out Client_Type;
-       Input_String : in Swagger.Nullable_UString;
-       Source_Language : in Swagger.Nullable_UString;
-       Target_Language : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for translation
-   procedure Get_Versions_Text_Text_Translation_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
-   --  Apply model for the transliteration task for a given models
-   procedure Apply_Text_Text_Transliteration_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Language : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for transliteration
-   procedure Get_Versions_Text_Text_Transliteration_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
    --  Apply model for the word_alignment task for a given models
    procedure Apply_Text_Text_Word_Alignment_Post
       (Client : in out Client_Type;
@@ -419,18 +317,6 @@ package .Clients is
 
    --  Get list of models available for word_alignment
    procedure Get_Versions_Text_Text_Word_Alignment_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object);
-
-   --  Apply model for the frame_interpolation task for a given models
-   procedure Apply_Video_Video_Frame_Interpolation_Post
-      (Client : in out Client_Type;
-       Video : in Swagger.File_Part_Type;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object);
-
-   --  Get list of models available for frame_interpolation
-   procedure Get_Versions_Video_Video_Frame_Interpolation_Get
       (Client : in out Client_Type;
        Result : out Swagger.Object);
 

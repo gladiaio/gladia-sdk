@@ -52,7 +52,7 @@ export class ImageImageColorizationApi {
      * @param image 
      * @param model 
      */
-    public applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: object;  },
     { response: JQueryXHR; errorThrown: string }
     > {

@@ -22,7 +22,7 @@ module OpenapiClient
     # Apply model for the super-resolution task for a given models
     # @param image [File] 
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :model  (default to 'esrgan')
+    # @option opts [String] :model  (default to 'idealo-psnr-small')
     # @return [Object]
     def apply_image_image_super_resolution_post(image, opts = {})
       data, _status_code, _headers = apply_image_image_super_resolution_post_with_http_info(image, opts)
@@ -41,6 +41,10 @@ module OpenapiClient
       # verify the required parameter 'image' is set
       if @api_client.config.client_side_validation && image.nil?
         fail ArgumentError, "Missing the required parameter 'image' when calling ImageImageSuperResolutionApi.apply_image_image_super_resolution_post"
+      end
+      allowable_values = ["idealo-psnr-small"]
+      if @api_client.config.client_side_validation && opts[:'model'] && !allowable_values.include?(opts[:'model'])
+        fail ArgumentError, "invalid value for \"model\", must be one of #{allowable_values}"
       end
       # resource path
       local_var_path = '/image/image/super-resolution/'

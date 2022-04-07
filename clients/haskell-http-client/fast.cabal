@@ -67,14 +67,11 @@ library
       Fast.API.ImageImageBackgroundRemoval
       Fast.API.ImageImageColorization
       Fast.API.ImageImageFaceBluring
-      Fast.API.ImageImageRestoration
       Fast.API.ImageImageSuperResolution
       Fast.API.ImageImageUncolorization
       Fast.API.ImageTextAsciify
       Fast.API.ImageTextOcr
       Fast.API.TextTextAutocorrect
-      Fast.API.TextTextBooleanQuestionGeneration
-      Fast.API.TextTextDependencyTracking
       Fast.API.TextTextEmotionRecognition
       Fast.API.TextTextEntityExtraction
       Fast.API.TextTextHateSpeechDetection
@@ -87,17 +84,11 @@ library
       Fast.API.TextTextNextWordPrediction
       Fast.API.TextTextPlural
       Fast.API.TextTextProgrammingLanguageGeneration
-      Fast.API.TextTextProgrammingLanguageIdentification
       Fast.API.TextTextQuestionAnswering
-      Fast.API.TextTextSentencePairModeling
       Fast.API.TextTextSentenceParaphraser
       Fast.API.TextTextSentimentAnalysis
       Fast.API.TextTextSimilarity
-      Fast.API.TextTextSummarization
-      Fast.API.TextTextTranslation
-      Fast.API.TextTextTransliteration
       Fast.API.TextTextWordAlignment
-      Fast.API.VideoVideoFrameInterpolation
       Fast.Client
       Fast.Core
       Fast.Logging

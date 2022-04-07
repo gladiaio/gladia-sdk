@@ -85,7 +85,7 @@ export class ImageTextOcrApi extends BaseAPI {
     * @enum {string}
     */
 export enum ApplyImageTextOcrPostModelEnum {
-    TesseractDefault = 'tesseract-default',
     TesseractDenoising = 'tesseract-denoising',
-    EasyOcr = 'easy-ocr'
+    EasyOcr = 'easy-ocr',
+    TesseractDefault = 'tesseract-default'
 }

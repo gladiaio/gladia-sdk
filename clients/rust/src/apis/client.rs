@@ -8,14 +8,11 @@ pub struct APIClient<C: hyper::client::Connect> {
     image_image_background_removal_api: Box<::apis::ImageImageBackgroundRemovalApi>,
     image_image_colorization_api: Box<::apis::ImageImageColorizationApi>,
     image_image_face_bluring_api: Box<::apis::ImageImageFaceBluringApi>,
-    image_image_restoration_api: Box<::apis::ImageImageRestorationApi>,
     image_image_super_resolution_api: Box<::apis::ImageImageSuperResolutionApi>,
     image_image_uncolorization_api: Box<::apis::ImageImageUncolorizationApi>,
     image_text_asciify_api: Box<::apis::ImageTextAsciifyApi>,
     image_text_ocr_api: Box<::apis::ImageTextOcrApi>,
     text_text_autocorrect_api: Box<::apis::TextTextAutocorrectApi>,
-    text_text_boolean_question_generation_api: Box<::apis::TextTextBooleanQuestionGenerationApi>,
-    text_text_dependency_tracking_api: Box<::apis::TextTextDependencyTrackingApi>,
     text_text_emotion_recognition_api: Box<::apis::TextTextEmotionRecognitionApi>,
     text_text_entity_extraction_api: Box<::apis::TextTextEntityExtractionApi>,
     text_text_hate_speech_detection_api: Box<::apis::TextTextHateSpeechDetectionApi>,
@@ -28,17 +25,11 @@ pub struct APIClient<C: hyper::client::Connect> {
     text_text_next_word_prediction_api: Box<::apis::TextTextNextWordPredictionApi>,
     text_text_plural_api: Box<::apis::TextTextPluralApi>,
     text_text_programming_language_generation_api: Box<::apis::TextTextProgrammingLanguageGenerationApi>,
-    text_text_programming_language_identification_api: Box<::apis::TextTextProgrammingLanguageIdentificationApi>,
     text_text_question_answering_api: Box<::apis::TextTextQuestionAnsweringApi>,
-    text_text_sentence_pair_modeling_api: Box<::apis::TextTextSentencePairModelingApi>,
     text_text_sentence_paraphraser_api: Box<::apis::TextTextSentenceParaphraserApi>,
     text_text_sentiment_analysis_api: Box<::apis::TextTextSentimentAnalysisApi>,
     text_text_similarity_api: Box<::apis::TextTextSimilarityApi>,
-    text_text_summarization_api: Box<::apis::TextTextSummarizationApi>,
-    text_text_translation_api: Box<::apis::TextTextTranslationApi>,
-    text_text_transliteration_api: Box<::apis::TextTextTransliterationApi>,
     text_text_word_alignment_api: Box<::apis::TextTextWordAlignmentApi>,
-    video_video_frame_interpolation_api: Box<::apis::VideoVideoFrameInterpolationApi>,
 }
 
 impl<C: hyper::client::Connect> APIClient<C> {
@@ -50,14 +41,11 @@ impl<C: hyper::client::Connect> APIClient<C> {
             image_image_background_removal_api: Box::new(::apis::ImageImageBackgroundRemovalApiClient::new(rc.clone())),
             image_image_colorization_api: Box::new(::apis::ImageImageColorizationApiClient::new(rc.clone())),
             image_image_face_bluring_api: Box::new(::apis::ImageImageFaceBluringApiClient::new(rc.clone())),
-            image_image_restoration_api: Box::new(::apis::ImageImageRestorationApiClient::new(rc.clone())),
             image_image_super_resolution_api: Box::new(::apis::ImageImageSuperResolutionApiClient::new(rc.clone())),
             image_image_uncolorization_api: Box::new(::apis::ImageImageUncolorizationApiClient::new(rc.clone())),
             image_text_asciify_api: Box::new(::apis::ImageTextAsciifyApiClient::new(rc.clone())),
             image_text_ocr_api: Box::new(::apis::ImageTextOcrApiClient::new(rc.clone())),
             text_text_autocorrect_api: Box::new(::apis::TextTextAutocorrectApiClient::new(rc.clone())),
-            text_text_boolean_question_generation_api: Box::new(::apis::TextTextBooleanQuestionGenerationApiClient::new(rc.clone())),
-            text_text_dependency_tracking_api: Box::new(::apis::TextTextDependencyTrackingApiClient::new(rc.clone())),
             text_text_emotion_recognition_api: Box::new(::apis::TextTextEmotionRecognitionApiClient::new(rc.clone())),
             text_text_entity_extraction_api: Box::new(::apis::TextTextEntityExtractionApiClient::new(rc.clone())),
             text_text_hate_speech_detection_api: Box::new(::apis::TextTextHateSpeechDetectionApiClient::new(rc.clone())),
@@ -70,17 +58,11 @@ impl<C: hyper::client::Connect> APIClient<C> {
             text_text_next_word_prediction_api: Box::new(::apis::TextTextNextWordPredictionApiClient::new(rc.clone())),
             text_text_plural_api: Box::new(::apis::TextTextPluralApiClient::new(rc.clone())),
             text_text_programming_language_generation_api: Box::new(::apis::TextTextProgrammingLanguageGenerationApiClient::new(rc.clone())),
-            text_text_programming_language_identification_api: Box::new(::apis::TextTextProgrammingLanguageIdentificationApiClient::new(rc.clone())),
             text_text_question_answering_api: Box::new(::apis::TextTextQuestionAnsweringApiClient::new(rc.clone())),
-            text_text_sentence_pair_modeling_api: Box::new(::apis::TextTextSentencePairModelingApiClient::new(rc.clone())),
             text_text_sentence_paraphraser_api: Box::new(::apis::TextTextSentenceParaphraserApiClient::new(rc.clone())),
             text_text_sentiment_analysis_api: Box::new(::apis::TextTextSentimentAnalysisApiClient::new(rc.clone())),
             text_text_similarity_api: Box::new(::apis::TextTextSimilarityApiClient::new(rc.clone())),
-            text_text_summarization_api: Box::new(::apis::TextTextSummarizationApiClient::new(rc.clone())),
-            text_text_translation_api: Box::new(::apis::TextTextTranslationApiClient::new(rc.clone())),
-            text_text_transliteration_api: Box::new(::apis::TextTextTransliterationApiClient::new(rc.clone())),
             text_text_word_alignment_api: Box::new(::apis::TextTextWordAlignmentApiClient::new(rc.clone())),
-            video_video_frame_interpolation_api: Box::new(::apis::VideoVideoFrameInterpolationApiClient::new(rc.clone())),
         }
     }
 
@@ -94,10 +76,6 @@ impl<C: hyper::client::Connect> APIClient<C> {
 
     pub fn image_image_face_bluring_api(&self) -> &::apis::ImageImageFaceBluringApi{
         self.image_image_face_bluring_api.as_ref()
-    }
-
-    pub fn image_image_restoration_api(&self) -> &::apis::ImageImageRestorationApi{
-        self.image_image_restoration_api.as_ref()
     }
 
     pub fn image_image_super_resolution_api(&self) -> &::apis::ImageImageSuperResolutionApi{
@@ -118,14 +96,6 @@ impl<C: hyper::client::Connect> APIClient<C> {
 
     pub fn text_text_autocorrect_api(&self) -> &::apis::TextTextAutocorrectApi{
         self.text_text_autocorrect_api.as_ref()
-    }
-
-    pub fn text_text_boolean_question_generation_api(&self) -> &::apis::TextTextBooleanQuestionGenerationApi{
-        self.text_text_boolean_question_generation_api.as_ref()
-    }
-
-    pub fn text_text_dependency_tracking_api(&self) -> &::apis::TextTextDependencyTrackingApi{
-        self.text_text_dependency_tracking_api.as_ref()
     }
 
     pub fn text_text_emotion_recognition_api(&self) -> &::apis::TextTextEmotionRecognitionApi{
@@ -176,16 +146,8 @@ impl<C: hyper::client::Connect> APIClient<C> {
         self.text_text_programming_language_generation_api.as_ref()
     }
 
-    pub fn text_text_programming_language_identification_api(&self) -> &::apis::TextTextProgrammingLanguageIdentificationApi{
-        self.text_text_programming_language_identification_api.as_ref()
-    }
-
     pub fn text_text_question_answering_api(&self) -> &::apis::TextTextQuestionAnsweringApi{
         self.text_text_question_answering_api.as_ref()
-    }
-
-    pub fn text_text_sentence_pair_modeling_api(&self) -> &::apis::TextTextSentencePairModelingApi{
-        self.text_text_sentence_pair_modeling_api.as_ref()
     }
 
     pub fn text_text_sentence_paraphraser_api(&self) -> &::apis::TextTextSentenceParaphraserApi{
@@ -200,24 +162,8 @@ impl<C: hyper::client::Connect> APIClient<C> {
         self.text_text_similarity_api.as_ref()
     }
 
-    pub fn text_text_summarization_api(&self) -> &::apis::TextTextSummarizationApi{
-        self.text_text_summarization_api.as_ref()
-    }
-
-    pub fn text_text_translation_api(&self) -> &::apis::TextTextTranslationApi{
-        self.text_text_translation_api.as_ref()
-    }
-
-    pub fn text_text_transliteration_api(&self) -> &::apis::TextTextTransliterationApi{
-        self.text_text_transliteration_api.as_ref()
-    }
-
     pub fn text_text_word_alignment_api(&self) -> &::apis::TextTextWordAlignmentApi{
         self.text_text_word_alignment_api.as_ref()
-    }
-
-    pub fn video_video_frame_interpolation_api(&self) -> &::apis::VideoVideoFrameInterpolationApi{
-        self.video_video_frame_interpolation_api.as_ref()
     }
 
 }

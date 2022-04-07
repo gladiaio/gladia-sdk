@@ -113,40 +113,6 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Get_Versions_Image_Image_Face_Bluring_Get;
 
-   --  Apply model for the restoration task for a given models
-   procedure Apply_Image_Image_Restoration_Post
-      (Client : in out Client_Type;
-       Image : in Swagger.File_Part_Type;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Req   : Swagger.Clients.Request_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-      Client.Initialize (Req, (1 => Swagger.Clients.APPLICATION_FORM));
-      .Models.Serialize (Req.Stream, "image", Image);
-
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/image/image/restoration/");
-      Client.Call (Swagger.Clients.POST, URI, Req, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Image_Image_Restoration_Post;
-
-   --  Get list of models available for restoration
-   procedure Get_Versions_Image_Image_Restoration_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/image/image/restoration/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Image_Image_Restoration_Get;
-
    --  Apply model for the super_resolution task for a given models
    procedure Apply_Image_Image_Super_Resolution_Post
       (Client : in out Client_Type;
@@ -316,70 +282,6 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end Get_Versions_Text_Text_Autocorrect_Get;
-
-   --  Apply model for the boolean_question_generation task for a given models
-   procedure Apply_Text_Text_Boolean_Question_Generation_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Add_Param ("text", Text);
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/text/text/boolean-question-generation/");
-      Client.Call (Swagger.Clients.POST, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Text_Text_Boolean_Question_Generation_Post;
-
-   --  Get list of models available for boolean_question_generation
-   procedure Get_Versions_Text_Text_Boolean_Question_Generation_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/text/text/boolean-question-generation/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Text_Text_Boolean_Question_Generation_Get;
-
-   --  Apply model for the dependency_tracking task for a given models
-   procedure Apply_Text_Text_Dependency_Tracking_Post
-      (Client : in out Client_Type;
-       Input_String : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Add_Param ("input_string", Input_String);
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/text/text/dependency-tracking/");
-      Client.Call (Swagger.Clients.POST, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Text_Text_Dependency_Tracking_Post;
-
-   --  Get list of models available for dependency_tracking
-   procedure Get_Versions_Text_Text_Dependency_Tracking_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/text/text/dependency-tracking/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Text_Text_Dependency_Tracking_Get;
 
    --  Apply model for the emotion_recognition task for a given models
    procedure Apply_Text_Text_Emotion_Recognition_Post
@@ -769,38 +671,6 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Get_Versions_Text_Text_Programming_Language_Generation_Get;
 
-   --  Apply model for the programming_language_identification task for a given models
-   procedure Apply_Text_Text_Programming_Language_Identification_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Add_Param ("text", Text);
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/text/text/programming-language-identification/");
-      Client.Call (Swagger.Clients.POST, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Text_Text_Programming_Language_Identification_Post;
-
-   --  Get list of models available for programming_language_identification
-   procedure Get_Versions_Text_Text_Programming_Language_Identification_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/text/text/programming-language-identification/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Text_Text_Programming_Language_Identification_Get;
-
    --  Apply model for the question_answering task for a given models
    procedure Apply_Text_Text_Question_Answering_Post
       (Client : in out Client_Type;
@@ -834,38 +704,6 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end Get_Versions_Text_Text_Question_Answering_Get;
-
-   --  Apply model for the sentence_pair_modeling task for a given models
-   procedure Apply_Text_Text_Sentence_Pair_Modeling_Post
-      (Client : in out Client_Type;
-       Sentence : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Add_Param ("sentence", Sentence);
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/text/text/sentence-pair-modeling/");
-      Client.Call (Swagger.Clients.POST, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Text_Text_Sentence_Pair_Modeling_Post;
-
-   --  Get list of models available for sentence_pair_modeling
-   procedure Get_Versions_Text_Text_Sentence_Pair_Modeling_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/text/text/sentence-pair-modeling/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Text_Text_Sentence_Pair_Modeling_Get;
 
    --  Apply model for the sentence_paraphraser task for a given models
    procedure Apply_Text_Text_Sentence_Paraphraser_Post
@@ -965,114 +803,6 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Get_Versions_Text_Text_Similarity_Get;
 
-   --  Apply model for the summarization task for a given models
-   procedure Apply_Text_Text_Summarization_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Source_Language : in Swagger.Nullable_UString;
-       Max_Length : in Swagger.Nullable_Integer;
-       Min_Length : in Swagger.Nullable_Integer;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Add_Param ("text", Text);
-      URI.Add_Param ("source_language", Source_Language);
-      URI.Add_Param ("max_length", Max_Length);
-      URI.Add_Param ("min_length", Min_Length);
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/text/text/summarization/");
-      Client.Call (Swagger.Clients.POST, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Text_Text_Summarization_Post;
-
-   --  Get list of models available for summarization
-   procedure Get_Versions_Text_Text_Summarization_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/text/text/summarization/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Text_Text_Summarization_Get;
-
-   --  Apply model for the translation task for a given models
-   procedure Apply_Text_Text_Translation_Post
-      (Client : in out Client_Type;
-       Input_String : in Swagger.Nullable_UString;
-       Source_Language : in Swagger.Nullable_UString;
-       Target_Language : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Add_Param ("input_string", Input_String);
-      URI.Add_Param ("source_language", Source_Language);
-      URI.Add_Param ("target_language", Target_Language);
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/text/text/translation/");
-      Client.Call (Swagger.Clients.POST, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Text_Text_Translation_Post;
-
-   --  Get list of models available for translation
-   procedure Get_Versions_Text_Text_Translation_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/text/text/translation/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Text_Text_Translation_Get;
-
-   --  Apply model for the transliteration task for a given models
-   procedure Apply_Text_Text_Transliteration_Post
-      (Client : in out Client_Type;
-       Text : in Swagger.Nullable_UString;
-       Language : in Swagger.Nullable_UString;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Add_Param ("text", Text);
-      URI.Add_Param ("language", Language);
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/text/text/transliteration/");
-      Client.Call (Swagger.Clients.POST, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Text_Text_Transliteration_Post;
-
-   --  Get list of models available for transliteration
-   procedure Get_Versions_Text_Text_Transliteration_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/text/text/transliteration/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Text_Text_Transliteration_Get;
-
    --  Apply model for the word_alignment task for a given models
    procedure Apply_Text_Text_Word_Alignment_Post
       (Client : in out Client_Type;
@@ -1106,38 +836,4 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end Get_Versions_Text_Text_Word_Alignment_Get;
-
-   --  Apply model for the frame_interpolation task for a given models
-   procedure Apply_Video_Video_Frame_Interpolation_Post
-      (Client : in out Client_Type;
-       Video : in Swagger.File_Part_Type;
-       Model : in Swagger.Nullable_UString;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Req   : Swagger.Clients.Request_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-      Client.Initialize (Req, (1 => Swagger.Clients.APPLICATION_FORM));
-      .Models.Serialize (Req.Stream, "video", Video);
-
-      URI.Add_Param ("model", Model);
-      URI.Set_Path ("/video/video/frame-interpolation/");
-      Client.Call (Swagger.Clients.POST, URI, Req, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Apply_Video_Video_Frame_Interpolation_Post;
-
-   --  Get list of models available for frame_interpolation
-   procedure Get_Versions_Video_Video_Frame_Interpolation_Get
-      (Client : in out Client_Type;
-       Result : out Swagger.Object) is
-      URI   : Swagger.Clients.URI_Type;
-      Reply : Swagger.Value_Type;
-   begin
-      Client.Set_Accept ((1 => Swagger.Clients.APPLICATION_JSON));
-
-      URI.Set_Path ("/video/video/frame-interpolation/");
-      Client.Call (Swagger.Clients.GET, URI, Reply);
-      .Models.Deserialize (Reply, "", Result);
-   end Get_Versions_Video_Video_Frame_Interpolation_Get;
 end .Clients;

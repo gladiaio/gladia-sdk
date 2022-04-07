@@ -51,8 +51,6 @@ type APIClient struct {
 
 	ImageImageFaceBluringApi *ImageImageFaceBluringApiService
 
-	ImageImageRestorationApi *ImageImageRestorationApiService
-
 	ImageImageSuperResolutionApi *ImageImageSuperResolutionApiService
 
 	ImageImageUncolorizationApi *ImageImageUncolorizationApiService
@@ -62,10 +60,6 @@ type APIClient struct {
 	ImageTextOcrApi *ImageTextOcrApiService
 
 	TextTextAutocorrectApi *TextTextAutocorrectApiService
-
-	TextTextBooleanQuestionGenerationApi *TextTextBooleanQuestionGenerationApiService
-
-	TextTextDependencyTrackingApi *TextTextDependencyTrackingApiService
 
 	TextTextEmotionRecognitionApi *TextTextEmotionRecognitionApiService
 
@@ -91,11 +85,7 @@ type APIClient struct {
 
 	TextTextProgrammingLanguageGenerationApi *TextTextProgrammingLanguageGenerationApiService
 
-	TextTextProgrammingLanguageIdentificationApi *TextTextProgrammingLanguageIdentificationApiService
-
 	TextTextQuestionAnsweringApi *TextTextQuestionAnsweringApiService
-
-	TextTextSentencePairModelingApi *TextTextSentencePairModelingApiService
 
 	TextTextSentenceParaphraserApi *TextTextSentenceParaphraserApiService
 
@@ -103,15 +93,7 @@ type APIClient struct {
 
 	TextTextSimilarityApi *TextTextSimilarityApiService
 
-	TextTextSummarizationApi *TextTextSummarizationApiService
-
-	TextTextTranslationApi *TextTextTranslationApiService
-
-	TextTextTransliterationApi *TextTextTransliterationApiService
-
 	TextTextWordAlignmentApi *TextTextWordAlignmentApiService
-
-	VideoVideoFrameInterpolationApi *VideoVideoFrameInterpolationApiService
 }
 
 type service struct {
@@ -133,14 +115,11 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.ImageImageBackgroundRemovalApi = (*ImageImageBackgroundRemovalApiService)(&c.common)
 	c.ImageImageColorizationApi = (*ImageImageColorizationApiService)(&c.common)
 	c.ImageImageFaceBluringApi = (*ImageImageFaceBluringApiService)(&c.common)
-	c.ImageImageRestorationApi = (*ImageImageRestorationApiService)(&c.common)
 	c.ImageImageSuperResolutionApi = (*ImageImageSuperResolutionApiService)(&c.common)
 	c.ImageImageUncolorizationApi = (*ImageImageUncolorizationApiService)(&c.common)
 	c.ImageTextAsciifyApi = (*ImageTextAsciifyApiService)(&c.common)
 	c.ImageTextOcrApi = (*ImageTextOcrApiService)(&c.common)
 	c.TextTextAutocorrectApi = (*TextTextAutocorrectApiService)(&c.common)
-	c.TextTextBooleanQuestionGenerationApi = (*TextTextBooleanQuestionGenerationApiService)(&c.common)
-	c.TextTextDependencyTrackingApi = (*TextTextDependencyTrackingApiService)(&c.common)
 	c.TextTextEmotionRecognitionApi = (*TextTextEmotionRecognitionApiService)(&c.common)
 	c.TextTextEntityExtractionApi = (*TextTextEntityExtractionApiService)(&c.common)
 	c.TextTextHateSpeechDetectionApi = (*TextTextHateSpeechDetectionApiService)(&c.common)
@@ -153,17 +132,11 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.TextTextNextWordPredictionApi = (*TextTextNextWordPredictionApiService)(&c.common)
 	c.TextTextPluralApi = (*TextTextPluralApiService)(&c.common)
 	c.TextTextProgrammingLanguageGenerationApi = (*TextTextProgrammingLanguageGenerationApiService)(&c.common)
-	c.TextTextProgrammingLanguageIdentificationApi = (*TextTextProgrammingLanguageIdentificationApiService)(&c.common)
 	c.TextTextQuestionAnsweringApi = (*TextTextQuestionAnsweringApiService)(&c.common)
-	c.TextTextSentencePairModelingApi = (*TextTextSentencePairModelingApiService)(&c.common)
 	c.TextTextSentenceParaphraserApi = (*TextTextSentenceParaphraserApiService)(&c.common)
 	c.TextTextSentimentAnalysisApi = (*TextTextSentimentAnalysisApiService)(&c.common)
 	c.TextTextSimilarityApi = (*TextTextSimilarityApiService)(&c.common)
-	c.TextTextSummarizationApi = (*TextTextSummarizationApiService)(&c.common)
-	c.TextTextTranslationApi = (*TextTextTranslationApiService)(&c.common)
-	c.TextTextTransliterationApi = (*TextTextTransliterationApiService)(&c.common)
 	c.TextTextWordAlignmentApi = (*TextTextWordAlignmentApiService)(&c.common)
-	c.VideoVideoFrameInterpolationApi = (*VideoVideoFrameInterpolationApiService)(&c.common)
 
 	return c
 }

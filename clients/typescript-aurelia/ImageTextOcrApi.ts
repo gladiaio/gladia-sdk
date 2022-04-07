@@ -23,7 +23,7 @@ import {
 export interface IApplyImageTextOcrPostParams {
   image: any;
   sourceLanguage?: string;
-  model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr';
+  model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default';
 }
 
 /**

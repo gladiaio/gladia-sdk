@@ -72,8 +72,8 @@ data ApplyTextTextLanguageDetectionPost
 instance HasOptionalParam ApplyTextTextLanguageDetectionPost ParamText where
   applyOptionalParam req (ParamText xs) =
     req `setQuery` toQuery ("text", Just xs)
-instance HasOptionalParam ApplyTextTextLanguageDetectionPost Model12 where
-  applyOptionalParam req (Model12 xs) =
+instance HasOptionalParam ApplyTextTextLanguageDetectionPost Model13 where
+  applyOptionalParam req (Model13 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextLanguageDetectionPost MimeJSON

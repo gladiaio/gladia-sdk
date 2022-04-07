@@ -27,7 +27,7 @@ object ImageImageBackgroundRemovalApi {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def applyImageImageBackgroundRemovalPost(host: String, image: File, model: String = rembg)(implicit modelQuery: QueryParam[String]): Task[Any] = {
+  def applyImageImageBackgroundRemovalPost(host: String, image: File, model: String = xception)(implicit modelQuery: QueryParam[String]): Task[Any] = {
     implicit val returnTypeDecoder: EntityDecoder[Any] = jsonOf[Any]
 
     val path = "/image/image/background-removal/"
@@ -76,7 +76,7 @@ class HttpServiceImageImageBackgroundRemovalApi(service: HttpService) {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def applyImageImageBackgroundRemovalPost(image: File, model: String = rembg)(implicit modelQuery: QueryParam[String]): Task[Any] = {
+  def applyImageImageBackgroundRemovalPost(image: File, model: String = xception)(implicit modelQuery: QueryParam[String]): Task[Any] = {
     implicit val returnTypeDecoder: EntityDecoder[Any] = jsonOf[Any]
 
     val path = "/image/image/background-removal/"

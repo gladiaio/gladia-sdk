@@ -12,13 +12,20 @@ import Alamofire
 
 open class ImageImageSuperResolutionAPI {
     /**
+     * enum for parameter model
+     */
+    public enum Model_applyImageImageSuperResolutionPost: String {
+        case idealoPsnrSmall = "idealo-psnr-small"
+    }
+
+    /**
      Apply model for the super-resolution task for a given models
      
      - parameter image: (form)  
-     - parameter model: (query)  (optional, default to "esrgan")
+     - parameter model: (query)  (optional, default to .idealo-psnr-small)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func applyImageImageSuperResolutionPost(image: URL, model: String? = nil, completion: @escaping ((_ data: Any?,_ error: Error?) -> Void)) {
+    open class func applyImageImageSuperResolutionPost(image: URL, model: Model_applyImageImageSuperResolutionPost? = nil, completion: @escaping ((_ data: Any?,_ error: Error?) -> Void)) {
         applyImageImageSuperResolutionPostWithRequestBuilder(image: image, model: model).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -28,10 +35,10 @@ open class ImageImageSuperResolutionAPI {
      Apply model for the super-resolution task for a given models
      - POST /image/image/super-resolution/
      - parameter image: (form)  
-     - parameter model: (query)  (optional, default to "esrgan")
+     - parameter model: (query)  (optional, default to .idealo-psnr-small)
      - returns: RequestBuilder<Any> 
      */
-    open class func applyImageImageSuperResolutionPostWithRequestBuilder(image: URL, model: String? = nil) -> RequestBuilder<Any> {
+    open class func applyImageImageSuperResolutionPostWithRequestBuilder(image: URL, model: Model_applyImageImageSuperResolutionPost? = nil) -> RequestBuilder<Any> {
         let path = "/image/image/super-resolution/"
         let URLString = OpenAPIClientAPI.basePath + path
         let formParams: [String:Any?] = [
@@ -43,7 +50,7 @@ open class ImageImageSuperResolutionAPI {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-            "model": model
+            "model": model?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<Any>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()

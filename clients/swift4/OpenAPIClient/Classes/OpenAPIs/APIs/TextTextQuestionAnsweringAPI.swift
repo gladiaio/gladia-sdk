@@ -15,11 +15,11 @@ open class TextTextQuestionAnsweringAPI {
      * enum for parameter model
      */
     public enum Model_applyTextTextQuestionAnsweringPost: String {
-        case deepsetBertBaseCasedSquad2 = "deepset_bert-base-cased-squad2"
+        case mrm8488BertTiny5FinetunedSquadv2 = "mrm8488-bert-tiny-5-finetuned-squadv2"
         case mfebAlbertXxlargeV2Squad2 = "mfeb-albert-xxlarge-v2-squad2"
         case deepsetRobertaBaseSquad2 = "deepset-roberta-base-squad2"
-        case mrm8488BertTiny5FinetunedSquadv2 = "mrm8488-bert-tiny-5-finetuned-squadv2"
         case distilbertBaseCasedDistilledSquad = "distilbert-base-cased-distilled-squad"
+        case deepsetBertBaseCasedSquad2 = "deepset_bert-base-cased-squad2"
     }
 
     /**

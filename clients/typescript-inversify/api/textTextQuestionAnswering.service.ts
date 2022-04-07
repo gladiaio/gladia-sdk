@@ -44,9 +44,9 @@ export class TextTextQuestionAnsweringService {
      * @param model 
      
      */
-    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', observe?: 'body', headers?: Headers): Observable<object>;
-    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
-    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', observe: any = 'body', headers: Headers = {}): Observable<any> {
+    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', observe?: 'body', headers?: Headers): Observable<object>;
+    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
+    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', observe: any = 'body', headers: Headers = {}): Observable<any> {
         let queryParameters: string[] = [];
         if (context !== undefined) {
             queryParameters.push("context="+encodeURIComponent(String(context)));

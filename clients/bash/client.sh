@@ -101,8 +101,6 @@ operation_parameters_minimum_occurrences["applyImageImageColorizationPost:::imag
 operation_parameters_minimum_occurrences["applyImageImageColorizationPost:::model"]=0
 operation_parameters_minimum_occurrences["applyImageImageFaceBluringPost:::image"]=1
 operation_parameters_minimum_occurrences["applyImageImageFaceBluringPost:::model"]=0
-operation_parameters_minimum_occurrences["applyImageImageRestorationPost:::image"]=1
-operation_parameters_minimum_occurrences["applyImageImageRestorationPost:::model"]=0
 operation_parameters_minimum_occurrences["applyImageImageSuperResolutionPost:::image"]=1
 operation_parameters_minimum_occurrences["applyImageImageSuperResolutionPost:::model"]=0
 operation_parameters_minimum_occurrences["applyImageImageUncolorizationPost:::image"]=1
@@ -114,10 +112,6 @@ operation_parameters_minimum_occurrences["applyImageTextOcrPost:::source_languag
 operation_parameters_minimum_occurrences["applyImageTextOcrPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextAutocorrectPost:::sentence"]=0
 operation_parameters_minimum_occurrences["applyTextTextAutocorrectPost:::model"]=0
-operation_parameters_minimum_occurrences["applyTextTextBooleanQuestionGenerationPost:::text"]=0
-operation_parameters_minimum_occurrences["applyTextTextBooleanQuestionGenerationPost:::model"]=0
-operation_parameters_minimum_occurrences["applyTextTextDependencyTrackingPost:::input_string"]=0
-operation_parameters_minimum_occurrences["applyTextTextDependencyTrackingPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextEmotionRecognitionPost:::text"]=0
 operation_parameters_minimum_occurrences["applyTextTextEmotionRecognitionPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextEntityExtractionPost:::input_string"]=0
@@ -144,13 +138,9 @@ operation_parameters_minimum_occurrences["applyTextTextPluralPost:::count"]=0
 operation_parameters_minimum_occurrences["applyTextTextPluralPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextProgrammingLanguageGenerationPost:::code_snippet"]=0
 operation_parameters_minimum_occurrences["applyTextTextProgrammingLanguageGenerationPost:::model"]=0
-operation_parameters_minimum_occurrences["applyTextTextProgrammingLanguageIdentificationPost:::text"]=0
-operation_parameters_minimum_occurrences["applyTextTextProgrammingLanguageIdentificationPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextQuestionAnsweringPost:::context"]=0
 operation_parameters_minimum_occurrences["applyTextTextQuestionAnsweringPost:::question"]=0
 operation_parameters_minimum_occurrences["applyTextTextQuestionAnsweringPost:::model"]=0
-operation_parameters_minimum_occurrences["applyTextTextSentencePairModelingPost:::sentence"]=0
-operation_parameters_minimum_occurrences["applyTextTextSentencePairModelingPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextSentenceParaphraserPost:::context"]=0
 operation_parameters_minimum_occurrences["applyTextTextSentenceParaphraserPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextSentimentAnalysisPost:::text"]=0
@@ -158,23 +148,9 @@ operation_parameters_minimum_occurrences["applyTextTextSentimentAnalysisPost:::m
 operation_parameters_minimum_occurrences["applyTextTextSimilarityPost:::sentence_1"]=0
 operation_parameters_minimum_occurrences["applyTextTextSimilarityPost:::sentence_2"]=0
 operation_parameters_minimum_occurrences["applyTextTextSimilarityPost:::model"]=0
-operation_parameters_minimum_occurrences["applyTextTextSummarizationPost:::text"]=0
-operation_parameters_minimum_occurrences["applyTextTextSummarizationPost:::source_language"]=0
-operation_parameters_minimum_occurrences["applyTextTextSummarizationPost:::max_length"]=0
-operation_parameters_minimum_occurrences["applyTextTextSummarizationPost:::min_length"]=0
-operation_parameters_minimum_occurrences["applyTextTextSummarizationPost:::model"]=0
-operation_parameters_minimum_occurrences["applyTextTextTranslationPost:::input_string"]=0
-operation_parameters_minimum_occurrences["applyTextTextTranslationPost:::source_language"]=0
-operation_parameters_minimum_occurrences["applyTextTextTranslationPost:::target_language"]=0
-operation_parameters_minimum_occurrences["applyTextTextTranslationPost:::model"]=0
-operation_parameters_minimum_occurrences["applyTextTextTransliterationPost:::text"]=0
-operation_parameters_minimum_occurrences["applyTextTextTransliterationPost:::language"]=0
-operation_parameters_minimum_occurrences["applyTextTextTransliterationPost:::model"]=0
 operation_parameters_minimum_occurrences["applyTextTextWordAlignmentPost:::input_string_language_1"]=0
 operation_parameters_minimum_occurrences["applyTextTextWordAlignmentPost:::input_string_language_2"]=0
 operation_parameters_minimum_occurrences["applyTextTextWordAlignmentPost:::model"]=0
-operation_parameters_minimum_occurrences["applyVideoVideoFrameInterpolationPost:::video"]=1
-operation_parameters_minimum_occurrences["applyVideoVideoFrameInterpolationPost:::model"]=0
 
 ##
 # This array stores the maximum number of allowed occurrences for parameter
@@ -189,8 +165,6 @@ operation_parameters_maximum_occurrences["applyImageImageColorizationPost:::imag
 operation_parameters_maximum_occurrences["applyImageImageColorizationPost:::model"]=0
 operation_parameters_maximum_occurrences["applyImageImageFaceBluringPost:::image"]=0
 operation_parameters_maximum_occurrences["applyImageImageFaceBluringPost:::model"]=0
-operation_parameters_maximum_occurrences["applyImageImageRestorationPost:::image"]=0
-operation_parameters_maximum_occurrences["applyImageImageRestorationPost:::model"]=0
 operation_parameters_maximum_occurrences["applyImageImageSuperResolutionPost:::image"]=0
 operation_parameters_maximum_occurrences["applyImageImageSuperResolutionPost:::model"]=0
 operation_parameters_maximum_occurrences["applyImageImageUncolorizationPost:::image"]=0
@@ -202,10 +176,6 @@ operation_parameters_maximum_occurrences["applyImageTextOcrPost:::source_languag
 operation_parameters_maximum_occurrences["applyImageTextOcrPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextAutocorrectPost:::sentence"]=0
 operation_parameters_maximum_occurrences["applyTextTextAutocorrectPost:::model"]=0
-operation_parameters_maximum_occurrences["applyTextTextBooleanQuestionGenerationPost:::text"]=0
-operation_parameters_maximum_occurrences["applyTextTextBooleanQuestionGenerationPost:::model"]=0
-operation_parameters_maximum_occurrences["applyTextTextDependencyTrackingPost:::input_string"]=0
-operation_parameters_maximum_occurrences["applyTextTextDependencyTrackingPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextEmotionRecognitionPost:::text"]=0
 operation_parameters_maximum_occurrences["applyTextTextEmotionRecognitionPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextEntityExtractionPost:::input_string"]=0
@@ -232,13 +202,9 @@ operation_parameters_maximum_occurrences["applyTextTextPluralPost:::count"]=0
 operation_parameters_maximum_occurrences["applyTextTextPluralPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextProgrammingLanguageGenerationPost:::code_snippet"]=0
 operation_parameters_maximum_occurrences["applyTextTextProgrammingLanguageGenerationPost:::model"]=0
-operation_parameters_maximum_occurrences["applyTextTextProgrammingLanguageIdentificationPost:::text"]=0
-operation_parameters_maximum_occurrences["applyTextTextProgrammingLanguageIdentificationPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextQuestionAnsweringPost:::context"]=0
 operation_parameters_maximum_occurrences["applyTextTextQuestionAnsweringPost:::question"]=0
 operation_parameters_maximum_occurrences["applyTextTextQuestionAnsweringPost:::model"]=0
-operation_parameters_maximum_occurrences["applyTextTextSentencePairModelingPost:::sentence"]=0
-operation_parameters_maximum_occurrences["applyTextTextSentencePairModelingPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextSentenceParaphraserPost:::context"]=0
 operation_parameters_maximum_occurrences["applyTextTextSentenceParaphraserPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextSentimentAnalysisPost:::text"]=0
@@ -246,23 +212,9 @@ operation_parameters_maximum_occurrences["applyTextTextSentimentAnalysisPost:::m
 operation_parameters_maximum_occurrences["applyTextTextSimilarityPost:::sentence_1"]=0
 operation_parameters_maximum_occurrences["applyTextTextSimilarityPost:::sentence_2"]=0
 operation_parameters_maximum_occurrences["applyTextTextSimilarityPost:::model"]=0
-operation_parameters_maximum_occurrences["applyTextTextSummarizationPost:::text"]=0
-operation_parameters_maximum_occurrences["applyTextTextSummarizationPost:::source_language"]=0
-operation_parameters_maximum_occurrences["applyTextTextSummarizationPost:::max_length"]=0
-operation_parameters_maximum_occurrences["applyTextTextSummarizationPost:::min_length"]=0
-operation_parameters_maximum_occurrences["applyTextTextSummarizationPost:::model"]=0
-operation_parameters_maximum_occurrences["applyTextTextTranslationPost:::input_string"]=0
-operation_parameters_maximum_occurrences["applyTextTextTranslationPost:::source_language"]=0
-operation_parameters_maximum_occurrences["applyTextTextTranslationPost:::target_language"]=0
-operation_parameters_maximum_occurrences["applyTextTextTranslationPost:::model"]=0
-operation_parameters_maximum_occurrences["applyTextTextTransliterationPost:::text"]=0
-operation_parameters_maximum_occurrences["applyTextTextTransliterationPost:::language"]=0
-operation_parameters_maximum_occurrences["applyTextTextTransliterationPost:::model"]=0
 operation_parameters_maximum_occurrences["applyTextTextWordAlignmentPost:::input_string_language_1"]=0
 operation_parameters_maximum_occurrences["applyTextTextWordAlignmentPost:::input_string_language_2"]=0
 operation_parameters_maximum_occurrences["applyTextTextWordAlignmentPost:::model"]=0
-operation_parameters_maximum_occurrences["applyVideoVideoFrameInterpolationPost:::video"]=0
-operation_parameters_maximum_occurrences["applyVideoVideoFrameInterpolationPost:::model"]=0
 
 ##
 # The type of collection for specifying multiple values for parameter:
@@ -274,8 +226,6 @@ operation_parameters_collection_type["applyImageImageColorizationPost:::image"]=
 operation_parameters_collection_type["applyImageImageColorizationPost:::model"]=""
 operation_parameters_collection_type["applyImageImageFaceBluringPost:::image"]=""
 operation_parameters_collection_type["applyImageImageFaceBluringPost:::model"]=""
-operation_parameters_collection_type["applyImageImageRestorationPost:::image"]=""
-operation_parameters_collection_type["applyImageImageRestorationPost:::model"]=""
 operation_parameters_collection_type["applyImageImageSuperResolutionPost:::image"]=""
 operation_parameters_collection_type["applyImageImageSuperResolutionPost:::model"]=""
 operation_parameters_collection_type["applyImageImageUncolorizationPost:::image"]=""
@@ -287,10 +237,6 @@ operation_parameters_collection_type["applyImageTextOcrPost:::source_language"]=
 operation_parameters_collection_type["applyImageTextOcrPost:::model"]=""
 operation_parameters_collection_type["applyTextTextAutocorrectPost:::sentence"]=""
 operation_parameters_collection_type["applyTextTextAutocorrectPost:::model"]=""
-operation_parameters_collection_type["applyTextTextBooleanQuestionGenerationPost:::text"]=""
-operation_parameters_collection_type["applyTextTextBooleanQuestionGenerationPost:::model"]=""
-operation_parameters_collection_type["applyTextTextDependencyTrackingPost:::input_string"]=""
-operation_parameters_collection_type["applyTextTextDependencyTrackingPost:::model"]=""
 operation_parameters_collection_type["applyTextTextEmotionRecognitionPost:::text"]=""
 operation_parameters_collection_type["applyTextTextEmotionRecognitionPost:::model"]=""
 operation_parameters_collection_type["applyTextTextEntityExtractionPost:::input_string"]=""
@@ -317,13 +263,9 @@ operation_parameters_collection_type["applyTextTextPluralPost:::count"]=""
 operation_parameters_collection_type["applyTextTextPluralPost:::model"]=""
 operation_parameters_collection_type["applyTextTextProgrammingLanguageGenerationPost:::code_snippet"]=""
 operation_parameters_collection_type["applyTextTextProgrammingLanguageGenerationPost:::model"]=""
-operation_parameters_collection_type["applyTextTextProgrammingLanguageIdentificationPost:::text"]=""
-operation_parameters_collection_type["applyTextTextProgrammingLanguageIdentificationPost:::model"]=""
 operation_parameters_collection_type["applyTextTextQuestionAnsweringPost:::context"]=""
 operation_parameters_collection_type["applyTextTextQuestionAnsweringPost:::question"]=""
 operation_parameters_collection_type["applyTextTextQuestionAnsweringPost:::model"]=""
-operation_parameters_collection_type["applyTextTextSentencePairModelingPost:::sentence"]=""
-operation_parameters_collection_type["applyTextTextSentencePairModelingPost:::model"]=""
 operation_parameters_collection_type["applyTextTextSentenceParaphraserPost:::context"]=""
 operation_parameters_collection_type["applyTextTextSentenceParaphraserPost:::model"]=""
 operation_parameters_collection_type["applyTextTextSentimentAnalysisPost:::text"]=""
@@ -331,23 +273,9 @@ operation_parameters_collection_type["applyTextTextSentimentAnalysisPost:::model
 operation_parameters_collection_type["applyTextTextSimilarityPost:::sentence_1"]=""
 operation_parameters_collection_type["applyTextTextSimilarityPost:::sentence_2"]=""
 operation_parameters_collection_type["applyTextTextSimilarityPost:::model"]=""
-operation_parameters_collection_type["applyTextTextSummarizationPost:::text"]=""
-operation_parameters_collection_type["applyTextTextSummarizationPost:::source_language"]=""
-operation_parameters_collection_type["applyTextTextSummarizationPost:::max_length"]=""
-operation_parameters_collection_type["applyTextTextSummarizationPost:::min_length"]=""
-operation_parameters_collection_type["applyTextTextSummarizationPost:::model"]=""
-operation_parameters_collection_type["applyTextTextTranslationPost:::input_string"]=""
-operation_parameters_collection_type["applyTextTextTranslationPost:::source_language"]=""
-operation_parameters_collection_type["applyTextTextTranslationPost:::target_language"]=""
-operation_parameters_collection_type["applyTextTextTranslationPost:::model"]=""
-operation_parameters_collection_type["applyTextTextTransliterationPost:::text"]=""
-operation_parameters_collection_type["applyTextTextTransliterationPost:::language"]=""
-operation_parameters_collection_type["applyTextTextTransliterationPost:::model"]=""
 operation_parameters_collection_type["applyTextTextWordAlignmentPost:::input_string_language_1"]=""
 operation_parameters_collection_type["applyTextTextWordAlignmentPost:::input_string_language_2"]=""
 operation_parameters_collection_type["applyTextTextWordAlignmentPost:::model"]=""
-operation_parameters_collection_type["applyVideoVideoFrameInterpolationPost:::video"]=""
-operation_parameters_collection_type["applyVideoVideoFrameInterpolationPost:::model"]=""
 
 
 ##
@@ -727,13 +655,6 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
-    echo -e "${BOLD}${WHITE}[imageImageRestoration]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyImageImageRestorationPost${OFF};Apply model for the restoration task for a given models
-  ${CYAN}getVersionsImageImageRestorationGet${OFF};Get list of models available for restoration
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
     echo -e "${BOLD}${WHITE}[imageImageSuperResolution]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}applyImageImageSuperResolutionPost${OFF};Apply model for the super-resolution task for a given models
@@ -766,20 +687,6 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}applyTextTextAutocorrectPost${OFF};Apply model for the autocorrect task for a given models
   ${CYAN}getVersionsTextTextAutocorrectGet${OFF};Get list of models available for autocorrect
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[textTextBooleanQuestionGeneration]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyTextTextBooleanQuestionGenerationPost${OFF};Apply model for the boolean-question-generation task for a given models
-  ${CYAN}getVersionsTextTextBooleanQuestionGenerationGet${OFF};Get list of models available for boolean-question-generation
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[textTextDependencyTracking]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyTextTextDependencyTrackingPost${OFF};Apply model for the dependency-tracking task for a given models
-  ${CYAN}getVersionsTextTextDependencyTrackingGet${OFF};Get list of models available for dependency-tracking
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -867,24 +774,10 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
-    echo -e "${BOLD}${WHITE}[textTextProgrammingLanguageIdentification]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyTextTextProgrammingLanguageIdentificationPost${OFF};Apply model for the programming-language-identification task for a given models
-  ${CYAN}getVersionsTextTextProgrammingLanguageIdentificationGet${OFF};Get list of models available for programming-language-identification
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
     echo -e "${BOLD}${WHITE}[textTextQuestionAnswering]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}applyTextTextQuestionAnsweringPost${OFF};Apply model for the question-answering task for a given models
   ${CYAN}getVersionsTextTextQuestionAnsweringGet${OFF};Get list of models available for question-answering
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[textTextSentencePairModeling]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyTextTextSentencePairModelingPost${OFF};Apply model for the sentence-pair-modeling task for a given models
-  ${CYAN}getVersionsTextTextSentencePairModelingGet${OFF};Get list of models available for sentence-pair-modeling
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -909,38 +802,10 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
-    echo -e "${BOLD}${WHITE}[textTextSummarization]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyTextTextSummarizationPost${OFF};Apply model for the summarization task for a given models
-  ${CYAN}getVersionsTextTextSummarizationGet${OFF};Get list of models available for summarization
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[textTextTranslation]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyTextTextTranslationPost${OFF};Apply model for the translation task for a given models
-  ${CYAN}getVersionsTextTextTranslationGet${OFF};Get list of models available for translation
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[textTextTransliteration]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyTextTextTransliterationPost${OFF};Apply model for the transliteration task for a given models
-  ${CYAN}getVersionsTextTextTransliterationGet${OFF};Get list of models available for transliteration
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
     echo -e "${BOLD}${WHITE}[textTextWordAlignment]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}applyTextTextWordAlignmentPost${OFF};Apply model for the word-alignment task for a given models
   ${CYAN}getVersionsTextTextWordAlignmentGet${OFF};Get list of models available for word-alignment
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[videoVideoFrameInterpolation]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}applyVideoVideoFrameInterpolationPost${OFF};Apply model for the frame-interpolation task for a given models
-  ${CYAN}getVersionsVideoVideoFrameInterpolationGet${OFF};Get list of models available for frame-interpolation
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1004,7 +869,7 @@ print_applyImageImageBackgroundRemovalPost_help() {
     echo -e "${BOLD}${WHITE}applyImageImageBackgroundRemovalPost - Apply model for the background-removal task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: rembg)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
+    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: xception)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1095,39 +960,6 @@ print_getVersionsImageImageFaceBluringGet_help() {
 }
 ##############################################################################
 #
-# Print help for applyImageImageRestorationPost operation
-#
-##############################################################################
-print_applyImageImageRestorationPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyImageImageRestorationPost - Apply model for the restoration task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: bringing-old-photos-back-to-life)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsImageImageRestorationGet operation
-#
-##############################################################################
-print_getVersionsImageImageRestorationGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsImageImageRestorationGet - Get list of models available for restoration${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for applyImageImageSuperResolutionPost operation
 #
 ##############################################################################
@@ -1136,7 +968,7 @@ print_applyImageImageSuperResolutionPost_help() {
     echo -e "${BOLD}${WHITE}applyImageImageSuperResolutionPost - Apply model for the super-resolution task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: esrgan)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
+    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: idealo-psnr-small)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1289,76 +1121,6 @@ print_applyTextTextAutocorrectPost_help() {
 print_getVersionsTextTextAutocorrectGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getVersionsTextTextAutocorrectGet - Get list of models available for autocorrect${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for applyTextTextBooleanQuestionGenerationPost operation
-#
-##############################################################################
-print_applyTextTextBooleanQuestionGenerationPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyTextTextBooleanQuestionGenerationPost - Apply model for the boolean-question-generation task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}text${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: I lSachin Ramesh Tendulkar is a former international cricketer from India and a former captain of the Indian national team. He is widely regarded as one of the greatest batsmen in the history of cricket. He is the highest run scorer of all time in International cricket.)${OFF} - ${YELLOW} Specify as: text=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: questgen)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsTextTextBooleanQuestionGenerationGet operation
-#
-##############################################################################
-print_getVersionsTextTextBooleanQuestionGenerationGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsTextTextBooleanQuestionGenerationGet - Get list of models available for boolean-question-generation${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for applyTextTextDependencyTrackingPost operation
-#
-##############################################################################
-print_applyTextTextDependencyTrackingPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyTextTextDependencyTrackingPost - Apply model for the dependency-tracking task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}input_string${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: Text to analyzed)${OFF} - ${YELLOW} Specify as: input_string=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: LAL-Parser)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsTextTextDependencyTrackingGet operation
-#
-##############################################################################
-print_getVersionsTextTextDependencyTrackingGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsTextTextDependencyTrackingGet - Get list of models available for dependency-tracking${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1791,41 +1553,6 @@ print_getVersionsTextTextProgrammingLanguageGenerationGet_help() {
 }
 ##############################################################################
 #
-# Print help for applyTextTextProgrammingLanguageIdentificationPost operation
-#
-##############################################################################
-print_applyTextTextProgrammingLanguageIdentificationPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyTextTextProgrammingLanguageIdentificationPost - Apply model for the programming-language-identification task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}text${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: def is_palendrome(s):)${OFF} - ${YELLOW} Specify as: text=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: aliostad)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsTextTextProgrammingLanguageIdentificationGet operation
-#
-##############################################################################
-print_getVersionsTextTextProgrammingLanguageIdentificationGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsTextTextProgrammingLanguageIdentificationGet - Get list of models available for programming-language-identification${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for applyTextTextQuestionAnsweringPost operation
 #
 ##############################################################################
@@ -1855,41 +1582,6 @@ print_applyTextTextQuestionAnsweringPost_help() {
 print_getVersionsTextTextQuestionAnsweringGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getVersionsTextTextQuestionAnsweringGet - Get list of models available for question-answering${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for applyTextTextSentencePairModelingPost operation
-#
-##############################################################################
-print_applyTextTextSentencePairModelingPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyTextTextSentencePairModelingPost - Apply model for the sentence-pair-modeling task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}sentence${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: Once, a group of frogs was roaming around the forest in search of water.)${OFF} - ${YELLOW} Specify as: sentence=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: UKPLab-all-MiniLM-L6-v2)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsTextTextSentencePairModelingGet operation
-#
-##############################################################################
-print_getVersionsTextTextSentencePairModelingGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsTextTextSentencePairModelingGet - Get list of models available for sentence-pair-modeling${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2005,123 +1697,6 @@ print_getVersionsTextTextSimilarityGet_help() {
 }
 ##############################################################################
 #
-# Print help for applyTextTextSummarizationPost operation
-#
-##############################################################################
-print_applyTextTextSummarizationPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyTextTextSummarizationPost - Apply model for the summarization task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}text${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: The Crown is a historical drama streaming television series about the reign of Queen Elizabeth II, created and principally written by Peter Morgan, and produced by Left Bank Pictures and Sony Pictures Television for Netflix. Morgan developed it from his drama film The Queen (2006) and especially his stage play The Audience (2013). The first season covers the period from Elizabeth&#39;s marriage to Philip, Duke of Edinburgh in 1947 to the disintegration of her sister Princess Margaret&#39;s engagement to Group Captain Peter Townsend in 1955. The second season covers the period from the Suez Crisis in 1956 to the retirement of Prime Minister Harold Macmillan in 1963 and the birth of Prince Edward in 1964. The third season spans 1964 to 1977, includes Harold Wilson&#39;s two periods as prime minister, and introduces Camilla Shand. The fourth season spans 1979 to the early 1990s and includes Margaret Thatcher&#39;s tenure as prime minister and Prince Charles&#39;s marriage to Lady Diana Spencer. The fifth and sixth seasons, which will close the series, will cover the Queen&#39;s reign into the 21st century. For each of the two-season increments, new actors fill the roles to account for the ageing process in the periods of time portrayed. Claire Foy portrays the Queen in the first two seasons, alongside Matt Smith as Prince Philip and Vanessa Kirby as Princess Margaret. For the third and fourth seasons, Olivia Colman takes over as the Queen, Tobias Menzies as Prince Philip, and Helena Bonham Carter as Princess Margaret. Also added to the cast in season 3 is Josh O&#39;Connor as Prince Charles. In the fourth season, new cast members include Emma Corrin as Lady Diana Spencer and Gillian Anderson as Margaret Thatcher. Imelda Staunton, Jonathan Pryce, and Lesley Manville will succeed Colman, Menzies, and Bonham Carter, respectively, for the final two seasons, while Elizabeth Debicki and Dominic West are expected to assume the role of Princess Diana and Prince Charles, respectively. Filming takes place at Elstree Studios in Borehamwood, Hertfordshire, with location shooting throughout the United Kingdom and internationally. The first season was released by Netflix on 4 November 2016, the second on 8 December 2017, the third on 17 November 2019, and the fourth on 15 November 2020. The fifth season is anticipated in 2022. As of 2020, the estimated production budget of The Crown has been reported to be $260 million, making it one of the most expensive television series in history.[4] The Crown was praised by critics for its acting, directing, writing, cinematography, and production values, although its historical inaccuracies have received some criticism, particularly within the fourth season. Nonetheless, it received accolades at the 23rd Screen Actors Guild Awards, Foy won Best Actress in the lead role and Best Actor for John Lithgow as Winston Churchill, and has secured a total of sixty three nominations for its first four seasons at the Primetime Emmy Awards, including four for Outstanding Drama Series.[5] The series has also twice won the Golden Globe Award for Best Television Series - Drama, at the 74th and 78th ceremonies, with additional acting wins for Foy, Colman, Corrin, O&#39;Connor and Anderson.[6] )${OFF} - ${YELLOW} Specify as: text=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}source_language${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: en)${OFF} - ${YELLOW} Specify as: source_language=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}max_length${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 512)${OFF} - ${YELLOW} Specify as: max_length=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}min_length${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 40)${OFF} - ${YELLOW} Specify as: min_length=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: distilbart-cnn-12-6)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsTextTextSummarizationGet operation
-#
-##############################################################################
-print_getVersionsTextTextSummarizationGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsTextTextSummarizationGet - Get list of models available for summarization${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for applyTextTextTranslationPost operation
-#
-##############################################################################
-print_applyTextTextTranslationPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyTextTextTranslationPost - Apply model for the translation task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}input_string${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: Text to translate)${OFF} - ${YELLOW} Specify as: input_string=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}source_language${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: en)${OFF} - ${YELLOW} Specify as: source_language=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}target_language${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: fr)${OFF} - ${YELLOW} Specify as: target_language=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: Helsinki-NLP)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsTextTextTranslationGet operation
-#
-##############################################################################
-print_getVersionsTextTextTranslationGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsTextTextTranslationGet - Get list of models available for translation${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for applyTextTextTransliterationPost operation
-#
-##############################################################################
-print_applyTextTextTransliterationPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyTextTextTransliterationPost - Apply model for the transliteration task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}text${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: Лорем ипсум долор сит амет)${OFF} - ${YELLOW} Specify as: text=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}language${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: ru)${OFF} - ${YELLOW} Specify as: language=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: transliterate)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsTextTextTransliterationGet operation
-#
-##############################################################################
-print_getVersionsTextTextTransliterationGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsTextTextTransliterationGet - Get list of models available for transliteration${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for applyTextTextWordAlignmentPost operation
 #
 ##############################################################################
@@ -2151,39 +1726,6 @@ print_applyTextTextWordAlignmentPost_help() {
 print_getVersionsTextTextWordAlignmentGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getVersionsTextTextWordAlignmentGet - Get list of models available for word-alignment${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for applyVideoVideoFrameInterpolationPost operation
-#
-##############################################################################
-print_applyVideoVideoFrameInterpolationPost_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}applyVideoVideoFrameInterpolationPost - Apply model for the frame-interpolation task for a given models${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}model${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: deep-animation-video-interpolation-in-the-wild)${OFF} - ${YELLOW} Specify as: model=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Successful Response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=422
-    echo -e "${result_color_table[${code:0:1}]}  422;Validation Error${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getVersionsVideoVideoFrameInterpolationGet operation
-#
-##############################################################################
-print_getVersionsVideoVideoFrameInterpolationGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getVersionsVideoVideoFrameInterpolationGet - Get list of models available for frame-interpolation${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2387,78 +1929,6 @@ call_getVersionsImageImageFaceBluringGet() {
     local path
 
     if ! path=$(build_request_path "/image/image/face-bluring/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call applyImageImageRestorationPost operation
-#
-##############################################################################
-call_applyImageImageRestorationPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(model)
-    local path
-
-    if ! path=$(build_request_path "/image/image/restoration/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsImageImageRestorationGet operation
-#
-##############################################################################
-call_getVersionsImageImageRestorationGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/image/image/restoration/" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2819,150 +2289,6 @@ call_getVersionsTextTextAutocorrectGet() {
     local path
 
     if ! path=$(build_request_path "/text/text/autocorrect/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call applyTextTextBooleanQuestionGenerationPost operation
-#
-##############################################################################
-call_applyTextTextBooleanQuestionGenerationPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(text model)
-    local path
-
-    if ! path=$(build_request_path "/text/text/boolean-question-generation/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsTextTextBooleanQuestionGenerationGet operation
-#
-##############################################################################
-call_getVersionsTextTextBooleanQuestionGenerationGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/text/text/boolean-question-generation/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call applyTextTextDependencyTrackingPost operation
-#
-##############################################################################
-call_applyTextTextDependencyTrackingPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(input_string model)
-    local path
-
-    if ! path=$(build_request_path "/text/text/dependency-tracking/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsTextTextDependencyTrackingGet operation
-#
-##############################################################################
-call_getVersionsTextTextDependencyTrackingGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/text/text/dependency-tracking/" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3850,78 +3176,6 @@ call_getVersionsTextTextProgrammingLanguageGenerationGet() {
 
 ##############################################################################
 #
-# Call applyTextTextProgrammingLanguageIdentificationPost operation
-#
-##############################################################################
-call_applyTextTextProgrammingLanguageIdentificationPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(text model)
-    local path
-
-    if ! path=$(build_request_path "/text/text/programming-language-identification/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsTextTextProgrammingLanguageIdentificationGet operation
-#
-##############################################################################
-call_getVersionsTextTextProgrammingLanguageIdentificationGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/text/text/programming-language-identification/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call applyTextTextQuestionAnsweringPost operation
 #
 ##############################################################################
@@ -3971,78 +3225,6 @@ call_getVersionsTextTextQuestionAnsweringGet() {
     local path
 
     if ! path=$(build_request_path "/text/text/question-answering/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call applyTextTextSentencePairModelingPost operation
-#
-##############################################################################
-call_applyTextTextSentencePairModelingPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(sentence model)
-    local path
-
-    if ! path=$(build_request_path "/text/text/sentence-pair-modeling/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsTextTextSentencePairModelingGet operation
-#
-##############################################################################
-call_getVersionsTextTextSentencePairModelingGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/text/text/sentence-pair-modeling/" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -4282,222 +3464,6 @@ call_getVersionsTextTextSimilarityGet() {
 
 ##############################################################################
 #
-# Call applyTextTextSummarizationPost operation
-#
-##############################################################################
-call_applyTextTextSummarizationPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(text source_language max_length min_length model)
-    local path
-
-    if ! path=$(build_request_path "/text/text/summarization/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsTextTextSummarizationGet operation
-#
-##############################################################################
-call_getVersionsTextTextSummarizationGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/text/text/summarization/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call applyTextTextTranslationPost operation
-#
-##############################################################################
-call_applyTextTextTranslationPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(input_string source_language target_language model)
-    local path
-
-    if ! path=$(build_request_path "/text/text/translation/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsTextTextTranslationGet operation
-#
-##############################################################################
-call_getVersionsTextTextTranslationGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/text/text/translation/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call applyTextTextTransliterationPost operation
-#
-##############################################################################
-call_applyTextTextTransliterationPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(text language model)
-    local path
-
-    if ! path=$(build_request_path "/text/text/transliteration/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsTextTextTransliterationGet operation
-#
-##############################################################################
-call_getVersionsTextTextTransliterationGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/text/text/transliteration/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call applyTextTextWordAlignmentPost operation
 #
 ##############################################################################
@@ -4547,78 +3513,6 @@ call_getVersionsTextTextWordAlignmentGet() {
     local path
 
     if ! path=$(build_request_path "/text/text/word-alignment/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call applyVideoVideoFrameInterpolationPost operation
-#
-##############################################################################
-call_applyVideoVideoFrameInterpolationPost() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(model)
-    local path
-
-    if ! path=$(build_request_path "/video/video/frame-interpolation/" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="POST"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getVersionsVideoVideoFrameInterpolationGet operation
-#
-##############################################################################
-call_getVersionsVideoVideoFrameInterpolationGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=()
-    local path
-
-    if ! path=$(build_request_path "/video/video/frame-interpolation/" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -4755,12 +3649,6 @@ case $key in
     getVersionsImageImageFaceBluringGet)
     operation="getVersionsImageImageFaceBluringGet"
     ;;
-    applyImageImageRestorationPost)
-    operation="applyImageImageRestorationPost"
-    ;;
-    getVersionsImageImageRestorationGet)
-    operation="getVersionsImageImageRestorationGet"
-    ;;
     applyImageImageSuperResolutionPost)
     operation="applyImageImageSuperResolutionPost"
     ;;
@@ -4790,18 +3678,6 @@ case $key in
     ;;
     getVersionsTextTextAutocorrectGet)
     operation="getVersionsTextTextAutocorrectGet"
-    ;;
-    applyTextTextBooleanQuestionGenerationPost)
-    operation="applyTextTextBooleanQuestionGenerationPost"
-    ;;
-    getVersionsTextTextBooleanQuestionGenerationGet)
-    operation="getVersionsTextTextBooleanQuestionGenerationGet"
-    ;;
-    applyTextTextDependencyTrackingPost)
-    operation="applyTextTextDependencyTrackingPost"
-    ;;
-    getVersionsTextTextDependencyTrackingGet)
-    operation="getVersionsTextTextDependencyTrackingGet"
     ;;
     applyTextTextEmotionRecognitionPost)
     operation="applyTextTextEmotionRecognitionPost"
@@ -4875,23 +3751,11 @@ case $key in
     getVersionsTextTextProgrammingLanguageGenerationGet)
     operation="getVersionsTextTextProgrammingLanguageGenerationGet"
     ;;
-    applyTextTextProgrammingLanguageIdentificationPost)
-    operation="applyTextTextProgrammingLanguageIdentificationPost"
-    ;;
-    getVersionsTextTextProgrammingLanguageIdentificationGet)
-    operation="getVersionsTextTextProgrammingLanguageIdentificationGet"
-    ;;
     applyTextTextQuestionAnsweringPost)
     operation="applyTextTextQuestionAnsweringPost"
     ;;
     getVersionsTextTextQuestionAnsweringGet)
     operation="getVersionsTextTextQuestionAnsweringGet"
-    ;;
-    applyTextTextSentencePairModelingPost)
-    operation="applyTextTextSentencePairModelingPost"
-    ;;
-    getVersionsTextTextSentencePairModelingGet)
-    operation="getVersionsTextTextSentencePairModelingGet"
     ;;
     applyTextTextSentenceParaphraserPost)
     operation="applyTextTextSentenceParaphraserPost"
@@ -4911,35 +3775,11 @@ case $key in
     getVersionsTextTextSimilarityGet)
     operation="getVersionsTextTextSimilarityGet"
     ;;
-    applyTextTextSummarizationPost)
-    operation="applyTextTextSummarizationPost"
-    ;;
-    getVersionsTextTextSummarizationGet)
-    operation="getVersionsTextTextSummarizationGet"
-    ;;
-    applyTextTextTranslationPost)
-    operation="applyTextTextTranslationPost"
-    ;;
-    getVersionsTextTextTranslationGet)
-    operation="getVersionsTextTextTranslationGet"
-    ;;
-    applyTextTextTransliterationPost)
-    operation="applyTextTextTransliterationPost"
-    ;;
-    getVersionsTextTextTransliterationGet)
-    operation="getVersionsTextTextTransliterationGet"
-    ;;
     applyTextTextWordAlignmentPost)
     operation="applyTextTextWordAlignmentPost"
     ;;
     getVersionsTextTextWordAlignmentGet)
     operation="getVersionsTextTextWordAlignmentGet"
-    ;;
-    applyVideoVideoFrameInterpolationPost)
-    operation="applyVideoVideoFrameInterpolationPost"
-    ;;
-    getVersionsVideoVideoFrameInterpolationGet)
-    operation="getVersionsVideoVideoFrameInterpolationGet"
     ;;
     *==*)
     # Parse body arguments and convert them into top level
@@ -5036,12 +3876,6 @@ case $operation in
     getVersionsImageImageFaceBluringGet)
     call_getVersionsImageImageFaceBluringGet
     ;;
-    applyImageImageRestorationPost)
-    call_applyImageImageRestorationPost
-    ;;
-    getVersionsImageImageRestorationGet)
-    call_getVersionsImageImageRestorationGet
-    ;;
     applyImageImageSuperResolutionPost)
     call_applyImageImageSuperResolutionPost
     ;;
@@ -5071,18 +3905,6 @@ case $operation in
     ;;
     getVersionsTextTextAutocorrectGet)
     call_getVersionsTextTextAutocorrectGet
-    ;;
-    applyTextTextBooleanQuestionGenerationPost)
-    call_applyTextTextBooleanQuestionGenerationPost
-    ;;
-    getVersionsTextTextBooleanQuestionGenerationGet)
-    call_getVersionsTextTextBooleanQuestionGenerationGet
-    ;;
-    applyTextTextDependencyTrackingPost)
-    call_applyTextTextDependencyTrackingPost
-    ;;
-    getVersionsTextTextDependencyTrackingGet)
-    call_getVersionsTextTextDependencyTrackingGet
     ;;
     applyTextTextEmotionRecognitionPost)
     call_applyTextTextEmotionRecognitionPost
@@ -5156,23 +3978,11 @@ case $operation in
     getVersionsTextTextProgrammingLanguageGenerationGet)
     call_getVersionsTextTextProgrammingLanguageGenerationGet
     ;;
-    applyTextTextProgrammingLanguageIdentificationPost)
-    call_applyTextTextProgrammingLanguageIdentificationPost
-    ;;
-    getVersionsTextTextProgrammingLanguageIdentificationGet)
-    call_getVersionsTextTextProgrammingLanguageIdentificationGet
-    ;;
     applyTextTextQuestionAnsweringPost)
     call_applyTextTextQuestionAnsweringPost
     ;;
     getVersionsTextTextQuestionAnsweringGet)
     call_getVersionsTextTextQuestionAnsweringGet
-    ;;
-    applyTextTextSentencePairModelingPost)
-    call_applyTextTextSentencePairModelingPost
-    ;;
-    getVersionsTextTextSentencePairModelingGet)
-    call_getVersionsTextTextSentencePairModelingGet
     ;;
     applyTextTextSentenceParaphraserPost)
     call_applyTextTextSentenceParaphraserPost
@@ -5192,35 +4002,11 @@ case $operation in
     getVersionsTextTextSimilarityGet)
     call_getVersionsTextTextSimilarityGet
     ;;
-    applyTextTextSummarizationPost)
-    call_applyTextTextSummarizationPost
-    ;;
-    getVersionsTextTextSummarizationGet)
-    call_getVersionsTextTextSummarizationGet
-    ;;
-    applyTextTextTranslationPost)
-    call_applyTextTextTranslationPost
-    ;;
-    getVersionsTextTextTranslationGet)
-    call_getVersionsTextTextTranslationGet
-    ;;
-    applyTextTextTransliterationPost)
-    call_applyTextTextTransliterationPost
-    ;;
-    getVersionsTextTextTransliterationGet)
-    call_getVersionsTextTextTransliterationGet
-    ;;
     applyTextTextWordAlignmentPost)
     call_applyTextTextWordAlignmentPost
     ;;
     getVersionsTextTextWordAlignmentGet)
     call_getVersionsTextTextWordAlignmentGet
-    ;;
-    applyVideoVideoFrameInterpolationPost)
-    call_applyVideoVideoFrameInterpolationPost
-    ;;
-    getVersionsVideoVideoFrameInterpolationGet)
-    call_getVersionsVideoVideoFrameInterpolationGet
     ;;
     *)
     ERROR_MSG="ERROR: Unknown operation: $operation"

@@ -15,14 +15,11 @@ export { AuthStorage } from './AuthStorage';
 export { ImageImageBackgroundRemovalApi } from './ImageImageBackgroundRemovalApi';
 export { ImageImageColorizationApi } from './ImageImageColorizationApi';
 export { ImageImageFaceBluringApi } from './ImageImageFaceBluringApi';
-export { ImageImageRestorationApi } from './ImageImageRestorationApi';
 export { ImageImageSuperResolutionApi } from './ImageImageSuperResolutionApi';
 export { ImageImageUncolorizationApi } from './ImageImageUncolorizationApi';
 export { ImageTextAsciifyApi } from './ImageTextAsciifyApi';
 export { ImageTextOcrApi } from './ImageTextOcrApi';
 export { TextTextAutocorrectApi } from './TextTextAutocorrectApi';
-export { TextTextBooleanQuestionGenerationApi } from './TextTextBooleanQuestionGenerationApi';
-export { TextTextDependencyTrackingApi } from './TextTextDependencyTrackingApi';
 export { TextTextEmotionRecognitionApi } from './TextTextEmotionRecognitionApi';
 export { TextTextEntityExtractionApi } from './TextTextEntityExtractionApi';
 export { TextTextHateSpeechDetectionApi } from './TextTextHateSpeechDetectionApi';
@@ -35,27 +32,19 @@ export { TextTextNextSentencePredictionApi } from './TextTextNextSentencePredict
 export { TextTextNextWordPredictionApi } from './TextTextNextWordPredictionApi';
 export { TextTextPluralApi } from './TextTextPluralApi';
 export { TextTextProgrammingLanguageGenerationApi } from './TextTextProgrammingLanguageGenerationApi';
-export { TextTextProgrammingLanguageIdentificationApi } from './TextTextProgrammingLanguageIdentificationApi';
 export { TextTextQuestionAnsweringApi } from './TextTextQuestionAnsweringApi';
-export { TextTextSentencePairModelingApi } from './TextTextSentencePairModelingApi';
 export { TextTextSentenceParaphraserApi } from './TextTextSentenceParaphraserApi';
 export { TextTextSentimentAnalysisApi } from './TextTextSentimentAnalysisApi';
 export { TextTextSimilarityApi } from './TextTextSimilarityApi';
-export { TextTextSummarizationApi } from './TextTextSummarizationApi';
-export { TextTextTranslationApi } from './TextTextTranslationApi';
-export { TextTextTransliterationApi } from './TextTextTransliterationApi';
 export { TextTextWordAlignmentApi } from './TextTextWordAlignmentApi';
-export { VideoVideoFrameInterpolationApi } from './VideoVideoFrameInterpolationApi';
 export {
   BodyApplyImageImageBackgroundRemovalPost,
   BodyApplyImageImageColorizationPost,
   BodyApplyImageImageFaceBluringPost,
-  BodyApplyImageImageRestorationPost,
   BodyApplyImageImageSuperResolutionPost,
   BodyApplyImageImageUncolorizationPost,
   BodyApplyImageTextAsciifyPost,
   BodyApplyImageTextOcrPost,
-  BodyApplyVideoVideoFrameInterpolationPost,
   HTTPValidationError,
   ValidationError,
 } from './models';

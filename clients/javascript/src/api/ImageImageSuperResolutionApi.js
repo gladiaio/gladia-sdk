@@ -46,7 +46,7 @@ export default class ImageImageSuperResolutionApi {
      * Apply model for the super-resolution task for a given models
      * @param {File} image 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.model  (default to 'esrgan')
+     * @param {module:model/String} opts.model  (default to 'idealo-psnr-small')
      * @param {module:api/ImageImageSuperResolutionApi~applyImageImageSuperResolutionPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */

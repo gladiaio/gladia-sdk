@@ -43,8 +43,6 @@ class ApiClient {
           return BodyApplyImageImageColorizationPost.fromJson(value);
         case 'BodyApplyImageImageFaceBluringPost':
           return BodyApplyImageImageFaceBluringPost.fromJson(value);
-        case 'BodyApplyImageImageRestorationPost':
-          return BodyApplyImageImageRestorationPost.fromJson(value);
         case 'BodyApplyImageImageSuperResolutionPost':
           return BodyApplyImageImageSuperResolutionPost.fromJson(value);
         case 'BodyApplyImageImageUncolorizationPost':
@@ -53,8 +51,6 @@ class ApiClient {
           return BodyApplyImageTextAsciifyPost.fromJson(value);
         case 'BodyApplyImageTextOcrPost':
           return BodyApplyImageTextOcrPost.fromJson(value);
-        case 'BodyApplyVideoVideoFrameInterpolationPost':
-          return BodyApplyVideoVideoFrameInterpolationPost.fromJson(value);
         case 'HTTPValidationError':
           return HTTPValidationError.fromJson(value);
         case 'ValidationError':

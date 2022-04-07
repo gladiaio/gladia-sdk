@@ -72,8 +72,8 @@ applyImageImageSuperResolutionPost (Image image) =
     `_addMultiFormPart` NH.partFileSource "image" image
 
 data ApplyImageImageSuperResolutionPost  
-instance HasOptionalParam ApplyImageImageSuperResolutionPost ModelText where
-  applyOptionalParam req (ModelText xs) =
+instance HasOptionalParam ApplyImageImageSuperResolutionPost Model4 where
+  applyOptionalParam req (Model4 xs) =
     req `setQuery` toQuery ("model", Just xs)
 
 -- | @multipart/form-data@

@@ -72,8 +72,8 @@ data ApplyTextTextKeywordExtractionPost
 instance HasOptionalParam ApplyTextTextKeywordExtractionPost ParamText where
   applyOptionalParam req (ParamText xs) =
     req `setQuery` toQuery ("text", Just xs)
-instance HasOptionalParam ApplyTextTextKeywordExtractionPost Model11 where
-  applyOptionalParam req (Model11 xs) =
+instance HasOptionalParam ApplyTextTextKeywordExtractionPost Model12 where
+  applyOptionalParam req (Model12 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextKeywordExtractionPost MimeJSON

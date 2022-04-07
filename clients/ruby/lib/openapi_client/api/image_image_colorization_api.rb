@@ -42,7 +42,7 @@ module OpenapiClient
       if @api_client.config.client_side_validation && image.nil?
         fail ArgumentError, "Missing the required parameter 'image' when calling ImageImageColorizationApi.apply_image_image_colorization_post"
       end
-      allowable_values = ["deoldify-artistic", "deoldify-stable"]
+      allowable_values = ["deoldify-stable", "deoldify-artistic"]
       if @api_client.config.client_side_validation && opts[:'model'] && !allowable_values.include?(opts[:'model'])
         fail ArgumentError, "invalid value for \"model\", must be one of #{allowable_values}"
       end

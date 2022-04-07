@@ -251,52 +251,6 @@ package body .Models is
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in BodyApplyImageImageRestorationPostType) is
-   begin
-      Into.Start_Entity (Name);
-      Serialize (Into, "image", Value.Image);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in BodyApplyImageImageRestorationPostType_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyImageImageRestorationPostType) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "image", Value.Image);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyImageImageRestorationPostType_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : BodyApplyImageImageRestorationPostType;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
                         Value : in BodyApplyImageImageSuperResolutionPostType) is
    begin
       Into.Start_Entity (Name);
@@ -467,52 +421,6 @@ package body .Models is
                           Value : out BodyApplyImageTextOcrPostType_Vectors.Vector) is
       List : Swagger.Value_Array_Type;
       Item : BodyApplyImageTextOcrPostType;
-   begin
-      Value.Clear;
-      Swagger.Streams.Deserialize (From, Name, List);
-      for Data of List loop
-         Deserialize (Data, "", Item);
-         Value.Append (Item);
-      end loop;
-   end Deserialize;
-
-
-
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in BodyApplyVideoVideoFrameInterpolationPostType) is
-   begin
-      Into.Start_Entity (Name);
-      Serialize (Into, "video", Value.Video);
-      Into.End_Entity (Name);
-   end Serialize;
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in BodyApplyVideoVideoFrameInterpolationPostType_Vectors.Vector) is
-   begin
-      Into.Start_Array (Name);
-      for Item of Value loop
-         Serialize (Into, "", Item);
-      end loop;
-      Into.End_Array (Name);
-   end Serialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyVideoVideoFrameInterpolationPostType) is
-      Object : Swagger.Value_Type;
-   begin
-      Swagger.Streams.Deserialize (From, Name, Object);
-      Swagger.Streams.Deserialize (Object, "video", Value.Video);
-   end Deserialize;
-
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out BodyApplyVideoVideoFrameInterpolationPostType_Vectors.Vector) is
-      List : Swagger.Value_Array_Type;
-      Item : BodyApplyVideoVideoFrameInterpolationPostType;
    begin
       Value.Clear;
       Swagger.Streams.Deserialize (From, Name, List);

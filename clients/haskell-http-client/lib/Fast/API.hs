@@ -16,14 +16,11 @@ module Fast.API
   ( module Fast.API.ImageImageBackgroundRemoval
   , module Fast.API.ImageImageColorization
   , module Fast.API.ImageImageFaceBluring
-  , module Fast.API.ImageImageRestoration
   , module Fast.API.ImageImageSuperResolution
   , module Fast.API.ImageImageUncolorization
   , module Fast.API.ImageTextAsciify
   , module Fast.API.ImageTextOcr
   , module Fast.API.TextTextAutocorrect
-  , module Fast.API.TextTextBooleanQuestionGeneration
-  , module Fast.API.TextTextDependencyTracking
   , module Fast.API.TextTextEmotionRecognition
   , module Fast.API.TextTextEntityExtraction
   , module Fast.API.TextTextHateSpeechDetection
@@ -36,30 +33,21 @@ module Fast.API
   , module Fast.API.TextTextNextWordPrediction
   , module Fast.API.TextTextPlural
   , module Fast.API.TextTextProgrammingLanguageGeneration
-  , module Fast.API.TextTextProgrammingLanguageIdentification
   , module Fast.API.TextTextQuestionAnswering
-  , module Fast.API.TextTextSentencePairModeling
   , module Fast.API.TextTextSentenceParaphraser
   , module Fast.API.TextTextSentimentAnalysis
   , module Fast.API.TextTextSimilarity
-  , module Fast.API.TextTextSummarization
-  , module Fast.API.TextTextTranslation
-  , module Fast.API.TextTextTransliteration
   , module Fast.API.TextTextWordAlignment
-  , module Fast.API.VideoVideoFrameInterpolation
   ) where
 
 import Fast.API.ImageImageBackgroundRemoval
 import Fast.API.ImageImageColorization
 import Fast.API.ImageImageFaceBluring
-import Fast.API.ImageImageRestoration
 import Fast.API.ImageImageSuperResolution
 import Fast.API.ImageImageUncolorization
 import Fast.API.ImageTextAsciify
 import Fast.API.ImageTextOcr
 import Fast.API.TextTextAutocorrect
-import Fast.API.TextTextBooleanQuestionGeneration
-import Fast.API.TextTextDependencyTracking
 import Fast.API.TextTextEmotionRecognition
 import Fast.API.TextTextEntityExtraction
 import Fast.API.TextTextHateSpeechDetection
@@ -72,14 +60,8 @@ import Fast.API.TextTextNextSentencePrediction
 import Fast.API.TextTextNextWordPrediction
 import Fast.API.TextTextPlural
 import Fast.API.TextTextProgrammingLanguageGeneration
-import Fast.API.TextTextProgrammingLanguageIdentification
 import Fast.API.TextTextQuestionAnswering
-import Fast.API.TextTextSentencePairModeling
 import Fast.API.TextTextSentenceParaphraser
 import Fast.API.TextTextSentimentAnalysis
 import Fast.API.TextTextSimilarity
-import Fast.API.TextTextSummarization
-import Fast.API.TextTextTranslation
-import Fast.API.TextTextTransliteration
 import Fast.API.TextTextWordAlignment
-import Fast.API.VideoVideoFrameInterpolation

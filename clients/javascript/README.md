@@ -104,7 +104,7 @@ var FastApi = require('fast_api');
 var api = new FastApi.ImageImageBackgroundRemovalApi()
 var image = "/path/to/file"; // {File} 
 var opts = {
-  'model': "'rembg'" // {String} 
+  'model': "'xception'" // {String} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -129,8 +129,6 @@ Class | Method | HTTP request | Description
 *FastApi.ImageImageColorizationApi* | [**getVersionsImageImageColorizationGet**](docs/ImageImageColorizationApi.md#getVersionsImageImageColorizationGet) | **GET** /image/image/colorization/ | Get list of models available for colorization
 *FastApi.ImageImageFaceBluringApi* | [**applyImageImageFaceBluringPost**](docs/ImageImageFaceBluringApi.md#applyImageImageFaceBluringPost) | **POST** /image/image/face-bluring/ | Apply model for the face-bluring task for a given models
 *FastApi.ImageImageFaceBluringApi* | [**getVersionsImageImageFaceBluringGet**](docs/ImageImageFaceBluringApi.md#getVersionsImageImageFaceBluringGet) | **GET** /image/image/face-bluring/ | Get list of models available for face-bluring
-*FastApi.ImageImageRestorationApi* | [**applyImageImageRestorationPost**](docs/ImageImageRestorationApi.md#applyImageImageRestorationPost) | **POST** /image/image/restoration/ | Apply model for the restoration task for a given models
-*FastApi.ImageImageRestorationApi* | [**getVersionsImageImageRestorationGet**](docs/ImageImageRestorationApi.md#getVersionsImageImageRestorationGet) | **GET** /image/image/restoration/ | Get list of models available for restoration
 *FastApi.ImageImageSuperResolutionApi* | [**applyImageImageSuperResolutionPost**](docs/ImageImageSuperResolutionApi.md#applyImageImageSuperResolutionPost) | **POST** /image/image/super-resolution/ | Apply model for the super-resolution task for a given models
 *FastApi.ImageImageSuperResolutionApi* | [**getVersionsImageImageSuperResolutionGet**](docs/ImageImageSuperResolutionApi.md#getVersionsImageImageSuperResolutionGet) | **GET** /image/image/super-resolution/ | Get list of models available for super-resolution
 *FastApi.ImageImageUncolorizationApi* | [**applyImageImageUncolorizationPost**](docs/ImageImageUncolorizationApi.md#applyImageImageUncolorizationPost) | **POST** /image/image/uncolorization/ | Apply model for the uncolorization task for a given models
@@ -141,10 +139,6 @@ Class | Method | HTTP request | Description
 *FastApi.ImageTextOcrApi* | [**getVersionsImageTextOcrGet**](docs/ImageTextOcrApi.md#getVersionsImageTextOcrGet) | **GET** /image/text/ocr/ | Get list of models available for ocr
 *FastApi.TextTextAutocorrectApi* | [**applyTextTextAutocorrectPost**](docs/TextTextAutocorrectApi.md#applyTextTextAutocorrectPost) | **POST** /text/text/autocorrect/ | Apply model for the autocorrect task for a given models
 *FastApi.TextTextAutocorrectApi* | [**getVersionsTextTextAutocorrectGet**](docs/TextTextAutocorrectApi.md#getVersionsTextTextAutocorrectGet) | **GET** /text/text/autocorrect/ | Get list of models available for autocorrect
-*FastApi.TextTextBooleanQuestionGenerationApi* | [**applyTextTextBooleanQuestionGenerationPost**](docs/TextTextBooleanQuestionGenerationApi.md#applyTextTextBooleanQuestionGenerationPost) | **POST** /text/text/boolean-question-generation/ | Apply model for the boolean-question-generation task for a given models
-*FastApi.TextTextBooleanQuestionGenerationApi* | [**getVersionsTextTextBooleanQuestionGenerationGet**](docs/TextTextBooleanQuestionGenerationApi.md#getVersionsTextTextBooleanQuestionGenerationGet) | **GET** /text/text/boolean-question-generation/ | Get list of models available for boolean-question-generation
-*FastApi.TextTextDependencyTrackingApi* | [**applyTextTextDependencyTrackingPost**](docs/TextTextDependencyTrackingApi.md#applyTextTextDependencyTrackingPost) | **POST** /text/text/dependency-tracking/ | Apply model for the dependency-tracking task for a given models
-*FastApi.TextTextDependencyTrackingApi* | [**getVersionsTextTextDependencyTrackingGet**](docs/TextTextDependencyTrackingApi.md#getVersionsTextTextDependencyTrackingGet) | **GET** /text/text/dependency-tracking/ | Get list of models available for dependency-tracking
 *FastApi.TextTextEmotionRecognitionApi* | [**applyTextTextEmotionRecognitionPost**](docs/TextTextEmotionRecognitionApi.md#applyTextTextEmotionRecognitionPost) | **POST** /text/text/emotion-recognition/ | Apply model for the emotion-recognition task for a given models
 *FastApi.TextTextEmotionRecognitionApi* | [**getVersionsTextTextEmotionRecognitionGet**](docs/TextTextEmotionRecognitionApi.md#getVersionsTextTextEmotionRecognitionGet) | **GET** /text/text/emotion-recognition/ | Get list of models available for emotion-recognition
 *FastApi.TextTextEntityExtractionApi* | [**applyTextTextEntityExtractionPost**](docs/TextTextEntityExtractionApi.md#applyTextTextEntityExtractionPost) | **POST** /text/text/entity-extraction/ | Apply model for the entity-extraction task for a given models
@@ -169,28 +163,16 @@ Class | Method | HTTP request | Description
 *FastApi.TextTextPluralApi* | [**getVersionsTextTextPluralGet**](docs/TextTextPluralApi.md#getVersionsTextTextPluralGet) | **GET** /text/text/plural/ | Get list of models available for plural
 *FastApi.TextTextProgrammingLanguageGenerationApi* | [**applyTextTextProgrammingLanguageGenerationPost**](docs/TextTextProgrammingLanguageGenerationApi.md#applyTextTextProgrammingLanguageGenerationPost) | **POST** /text/text/programming-language-generation/ | Apply model for the programming-language-generation task for a given models
 *FastApi.TextTextProgrammingLanguageGenerationApi* | [**getVersionsTextTextProgrammingLanguageGenerationGet**](docs/TextTextProgrammingLanguageGenerationApi.md#getVersionsTextTextProgrammingLanguageGenerationGet) | **GET** /text/text/programming-language-generation/ | Get list of models available for programming-language-generation
-*FastApi.TextTextProgrammingLanguageIdentificationApi* | [**applyTextTextProgrammingLanguageIdentificationPost**](docs/TextTextProgrammingLanguageIdentificationApi.md#applyTextTextProgrammingLanguageIdentificationPost) | **POST** /text/text/programming-language-identification/ | Apply model for the programming-language-identification task for a given models
-*FastApi.TextTextProgrammingLanguageIdentificationApi* | [**getVersionsTextTextProgrammingLanguageIdentificationGet**](docs/TextTextProgrammingLanguageIdentificationApi.md#getVersionsTextTextProgrammingLanguageIdentificationGet) | **GET** /text/text/programming-language-identification/ | Get list of models available for programming-language-identification
 *FastApi.TextTextQuestionAnsweringApi* | [**applyTextTextQuestionAnsweringPost**](docs/TextTextQuestionAnsweringApi.md#applyTextTextQuestionAnsweringPost) | **POST** /text/text/question-answering/ | Apply model for the question-answering task for a given models
 *FastApi.TextTextQuestionAnsweringApi* | [**getVersionsTextTextQuestionAnsweringGet**](docs/TextTextQuestionAnsweringApi.md#getVersionsTextTextQuestionAnsweringGet) | **GET** /text/text/question-answering/ | Get list of models available for question-answering
-*FastApi.TextTextSentencePairModelingApi* | [**applyTextTextSentencePairModelingPost**](docs/TextTextSentencePairModelingApi.md#applyTextTextSentencePairModelingPost) | **POST** /text/text/sentence-pair-modeling/ | Apply model for the sentence-pair-modeling task for a given models
-*FastApi.TextTextSentencePairModelingApi* | [**getVersionsTextTextSentencePairModelingGet**](docs/TextTextSentencePairModelingApi.md#getVersionsTextTextSentencePairModelingGet) | **GET** /text/text/sentence-pair-modeling/ | Get list of models available for sentence-pair-modeling
 *FastApi.TextTextSentenceParaphraserApi* | [**applyTextTextSentenceParaphraserPost**](docs/TextTextSentenceParaphraserApi.md#applyTextTextSentenceParaphraserPost) | **POST** /text/text/sentence-paraphraser/ | Apply model for the sentence-paraphraser task for a given models
 *FastApi.TextTextSentenceParaphraserApi* | [**getVersionsTextTextSentenceParaphraserGet**](docs/TextTextSentenceParaphraserApi.md#getVersionsTextTextSentenceParaphraserGet) | **GET** /text/text/sentence-paraphraser/ | Get list of models available for sentence-paraphraser
 *FastApi.TextTextSentimentAnalysisApi* | [**applyTextTextSentimentAnalysisPost**](docs/TextTextSentimentAnalysisApi.md#applyTextTextSentimentAnalysisPost) | **POST** /text/text/sentiment-analysis/ | Apply model for the sentiment-analysis task for a given models
 *FastApi.TextTextSentimentAnalysisApi* | [**getVersionsTextTextSentimentAnalysisGet**](docs/TextTextSentimentAnalysisApi.md#getVersionsTextTextSentimentAnalysisGet) | **GET** /text/text/sentiment-analysis/ | Get list of models available for sentiment-analysis
 *FastApi.TextTextSimilarityApi* | [**applyTextTextSimilarityPost**](docs/TextTextSimilarityApi.md#applyTextTextSimilarityPost) | **POST** /text/text/similarity/ | Apply model for the similarity task for a given models
 *FastApi.TextTextSimilarityApi* | [**getVersionsTextTextSimilarityGet**](docs/TextTextSimilarityApi.md#getVersionsTextTextSimilarityGet) | **GET** /text/text/similarity/ | Get list of models available for similarity
-*FastApi.TextTextSummarizationApi* | [**applyTextTextSummarizationPost**](docs/TextTextSummarizationApi.md#applyTextTextSummarizationPost) | **POST** /text/text/summarization/ | Apply model for the summarization task for a given models
-*FastApi.TextTextSummarizationApi* | [**getVersionsTextTextSummarizationGet**](docs/TextTextSummarizationApi.md#getVersionsTextTextSummarizationGet) | **GET** /text/text/summarization/ | Get list of models available for summarization
-*FastApi.TextTextTranslationApi* | [**applyTextTextTranslationPost**](docs/TextTextTranslationApi.md#applyTextTextTranslationPost) | **POST** /text/text/translation/ | Apply model for the translation task for a given models
-*FastApi.TextTextTranslationApi* | [**getVersionsTextTextTranslationGet**](docs/TextTextTranslationApi.md#getVersionsTextTextTranslationGet) | **GET** /text/text/translation/ | Get list of models available for translation
-*FastApi.TextTextTransliterationApi* | [**applyTextTextTransliterationPost**](docs/TextTextTransliterationApi.md#applyTextTextTransliterationPost) | **POST** /text/text/transliteration/ | Apply model for the transliteration task for a given models
-*FastApi.TextTextTransliterationApi* | [**getVersionsTextTextTransliterationGet**](docs/TextTextTransliterationApi.md#getVersionsTextTextTransliterationGet) | **GET** /text/text/transliteration/ | Get list of models available for transliteration
 *FastApi.TextTextWordAlignmentApi* | [**applyTextTextWordAlignmentPost**](docs/TextTextWordAlignmentApi.md#applyTextTextWordAlignmentPost) | **POST** /text/text/word-alignment/ | Apply model for the word-alignment task for a given models
 *FastApi.TextTextWordAlignmentApi* | [**getVersionsTextTextWordAlignmentGet**](docs/TextTextWordAlignmentApi.md#getVersionsTextTextWordAlignmentGet) | **GET** /text/text/word-alignment/ | Get list of models available for word-alignment
-*FastApi.VideoVideoFrameInterpolationApi* | [**applyVideoVideoFrameInterpolationPost**](docs/VideoVideoFrameInterpolationApi.md#applyVideoVideoFrameInterpolationPost) | **POST** /video/video/frame-interpolation/ | Apply model for the frame-interpolation task for a given models
-*FastApi.VideoVideoFrameInterpolationApi* | [**getVersionsVideoVideoFrameInterpolationGet**](docs/VideoVideoFrameInterpolationApi.md#getVersionsVideoVideoFrameInterpolationGet) | **GET** /video/video/frame-interpolation/ | Get list of models available for frame-interpolation
 
 
 ## Documentation for Models
@@ -198,12 +180,10 @@ Class | Method | HTTP request | Description
  - [FastApi.BodyApplyImageImageBackgroundRemovalPost](docs/BodyApplyImageImageBackgroundRemovalPost.md)
  - [FastApi.BodyApplyImageImageColorizationPost](docs/BodyApplyImageImageColorizationPost.md)
  - [FastApi.BodyApplyImageImageFaceBluringPost](docs/BodyApplyImageImageFaceBluringPost.md)
- - [FastApi.BodyApplyImageImageRestorationPost](docs/BodyApplyImageImageRestorationPost.md)
  - [FastApi.BodyApplyImageImageSuperResolutionPost](docs/BodyApplyImageImageSuperResolutionPost.md)
  - [FastApi.BodyApplyImageImageUncolorizationPost](docs/BodyApplyImageImageUncolorizationPost.md)
  - [FastApi.BodyApplyImageTextAsciifyPost](docs/BodyApplyImageTextAsciifyPost.md)
  - [FastApi.BodyApplyImageTextOcrPost](docs/BodyApplyImageTextOcrPost.md)
- - [FastApi.BodyApplyVideoVideoFrameInterpolationPost](docs/BodyApplyVideoVideoFrameInterpolationPost.md)
  - [FastApi.HTTPValidationError](docs/HTTPValidationError.md)
  - [FastApi.ValidationError](docs/ValidationError.md)
 

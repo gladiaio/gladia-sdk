@@ -75,8 +75,8 @@ instance HasOptionalParam ApplyTextTextQuestionAnsweringPost Context where
 instance HasOptionalParam ApplyTextTextQuestionAnsweringPost Question where
   applyOptionalParam req (Question xs) =
     req `setQuery` toQuery ("question", Just xs)
-instance HasOptionalParam ApplyTextTextQuestionAnsweringPost Model19 where
-  applyOptionalParam req (Model19 xs) =
+instance HasOptionalParam ApplyTextTextQuestionAnsweringPost Model20 where
+  applyOptionalParam req (Model20 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextQuestionAnsweringPost MimeJSON

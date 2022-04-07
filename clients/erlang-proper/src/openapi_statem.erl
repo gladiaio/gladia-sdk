@@ -58,22 +58,22 @@ cleanup() -> ok.
 initial_state() -> #{}.
 
 %%==============================================================================
-%% apply_video_video_frame_interpolation_post
+%% apply_text_text_word_alignment_post
 %%==============================================================================
 
-apply_video_video_frame_interpolation_post(Video) ->
-  openapi_api:apply_video_video_frame_interpolation_post(Video).
+apply_text_text_word_alignment_post() ->
+  openapi_api:apply_text_text_word_alignment_post().
 
-apply_video_video_frame_interpolation_post_args(_S) ->
-  [binary()].
+apply_text_text_word_alignment_post_args(_S) ->
+  [].
 
 %%==============================================================================
-%% get_versions_video_video_frame_interpolation_get
+%% get_versions_text_text_word_alignment_get
 %%==============================================================================
 
-get_versions_video_video_frame_interpolation_get() ->
-  openapi_api:get_versions_video_video_frame_interpolation_get().
+get_versions_text_text_word_alignment_get() ->
+  openapi_api:get_versions_text_text_word_alignment_get().
 
-get_versions_video_video_frame_interpolation_get_args(_S) ->
+get_versions_text_text_word_alignment_get_args(_S) ->
   [].
 

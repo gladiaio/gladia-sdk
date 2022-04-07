@@ -29,7 +29,7 @@ public class OASImageImageBackgroundRemovalApi {
      * Apply model for the background-removal task for a given models
      * 
      * @param image  (required)
-     * @param model  (optional, default to rembg)
+     * @param model  (optional, default to xception)
      * @return Object
      * @throws OAS.ApiException if fails to make API call
      */

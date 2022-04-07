@@ -96,8 +96,8 @@ export class TextTextSentimentAnalysisApi extends runtime.BaseAPI {
     * @enum {string}
     */
 export enum ApplyTextTextSentimentAnalysisPostModelEnum {
-    NlptownBertBaseMultilingualUncasedSentiment = 'nlptown-bert-base-multilingual-uncased-sentiment',
+    ZeroShotClassificationFacebookBartLargeMnli = 'zero-shot-classification-facebook-bart-large-mnli',
     DistilbertBaseUncased = 'distilbert-base-uncased',
-    DistilbertBaseUncasedFinetunedSst2English = 'distilbert-base-uncased-finetuned-sst-2-english',
-    ZeroShotClassificationFacebookBartLargeMnli = 'zero-shot-classification-facebook-bart-large-mnli'
+    NlptownBertBaseMultilingualUncasedSentiment = 'nlptown-bert-base-multilingual-uncased-sentiment',
+    DistilbertBaseUncasedFinetunedSst2English = 'distilbert-base-uncased-finetuned-sst-2-english'
 }

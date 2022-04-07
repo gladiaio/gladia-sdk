@@ -71,8 +71,8 @@ class TextTextNextWordPredictionApiSimulation extends Simulation {
         .feed(apply_text_text_next_word_prediction__postQUERYFeeder)
         .exec(http("applyTextTextNextWordPredictionPost")
         .httpRequest("POST","/text/text/next-word-prediction/")
-        .queryParam("sentence","${sentence}")
         .queryParam("model","${model}")
+        .queryParam("sentence","${sentence}")
 )
 
     // Run scnapplyTextTextNextWordPredictionPost with warm up and reach a constant rate for entire duration

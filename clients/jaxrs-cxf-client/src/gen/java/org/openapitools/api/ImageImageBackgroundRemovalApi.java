@@ -40,7 +40,7 @@ public interface ImageImageBackgroundRemovalApi  {
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Successful Response", response = Object.class),
         @ApiResponse(code = 422, message = "Validation Error", response = HTTPValidationError.class) })
-    public Object applyImageImageBackgroundRemovalPost( @Multipart(value = "image" ) Attachment imageDetail, @QueryParam("model") @DefaultValue("rembg")String model);
+    public Object applyImageImageBackgroundRemovalPost( @Multipart(value = "image" ) Attachment imageDetail, @QueryParam("model") @DefaultValue("xception")String model);
 
     /**
      * Get list of models available for background-removal

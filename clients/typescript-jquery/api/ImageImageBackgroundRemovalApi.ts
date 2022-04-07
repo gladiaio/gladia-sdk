@@ -52,7 +52,7 @@ export class ImageImageBackgroundRemovalApi {
      * @param image 
      * @param model 
      */
-    public applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: object;  },
     { response: JQueryXHR; errorThrown: string }
     > {

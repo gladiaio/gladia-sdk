@@ -38,7 +38,7 @@ module OpenapiClient
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TextTextNextWordPredictionApi.apply_text_text_next_word_prediction_post ...'
       end
-      allowable_values = ["bert-base-uncased", "roberta-base", "distilbert-base-uncased", "albert-base-v2"]
+      allowable_values = ["bert-base-uncased", "albert-base-v2", "distilbert-base-uncased", "roberta-base"]
       if @api_client.config.client_side_validation && opts[:'model'] && !allowable_values.include?(opts[:'model'])
         fail ArgumentError, "invalid value for \"model\", must be one of #{allowable_values}"
       end

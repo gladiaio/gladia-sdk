@@ -44,7 +44,7 @@ module OpenapiClient
       if @api_client.config.client_side_validation && image.nil?
         fail ArgumentError, "Missing the required parameter 'image' when calling ImageTextOcrApi.apply_image_text_ocr_post"
       end
-      allowable_values = ["tesseract-default", "tesseract-denoising", "easy-ocr"]
+      allowable_values = ["tesseract-denoising", "easy-ocr", "tesseract-default"]
       if @api_client.config.client_side_validation && opts[:'model'] && !allowable_values.include?(opts[:'model'])
         fail ArgumentError, "invalid value for \"model\", must be one of #{allowable_values}"
       end

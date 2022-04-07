@@ -33,7 +33,7 @@ export class ImageTextOcrApi {
      * @param sourceLanguage 
      * @param model 
      */
-    public applyImageTextOcrPost (image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
+    public applyImageTextOcrPost (image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
         const localVarPath = this.basePath + '/image/text/ocr/';
 
         let queryParameters: any = {};

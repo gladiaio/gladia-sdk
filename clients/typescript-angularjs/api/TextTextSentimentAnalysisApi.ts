@@ -32,7 +32,7 @@ export class TextTextSentimentAnalysisApi {
      * @param text 
      * @param model 
      */
-    public applyTextTextSentimentAnalysisPost (text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
+    public applyTextTextSentimentAnalysisPost (text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', extraHttpRequestParams?: any ) : ng.IHttpPromise<object> {
         const localVarPath = this.basePath + '/text/text/sentiment-analysis/';
 
         let queryParameters: any = {};

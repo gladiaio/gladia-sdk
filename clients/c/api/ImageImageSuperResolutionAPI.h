@@ -11,7 +11,7 @@
 // Apply model for the super-resolution task for a given models
 //
 object_t*
-ImageImageSuperResolutionAPI_applyImageImageSuperResolutionPost(apiClient_t *apiClient ,binary_t* image ,char * model);
+ImageImageSuperResolutionAPI_applyImageImageSuperResolutionPost(apiClient_t *apiClient ,binary_t* image ,model_e model);
 
 
 // Get list of models available for super-resolution

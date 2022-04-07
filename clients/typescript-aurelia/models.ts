@@ -26,11 +26,6 @@ export interface BodyApplyImageImageFaceBluringPost {
 }
 
 
-export interface BodyApplyImageImageRestorationPost {
-  image: any;
-}
-
-
 export interface BodyApplyImageImageSuperResolutionPost {
   image: any;
 }
@@ -48,11 +43,6 @@ export interface BodyApplyImageTextAsciifyPost {
 
 export interface BodyApplyImageTextOcrPost {
   image: any;
-}
-
-
-export interface BodyApplyVideoVideoFrameInterpolationPost {
-  video: any;
 }
 
 

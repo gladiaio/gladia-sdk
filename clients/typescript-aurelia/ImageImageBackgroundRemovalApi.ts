@@ -22,7 +22,7 @@ import {
  */
 export interface IApplyImageImageBackgroundRemovalPostParams {
   image: any;
-  model?: 'xception' | 'mobilenet';
+  model?: 'mobilenet' | 'xception';
 }
 
 /**

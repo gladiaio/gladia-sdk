@@ -101,9 +101,9 @@ export class TextTextQuestionAnsweringApi extends runtime.BaseAPI {
     * @enum {string}
     */
 export enum ApplyTextTextQuestionAnsweringPostModelEnum {
-    DeepsetBertBaseCasedSquad2 = 'deepset_bert-base-cased-squad2',
+    Mrm8488BertTiny5FinetunedSquadv2 = 'mrm8488-bert-tiny-5-finetuned-squadv2',
     MfebAlbertXxlargeV2Squad2 = 'mfeb-albert-xxlarge-v2-squad2',
     DeepsetRobertaBaseSquad2 = 'deepset-roberta-base-squad2',
-    Mrm8488BertTiny5FinetunedSquadv2 = 'mrm8488-bert-tiny-5-finetuned-squadv2',
-    DistilbertBaseCasedDistilledSquad = 'distilbert-base-cased-distilled-squad'
+    DistilbertBaseCasedDistilledSquad = 'distilbert-base-cased-distilled-squad',
+    DeepsetBertBaseCasedSquad2 = 'deepset_bert-base-cased-squad2'
 }

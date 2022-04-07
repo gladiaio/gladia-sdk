@@ -14,11 +14,11 @@ public class TextTextQuestionAnsweringAPI: APIBase {
      * enum for parameter model
      */
     public enum Model_applyTextTextQuestionAnsweringPost: String { 
-        case DeepsetBertBaseCasedSquad2 = "deepset_bert-base-cased-squad2"
+        case Mrm8488BertTiny5FinetunedSquadv2 = "mrm8488-bert-tiny-5-finetuned-squadv2"
         case MfebAlbertXxlargeV2Squad2 = "mfeb-albert-xxlarge-v2-squad2"
         case DeepsetRobertaBaseSquad2 = "deepset-roberta-base-squad2"
-        case Mrm8488BertTiny5FinetunedSquadv2 = "mrm8488-bert-tiny-5-finetuned-squadv2"
         case DistilbertBaseCasedDistilledSquad = "distilbert-base-cased-distilled-squad"
+        case DeepsetBertBaseCasedSquad2 = "deepset_bert-base-cased-squad2"
     }
 
     /**

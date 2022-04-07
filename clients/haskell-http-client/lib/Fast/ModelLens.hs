@@ -63,15 +63,6 @@ bodyApplyImageImageFaceBluringPostImageL f BodyApplyImageImageFaceBluringPost{..
 
 
 
--- * BodyApplyImageImageRestorationPost
-
--- | 'bodyApplyImageImageRestorationPostImage' Lens
-bodyApplyImageImageRestorationPostImageL :: Lens_' BodyApplyImageImageRestorationPost (FilePath)
-bodyApplyImageImageRestorationPostImageL f BodyApplyImageImageRestorationPost{..} = (\bodyApplyImageImageRestorationPostImage -> BodyApplyImageImageRestorationPost { bodyApplyImageImageRestorationPostImage, ..} ) <$> f bodyApplyImageImageRestorationPostImage
-{-# INLINE bodyApplyImageImageRestorationPostImageL #-}
-
-
-
 -- * BodyApplyImageImageSuperResolutionPost
 
 -- | 'bodyApplyImageImageSuperResolutionPostImage' Lens
@@ -105,15 +96,6 @@ bodyApplyImageTextAsciifyPostImageL f BodyApplyImageTextAsciifyPost{..} = (\body
 bodyApplyImageTextOcrPostImageL :: Lens_' BodyApplyImageTextOcrPost (FilePath)
 bodyApplyImageTextOcrPostImageL f BodyApplyImageTextOcrPost{..} = (\bodyApplyImageTextOcrPostImage -> BodyApplyImageTextOcrPost { bodyApplyImageTextOcrPostImage, ..} ) <$> f bodyApplyImageTextOcrPostImage
 {-# INLINE bodyApplyImageTextOcrPostImageL #-}
-
-
-
--- * BodyApplyVideoVideoFrameInterpolationPost
-
--- | 'bodyApplyVideoVideoFrameInterpolationPostVideo' Lens
-bodyApplyVideoVideoFrameInterpolationPostVideoL :: Lens_' BodyApplyVideoVideoFrameInterpolationPost (FilePath)
-bodyApplyVideoVideoFrameInterpolationPostVideoL f BodyApplyVideoVideoFrameInterpolationPost{..} = (\bodyApplyVideoVideoFrameInterpolationPostVideo -> BodyApplyVideoVideoFrameInterpolationPost { bodyApplyVideoVideoFrameInterpolationPostVideo, ..} ) <$> f bodyApplyVideoVideoFrameInterpolationPostVideo
-{-# INLINE bodyApplyVideoVideoFrameInterpolationPostVideoL #-}
 
 
 

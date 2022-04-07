@@ -31,7 +31,7 @@ class ImageImageBackgroundRemovalApi(basePath: kotlin.String = "http://localhost
     * Apply model for the background-removal task for a given models
     * 
     * @param image  
-    * @param model  (optional, default to 'rembg')
+    * @param model  (optional, default to 'xception')
     * @return kotlin.Any
     */
     @Suppress("UNCHECKED_CAST")

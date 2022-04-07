@@ -72,8 +72,8 @@ applyImageImageUncolorizationPost (Image image) =
     `_addMultiFormPart` NH.partFileSource "image" image
 
 data ApplyImageImageUncolorizationPost  
-instance HasOptionalParam ApplyImageImageUncolorizationPost Model4 where
-  applyOptionalParam req (Model4 xs) =
+instance HasOptionalParam ApplyImageImageUncolorizationPost Model5 where
+  applyOptionalParam req (Model5 xs) =
     req `setQuery` toQuery ("model", Just xs)
 
 -- | @multipart/form-data@

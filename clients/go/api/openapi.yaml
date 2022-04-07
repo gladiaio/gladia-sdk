@@ -25,10 +25,10 @@ paths:
         name: model
         required: false
         schema:
-          default: rembg
+          default: xception
           enum:
-          - xception
           - mobilenet
+          - xception
           title: Model
           type: string
         style: form
@@ -75,8 +75,8 @@ paths:
         schema:
           default: deoldify-stable
           enum:
-          - deoldify-artistic
           - deoldify-stable
+          - deoldify-artistic
           title: Model
           type: string
         style: form
@@ -148,51 +148,6 @@ paths:
       summary: Apply model for the face-bluring task for a given models
       tags:
       - image.image.face-bluring
-  /image/image/restoration/:
-    get:
-      operationId: get_versions_image_image_restoration__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for restoration
-      tags:
-      - image.image.restoration
-    post:
-      operationId: apply_image_image_restoration__post
-      parameters:
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: bringing-old-photos-back-to-life
-          title: Model
-          type: string
-        style: form
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/Body_apply_image_image_restoration__post'
-        required: true
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the restoration task for a given models
-      tags:
-      - image.image.restoration
   /image/image/super-resolution/:
     get:
       operationId: get_versions_image_image_super_resolution__get
@@ -213,7 +168,9 @@ paths:
         name: model
         required: false
         schema:
-          default: esrgan
+          default: idealo-psnr-small
+          enum:
+          - idealo-psnr-small
           title: Model
           type: string
         style: form
@@ -363,9 +320,9 @@ paths:
         schema:
           default: easy-ocr
           enum:
-          - tesseract-default
           - tesseract-denoising
           - easy-ocr
+          - tesseract-default
           title: Model
           type: string
         style: form
@@ -440,105 +397,6 @@ paths:
       summary: Apply model for the autocorrect task for a given models
       tags:
       - text.text.autocorrect
-  /text/text/boolean-question-generation/:
-    get:
-      operationId: get_versions_text_text_boolean_question_generation__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for boolean-question-generation
-      tags:
-      - text.text.boolean-question-generation
-    post:
-      operationId: apply_text_text_boolean_question_generation__post
-      parameters:
-      - explode: true
-        in: query
-        name: text
-        required: false
-        schema:
-          default: I lSachin Ramesh Tendulkar is a former international cricketer
-            from India and a former captain of the Indian national team. He is widely
-            regarded as one of the greatest batsmen in the history of cricket. He
-            is the highest run scorer of all time in International cricket.
-          title: Text
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: questgen
-          title: Model
-          type: string
-        style: form
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the boolean-question-generation task for a given models
-      tags:
-      - text.text.boolean-question-generation
-  /text/text/dependency-tracking/:
-    get:
-      operationId: get_versions_text_text_dependency_tracking__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for dependency-tracking
-      tags:
-      - text.text.dependency-tracking
-    post:
-      operationId: apply_text_text_dependency_tracking__post
-      parameters:
-      - explode: true
-        in: query
-        name: input_string
-        required: false
-        schema:
-          default: Text to analyzed
-          title: Input String
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: LAL-Parser
-          title: Model
-          type: string
-        style: form
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the dependency-tracking task for a given models
-      tags:
-      - text.text.dependency-tracking
   /text/text/emotion-recognition/:
     get:
       operationId: get_versions_text_text_emotion_recognition__get
@@ -1075,9 +933,9 @@ paths:
           default: distilbert-base-uncased
           enum:
           - bert-base-uncased
-          - roberta-base
-          - distilbert-base-uncased
           - albert-base-v2
+          - distilbert-base-uncased
+          - roberta-base
           title: Model
           type: string
         style: form
@@ -1206,55 +1064,6 @@ paths:
         models
       tags:
       - text.text.programming-language-generation
-  /text/text/programming-language-identification/:
-    get:
-      operationId: get_versions_text_text_programming_language_identification__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for programming-language-identification
-      tags:
-      - text.text.programming-language-identification
-    post:
-      operationId: apply_text_text_programming_language_identification__post
-      parameters:
-      - explode: true
-        in: query
-        name: text
-        required: false
-        schema:
-          default: 'def is_palendrome(s):'
-          title: Text
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: aliostad
-          title: Model
-          type: string
-        style: form
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the programming-language-identification task for a
-        given models
-      tags:
-      - text.text.programming-language-identification
   /text/text/question-answering/:
     get:
       operationId: get_versions_text_text_question_answering__get
@@ -1295,11 +1104,11 @@ paths:
         schema:
           default: deepset_bert-base-cased-squad2
           enum:
-          - deepset_bert-base-cased-squad2
+          - mrm8488-bert-tiny-5-finetuned-squadv2
           - mfeb-albert-xxlarge-v2-squad2
           - deepset-roberta-base-squad2
-          - mrm8488-bert-tiny-5-finetuned-squadv2
           - distilbert-base-cased-distilled-squad
+          - deepset_bert-base-cased-squad2
           title: Model
           type: string
         style: form
@@ -1318,55 +1127,6 @@ paths:
       summary: Apply model for the question-answering task for a given models
       tags:
       - text.text.question-answering
-  /text/text/sentence-pair-modeling/:
-    get:
-      operationId: get_versions_text_text_sentence_pair_modeling__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for sentence-pair-modeling
-      tags:
-      - text.text.sentence-pair-modeling
-    post:
-      operationId: apply_text_text_sentence_pair_modeling__post
-      parameters:
-      - explode: true
-        in: query
-        name: sentence
-        required: false
-        schema:
-          default: Once, a group of frogs was roaming around the forest in search
-            of water.
-          title: Sentence
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: UKPLab-all-MiniLM-L6-v2
-          title: Model
-          type: string
-        style: form
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the sentence-pair-modeling task for a given models
-      tags:
-      - text.text.sentence-pair-modeling
   /text/text/sentence-paraphraser/:
     get:
       operationId: get_versions_text_text_sentence_paraphraser__get
@@ -1449,10 +1209,10 @@ paths:
         schema:
           default: distilbert-base-uncased-finetuned-sst-2-english
           enum:
-          - nlptown-bert-base-multilingual-uncased-sentiment
-          - distilbert-base-uncased
-          - distilbert-base-uncased-finetuned-sst-2-english
           - zero-shot-classification-facebook-bart-large-mnli
+          - distilbert-base-uncased
+          - nlptown-bert-base-multilingual-uncased-sentiment
+          - distilbert-base-uncased-finetuned-sst-2-english
           title: Model
           type: string
         style: form
@@ -1530,247 +1290,6 @@ paths:
       summary: Apply model for the similarity task for a given models
       tags:
       - text.text.similarity
-  /text/text/summarization/:
-    get:
-      operationId: get_versions_text_text_summarization__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for summarization
-      tags:
-      - text.text.summarization
-    post:
-      operationId: apply_text_text_summarization__post
-      parameters:
-      - explode: true
-        in: query
-        name: text
-        required: false
-        schema:
-          default: 'The Crown is a historical drama streaming television series about
-            the reign of Queen Elizabeth II, created and principally written by Peter
-            Morgan, and produced by Left Bank Pictures and Sony Pictures Television
-            for Netflix. Morgan developed it from his drama film The Queen (2006)
-            and especially his stage play The Audience (2013). The first season covers
-            the period from Elizabeth''s marriage to Philip, Duke of Edinburgh in
-            1947 to the disintegration of her sister Princess Margaret''s engagement
-            to Group Captain Peter Townsend in 1955. The second season covers the
-            period from the Suez Crisis in 1956 to the retirement of Prime Minister
-            Harold Macmillan in 1963 and the birth of Prince Edward in 1964. The third
-            season spans 1964 to 1977, includes Harold Wilson''s two periods as prime
-            minister, and introduces Camilla Shand. The fourth season spans 1979 to
-            the early 1990s and includes Margaret Thatcher''s tenure as prime minister
-            and Prince Charles''s marriage to Lady Diana Spencer. The fifth and sixth
-            seasons, which will close the series, will cover the Queen''s reign into
-            the 21st century. For each of the two-season increments, new actors fill
-            the roles to account for the ageing process in the periods of time portrayed.
-            Claire Foy portrays the Queen in the first two seasons, alongside Matt
-            Smith as Prince Philip and Vanessa Kirby as Princess Margaret. For the
-            third and fourth seasons, Olivia Colman takes over as the Queen, Tobias
-            Menzies as Prince Philip, and Helena Bonham Carter as Princess Margaret.
-            Also added to the cast in season 3 is Josh O''Connor as Prince Charles.
-            In the fourth season, new cast members include Emma Corrin as Lady Diana
-            Spencer and Gillian Anderson as Margaret Thatcher. Imelda Staunton, Jonathan
-            Pryce, and Lesley Manville will succeed Colman, Menzies, and Bonham Carter,
-            respectively, for the final two seasons, while Elizabeth Debicki and Dominic
-            West are expected to assume the role of Princess Diana and Prince Charles,
-            respectively. Filming takes place at Elstree Studios in Borehamwood, Hertfordshire,
-            with location shooting throughout the United Kingdom and internationally.
-            The first season was released by Netflix on 4 November 2016, the second
-            on 8 December 2017, the third on 17 November 2019, and the fourth on 15
-            November 2020. The fifth season is anticipated in 2022. As of 2020, the
-            estimated production budget of The Crown has been reported to be $260
-            million, making it one of the most expensive television series in history.[4]
-            The Crown was praised by critics for its acting, directing, writing, cinematography,
-            and production values, although its historical inaccuracies have received
-            some criticism, particularly within the fourth season. Nonetheless, it
-            received accolades at the 23rd Screen Actors Guild Awards, Foy won Best
-            Actress in the lead role and Best Actor for John Lithgow as Winston Churchill,
-            and has secured a total of sixty three nominations for its first four
-            seasons at the Primetime Emmy Awards, including four for Outstanding Drama
-            Series.[5] The series has also twice won the Golden Globe Award for Best
-            Television Series - Drama, at the 74th and 78th ceremonies, with additional
-            acting wins for Foy, Colman, Corrin, O''Connor and Anderson.[6] '
-          title: Text
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: source_language
-        required: false
-        schema:
-          default: en
-          title: Source Language
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: max_length
-        required: false
-        schema:
-          default: 512
-          title: Max Length
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: min_length
-        required: false
-        schema:
-          default: 40
-          title: Min Length
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: distilbart-cnn-12-6
-          title: Model
-          type: string
-        style: form
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the summarization task for a given models
-      tags:
-      - text.text.summarization
-  /text/text/translation/:
-    get:
-      operationId: get_versions_text_text_translation__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for translation
-      tags:
-      - text.text.translation
-    post:
-      operationId: apply_text_text_translation__post
-      parameters:
-      - explode: true
-        in: query
-        name: input_string
-        required: false
-        schema:
-          default: Text to translate
-          title: Input String
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: source_language
-        required: false
-        schema:
-          default: en
-          title: Source Language
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: target_language
-        required: false
-        schema:
-          default: fr
-          title: Target Language
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: Helsinki-NLP
-          title: Model
-          type: string
-        style: form
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the translation task for a given models
-      tags:
-      - text.text.translation
-  /text/text/transliteration/:
-    get:
-      operationId: get_versions_text_text_transliteration__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for transliteration
-      tags:
-      - text.text.transliteration
-    post:
-      operationId: apply_text_text_transliteration__post
-      parameters:
-      - explode: true
-        in: query
-        name: text
-        required: false
-        schema:
-          default: Лорем ипсум долор сит амет
-          title: Text
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: language
-        required: false
-        schema:
-          default: ru
-          title: Language
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: transliterate
-          title: Model
-          type: string
-        style: form
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the transliteration task for a given models
-      tags:
-      - text.text.transliteration
   /text/text/word-alignment/:
     get:
       operationId: get_versions_text_text_word_alignment__get
@@ -1830,51 +1349,6 @@ paths:
       summary: Apply model for the word-alignment task for a given models
       tags:
       - text.text.word-alignment
-  /video/video/frame-interpolation/:
-    get:
-      operationId: get_versions_video_video_frame_interpolation__get
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-      summary: Get list of models available for frame-interpolation
-      tags:
-      - video.video.frame-interpolation
-    post:
-      operationId: apply_video_video_frame_interpolation__post
-      parameters:
-      - explode: true
-        in: query
-        name: model
-        required: false
-        schema:
-          default: deep-animation-video-interpolation-in-the-wild
-          title: Model
-          type: string
-        style: form
-      requestBody:
-        content:
-          multipart/form-data:
-            schema:
-              $ref: '#/components/schemas/Body_apply_video_video_frame_interpolation__post'
-        required: true
-      responses:
-        200:
-          content:
-            application/json:
-              schema: {}
-          description: Successful Response
-        422:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/HTTPValidationError'
-          description: Validation Error
-      summary: Apply model for the frame-interpolation task for a given models
-      tags:
-      - video.video.frame-interpolation
 components:
   schemas:
     Body_apply_image_image_background_removal__post:
@@ -1906,16 +1380,6 @@ components:
       required:
       - image
       title: Body_apply_image_image_face_bluring__post
-      type: object
-    Body_apply_image_image_restoration__post:
-      properties:
-        image:
-          format: binary
-          title: Image
-          type: string
-      required:
-      - image
-      title: Body_apply_image_image_restoration__post
       type: object
     Body_apply_image_image_super_resolution__post:
       properties:
@@ -1956,16 +1420,6 @@ components:
       required:
       - image
       title: Body_apply_image_text_ocr__post
-      type: object
-    Body_apply_video_video_frame_interpolation__post:
-      properties:
-        video:
-          format: binary
-          title: Video
-          type: string
-      required:
-      - video
-      title: Body_apply_video_video_frame_interpolation__post
       type: object
     HTTPValidationError:
       properties:

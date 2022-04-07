@@ -72,8 +72,8 @@ data ApplyTextTextEmotionRecognitionPost
 instance HasOptionalParam ApplyTextTextEmotionRecognitionPost ParamText where
   applyOptionalParam req (ParamText xs) =
     req `setQuery` toQuery ("text", Just xs)
-instance HasOptionalParam ApplyTextTextEmotionRecognitionPost Model8 where
-  applyOptionalParam req (Model8 xs) =
+instance HasOptionalParam ApplyTextTextEmotionRecognitionPost Model9 where
+  applyOptionalParam req (Model9 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextEmotionRecognitionPost MimeJSON

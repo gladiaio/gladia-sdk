@@ -22,7 +22,7 @@ import {
  */
 export interface IApplyTextTextNextWordPredictionPostParams {
   sentence?: string;
-  model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2';
+  model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base';
 }
 
 /**

@@ -15,9 +15,9 @@ open class TextTextNextWordPredictionAPI: APIBase {
      */
     public enum Model_applyTextTextNextWordPredictionPost: String { 
         case bertBaseUncased = "bert-base-uncased"
-        case robertaBase = "roberta-base"
-        case distilbertBaseUncased = "distilbert-base-uncased"
         case albertBaseV2 = "albert-base-v2"
+        case distilbertBaseUncased = "distilbert-base-uncased"
+        case robertaBase = "roberta-base"
     }
 
     /**

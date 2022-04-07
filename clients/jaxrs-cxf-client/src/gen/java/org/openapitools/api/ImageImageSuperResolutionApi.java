@@ -40,7 +40,7 @@ public interface ImageImageSuperResolutionApi  {
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Successful Response", response = Object.class),
         @ApiResponse(code = 422, message = "Validation Error", response = HTTPValidationError.class) })
-    public Object applyImageImageSuperResolutionPost( @Multipart(value = "image" ) Attachment imageDetail, @QueryParam("model") @DefaultValue("esrgan")String model);
+    public Object applyImageImageSuperResolutionPost( @Multipart(value = "image" ) Attachment imageDetail, @QueryParam("model") @DefaultValue("idealo-psnr-small")String model);
 
     /**
      * Get list of models available for super-resolution

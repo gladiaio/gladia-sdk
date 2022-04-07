@@ -54,7 +54,7 @@ NSInteger kOAIImageImageBackgroundRemovalApiMissingParamErrorCode = 234513;
 /// 
 ///  @param image  
 ///
-///  @param model  (optional, default to @"rembg")
+///  @param model  (optional, default to @"xception")
 ///
 ///  @returns NSObject*
 ///

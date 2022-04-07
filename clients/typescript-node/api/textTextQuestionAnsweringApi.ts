@@ -76,7 +76,7 @@ export class TextTextQuestionAnsweringApi {
      * @param question 
      * @param model 
      */
-    public async applyTextTextQuestionAnsweringPost (context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
+    public async applyTextTextQuestionAnsweringPost (context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/text/text/question-answering/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -91,7 +91,7 @@ export class TextTextQuestionAnsweringApi {
         }
 
         if (model !== undefined) {
-            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad'");
+            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2'");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

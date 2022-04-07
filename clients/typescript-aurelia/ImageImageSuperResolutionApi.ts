@@ -22,7 +22,7 @@ import {
  */
 export interface IApplyImageImageSuperResolutionPostParams {
   image: any;
-  model?: string;
+  model?: 'idealo-psnr-small';
 }
 
 /**

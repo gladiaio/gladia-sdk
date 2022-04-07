@@ -53,7 +53,7 @@ export class ImageTextOcrApi {
      * @param sourceLanguage 
      * @param model 
      */
-    public applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: object;  },
     { response: JQueryXHR; errorThrown: string }
     > {

@@ -6,7 +6,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: 0.1.0
 - Package version: 0.1.0
-- Build date: 2021-11-02T13:20:20.553Z[GMT]
+- Build date: 2022-04-07T11:38:44.014Z[GMT]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 
 ## Requirements
@@ -34,7 +34,7 @@ Then, run:
 ```groovy
 def apiInstance = new ImageImageBackgroundRemovalApi()
 def image = new File("/path/to/file") // File | 
-def model = "rembg" // String | 
+def model = "xception" // String | 
 
 apiInstance.applyImageImageBackgroundRemovalPost(image, model)
     {

@@ -11,12 +11,19 @@ import Alamofire
 
 open class ImageImageSuperResolutionAPI: APIBase {
     /**
+     * enum for parameter model
+     */
+    public enum Model_applyImageImageSuperResolutionPost: String { 
+        case idealoPsnrSmall = "idealo-psnr-small"
+    }
+
+    /**
      Apply model for the super-resolution task for a given models
      - parameter image: (form)  
      - parameter model: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func applyImageImageSuperResolutionPost(image: URL, model: String? = nil, completion: @escaping ((_ data: Any?, _ error: ErrorResponse?) -> Void)) {
+    open class func applyImageImageSuperResolutionPost(image: URL, model: Model_applyImageImageSuperResolutionPost? = nil, completion: @escaping ((_ data: Any?, _ error: ErrorResponse?) -> Void)) {
         applyImageImageSuperResolutionPostWithRequestBuilder(image: image, model: model).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -30,7 +37,7 @@ open class ImageImageSuperResolutionAPI: APIBase {
      - parameter model: (query)  (optional)
      - returns: RequestBuilder<Any> 
      */
-    open class func applyImageImageSuperResolutionPostWithRequestBuilder(image: URL, model: String? = nil) -> RequestBuilder<Any> {
+    open class func applyImageImageSuperResolutionPostWithRequestBuilder(image: URL, model: Model_applyImageImageSuperResolutionPost? = nil) -> RequestBuilder<Any> {
         let path = "/image/image/super-resolution/"
         let URLString = OpenAPIClientAPI.basePath + path
         let formParams: [String:Any?] = [
@@ -42,7 +49,7 @@ open class ImageImageSuperResolutionAPI: APIBase {
         
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems(values:[
-            "model": model
+            "model": model?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<Any>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()

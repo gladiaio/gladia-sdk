@@ -30,7 +30,7 @@ feature -- API Access
 			-- 
 			-- argument: image  (required)
 			-- 
-			-- argument: model  (optional, default to esrgan)
+			-- argument: model  (optional, default to idealo-psnr-small)
 			-- 
 			-- 
 			-- Result ANY

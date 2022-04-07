@@ -80,6 +80,6 @@ export class ImageImageColorizationApi extends BaseAPI {
     * @enum {string}
     */
 export enum ApplyImageImageColorizationPostModelEnum {
-    Artistic = 'deoldify-artistic',
-    Stable = 'deoldify-stable'
+    Stable = 'deoldify-stable',
+    Artistic = 'deoldify-artistic'
 }

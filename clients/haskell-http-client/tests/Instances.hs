@@ -128,14 +128,6 @@ genBodyApplyImageImageFaceBluringPost n =
   BodyApplyImageImageFaceBluringPost
     <$> arbitrary -- bodyApplyImageImageFaceBluringPostImage :: FilePath
   
-instance Arbitrary BodyApplyImageImageRestorationPost where
-  arbitrary = sized genBodyApplyImageImageRestorationPost
-
-genBodyApplyImageImageRestorationPost :: Int -> Gen BodyApplyImageImageRestorationPost
-genBodyApplyImageImageRestorationPost n =
-  BodyApplyImageImageRestorationPost
-    <$> arbitrary -- bodyApplyImageImageRestorationPostImage :: FilePath
-  
 instance Arbitrary BodyApplyImageImageSuperResolutionPost where
   arbitrary = sized genBodyApplyImageImageSuperResolutionPost
 
@@ -167,14 +159,6 @@ genBodyApplyImageTextOcrPost :: Int -> Gen BodyApplyImageTextOcrPost
 genBodyApplyImageTextOcrPost n =
   BodyApplyImageTextOcrPost
     <$> arbitrary -- bodyApplyImageTextOcrPostImage :: FilePath
-  
-instance Arbitrary BodyApplyVideoVideoFrameInterpolationPost where
-  arbitrary = sized genBodyApplyVideoVideoFrameInterpolationPost
-
-genBodyApplyVideoVideoFrameInterpolationPost :: Int -> Gen BodyApplyVideoVideoFrameInterpolationPost
-genBodyApplyVideoVideoFrameInterpolationPost n =
-  BodyApplyVideoVideoFrameInterpolationPost
-    <$> arbitrary -- bodyApplyVideoVideoFrameInterpolationPostVideo :: FilePath
   
 instance Arbitrary HTTPValidationError where
   arbitrary = sized genHTTPValidationError
@@ -243,6 +227,9 @@ instance Arbitrary E'Model22 where
   arbitrary = arbitraryBoundedEnum
 
 instance Arbitrary E'Model23 where
+  arbitrary = arbitraryBoundedEnum
+
+instance Arbitrary E'Model24 where
   arbitrary = arbitraryBoundedEnum
 
 instance Arbitrary E'Model3 where

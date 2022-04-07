@@ -75,7 +75,7 @@ export class TextTextNextWordPredictionApi extends BaseAPI {
     */
 export enum ApplyTextTextNextWordPredictionPostModelEnum {
     BertBaseUncased = 'bert-base-uncased',
-    RobertaBase = 'roberta-base',
+    AlbertBaseV2 = 'albert-base-v2',
     DistilbertBaseUncased = 'distilbert-base-uncased',
-    AlbertBaseV2 = 'albert-base-v2'
+    RobertaBase = 'roberta-base'
 }

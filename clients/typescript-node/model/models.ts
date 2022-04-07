@@ -1,12 +1,10 @@
 export * from './bodyApplyImageImageBackgroundRemovalPost';
 export * from './bodyApplyImageImageColorizationPost';
 export * from './bodyApplyImageImageFaceBluringPost';
-export * from './bodyApplyImageImageRestorationPost';
 export * from './bodyApplyImageImageSuperResolutionPost';
 export * from './bodyApplyImageImageUncolorizationPost';
 export * from './bodyApplyImageTextAsciifyPost';
 export * from './bodyApplyImageTextOcrPost';
-export * from './bodyApplyVideoVideoFrameInterpolationPost';
 export * from './hTTPValidationError';
 export * from './validationError';
 
@@ -15,12 +13,10 @@ import localVarRequest = require('request');
 import { BodyApplyImageImageBackgroundRemovalPost } from './bodyApplyImageImageBackgroundRemovalPost';
 import { BodyApplyImageImageColorizationPost } from './bodyApplyImageImageColorizationPost';
 import { BodyApplyImageImageFaceBluringPost } from './bodyApplyImageImageFaceBluringPost';
-import { BodyApplyImageImageRestorationPost } from './bodyApplyImageImageRestorationPost';
 import { BodyApplyImageImageSuperResolutionPost } from './bodyApplyImageImageSuperResolutionPost';
 import { BodyApplyImageImageUncolorizationPost } from './bodyApplyImageImageUncolorizationPost';
 import { BodyApplyImageTextAsciifyPost } from './bodyApplyImageTextAsciifyPost';
 import { BodyApplyImageTextOcrPost } from './bodyApplyImageTextOcrPost';
-import { BodyApplyVideoVideoFrameInterpolationPost } from './bodyApplyVideoVideoFrameInterpolationPost';
 import { HTTPValidationError } from './hTTPValidationError';
 import { ValidationError } from './validationError';
 
@@ -43,12 +39,10 @@ let typeMap: {[index: string]: any} = {
     "BodyApplyImageImageBackgroundRemovalPost": BodyApplyImageImageBackgroundRemovalPost,
     "BodyApplyImageImageColorizationPost": BodyApplyImageImageColorizationPost,
     "BodyApplyImageImageFaceBluringPost": BodyApplyImageImageFaceBluringPost,
-    "BodyApplyImageImageRestorationPost": BodyApplyImageImageRestorationPost,
     "BodyApplyImageImageSuperResolutionPost": BodyApplyImageImageSuperResolutionPost,
     "BodyApplyImageImageUncolorizationPost": BodyApplyImageImageUncolorizationPost,
     "BodyApplyImageTextAsciifyPost": BodyApplyImageTextAsciifyPost,
     "BodyApplyImageTextOcrPost": BodyApplyImageTextOcrPost,
-    "BodyApplyVideoVideoFrameInterpolationPost": BodyApplyVideoVideoFrameInterpolationPost,
     "HTTPValidationError": HTTPValidationError,
     "ValidationError": ValidationError,
 }

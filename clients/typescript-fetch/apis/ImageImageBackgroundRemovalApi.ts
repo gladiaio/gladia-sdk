@@ -102,6 +102,6 @@ export class ImageImageBackgroundRemovalApi extends runtime.BaseAPI {
     * @enum {string}
     */
 export enum ApplyImageImageBackgroundRemovalPostModelEnum {
-    Xception = 'xception',
-    Mobilenet = 'mobilenet'
+    Mobilenet = 'mobilenet',
+    Xception = 'xception'
 }

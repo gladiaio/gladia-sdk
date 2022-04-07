@@ -60,19 +60,6 @@ export interface BodyApplyImageImageFaceBluringPost {
 /**
  * 
  * @export
- * @interface BodyApplyImageImageRestorationPost
- */
-export interface BodyApplyImageImageRestorationPost {
-    /**
-     * 
-     * @type {any}
-     * @memberof BodyApplyImageImageRestorationPost
-     */
-    image: any;
-}
-/**
- * 
- * @export
  * @interface BodyApplyImageImageSuperResolutionPost
  */
 export interface BodyApplyImageImageSuperResolutionPost {
@@ -125,19 +112,6 @@ export interface BodyApplyImageTextOcrPost {
 /**
  * 
  * @export
- * @interface BodyApplyVideoVideoFrameInterpolationPost
- */
-export interface BodyApplyVideoVideoFrameInterpolationPost {
-    /**
-     * 
-     * @type {any}
-     * @memberof BodyApplyVideoVideoFrameInterpolationPost
-     */
-    video: any;
-}
-/**
- * 
- * @export
  * @interface HTTPValidationError
  */
 export interface HTTPValidationError {
@@ -184,11 +158,11 @@ export const ImageImageBackgroundRemovalApiAxiosParamCreator = function (configu
          * 
          * @summary Apply model for the background-removal task for a given models
          * @param {any} image 
-         * @param {'xception' | 'mobilenet'} [model] 
+         * @param {'mobilenet' | 'xception'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', options: any = {}): RequestArgs {
+        applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', options: any = {}): RequestArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageBackgroundRemovalPost.');
@@ -266,11 +240,11 @@ export const ImageImageBackgroundRemovalApiFp = function(configuration?: Configu
          * 
          * @summary Apply model for the background-removal task for a given models
          * @param {any} image 
-         * @param {'xception' | 'mobilenet'} [model] 
+         * @param {'mobilenet' | 'xception'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+        applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
             const localVarAxiosArgs = ImageImageBackgroundRemovalApiAxiosParamCreator(configuration).applyImageImageBackgroundRemovalPost(image, model, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -303,11 +277,11 @@ export const ImageImageBackgroundRemovalApiFactory = function (configuration?: C
          * 
          * @summary Apply model for the background-removal task for a given models
          * @param {any} image 
-         * @param {'xception' | 'mobilenet'} [model] 
+         * @param {'mobilenet' | 'xception'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', options?: any) {
+        applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', options?: any) {
             return ImageImageBackgroundRemovalApiFp(configuration).applyImageImageBackgroundRemovalPost(image, model, options)(axios, basePath);
         },
         /**
@@ -333,12 +307,12 @@ export class ImageImageBackgroundRemovalApi extends BaseAPI {
      * 
      * @summary Apply model for the background-removal task for a given models
      * @param {any} image 
-     * @param {'xception' | 'mobilenet'} [model] 
+     * @param {'mobilenet' | 'xception'} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ImageImageBackgroundRemovalApi
      */
-    public applyImageImageBackgroundRemovalPost(image: any, model?: 'xception' | 'mobilenet', options?: any) {
+    public applyImageImageBackgroundRemovalPost(image: any, model?: 'mobilenet' | 'xception', options?: any) {
         return ImageImageBackgroundRemovalApiFp(this.configuration).applyImageImageBackgroundRemovalPost(image, model, options)(this.axios, this.basePath);
     }
 
@@ -366,11 +340,11 @@ export const ImageImageColorizationApiAxiosParamCreator = function (configuratio
          * 
          * @summary Apply model for the colorization task for a given models
          * @param {any} image 
-         * @param {'deoldify-artistic' | 'deoldify-stable'} [model] 
+         * @param {'deoldify-stable' | 'deoldify-artistic'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', options: any = {}): RequestArgs {
+        applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', options: any = {}): RequestArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageColorizationPost.');
@@ -448,11 +422,11 @@ export const ImageImageColorizationApiFp = function(configuration?: Configuratio
          * 
          * @summary Apply model for the colorization task for a given models
          * @param {any} image 
-         * @param {'deoldify-artistic' | 'deoldify-stable'} [model] 
+         * @param {'deoldify-stable' | 'deoldify-artistic'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+        applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
             const localVarAxiosArgs = ImageImageColorizationApiAxiosParamCreator(configuration).applyImageImageColorizationPost(image, model, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -485,11 +459,11 @@ export const ImageImageColorizationApiFactory = function (configuration?: Config
          * 
          * @summary Apply model for the colorization task for a given models
          * @param {any} image 
-         * @param {'deoldify-artistic' | 'deoldify-stable'} [model] 
+         * @param {'deoldify-stable' | 'deoldify-artistic'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', options?: any) {
+        applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', options?: any) {
             return ImageImageColorizationApiFp(configuration).applyImageImageColorizationPost(image, model, options)(axios, basePath);
         },
         /**
@@ -515,12 +489,12 @@ export class ImageImageColorizationApi extends BaseAPI {
      * 
      * @summary Apply model for the colorization task for a given models
      * @param {any} image 
-     * @param {'deoldify-artistic' | 'deoldify-stable'} [model] 
+     * @param {'deoldify-stable' | 'deoldify-artistic'} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ImageImageColorizationApi
      */
-    public applyImageImageColorizationPost(image: any, model?: 'deoldify-artistic' | 'deoldify-stable', options?: any) {
+    public applyImageImageColorizationPost(image: any, model?: 'deoldify-stable' | 'deoldify-artistic', options?: any) {
         return ImageImageColorizationApiFp(this.configuration).applyImageImageColorizationPost(image, model, options)(this.axios, this.basePath);
     }
 
@@ -721,188 +695,6 @@ export class ImageImageFaceBluringApi extends BaseAPI {
 
 
 /**
- * ImageImageRestorationApi - axios parameter creator
- * @export
- */
-export const ImageImageRestorationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the restoration task for a given models
-         * @param {any} image 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyImageImageRestorationPost(image: any, model?: string, options: any = {}): RequestArgs {
-            // verify required parameter 'image' is not null or undefined
-            if (image === null || image === undefined) {
-                throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageRestorationPost.');
-            }
-            const localVarPath = `/image/image/restoration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-            const localVarFormParams = new FormData();
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-            if (image !== undefined) { 
-                localVarFormParams.append('image', image as any);
-            }
-    
-    
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            localVarRequestOptions.data = localVarFormParams;
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for restoration
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsImageImageRestorationGet(options: any = {}): RequestArgs {
-            const localVarPath = `/image/image/restoration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * ImageImageRestorationApi - functional programming interface
- * @export
- */
-export const ImageImageRestorationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the restoration task for a given models
-         * @param {any} image 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyImageImageRestorationPost(image: any, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = ImageImageRestorationApiAxiosParamCreator(configuration).applyImageImageRestorationPost(image, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for restoration
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsImageImageRestorationGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = ImageImageRestorationApiAxiosParamCreator(configuration).getVersionsImageImageRestorationGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * ImageImageRestorationApi - factory interface
- * @export
- */
-export const ImageImageRestorationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the restoration task for a given models
-         * @param {any} image 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyImageImageRestorationPost(image: any, model?: string, options?: any) {
-            return ImageImageRestorationApiFp(configuration).applyImageImageRestorationPost(image, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for restoration
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsImageImageRestorationGet(options?: any) {
-            return ImageImageRestorationApiFp(configuration).getVersionsImageImageRestorationGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * ImageImageRestorationApi - object-oriented interface
- * @export
- * @class ImageImageRestorationApi
- * @extends {BaseAPI}
- */
-export class ImageImageRestorationApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the restoration task for a given models
-     * @param {any} image 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ImageImageRestorationApi
-     */
-    public applyImageImageRestorationPost(image: any, model?: string, options?: any) {
-        return ImageImageRestorationApiFp(this.configuration).applyImageImageRestorationPost(image, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for restoration
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ImageImageRestorationApi
-     */
-    public getVersionsImageImageRestorationGet(options?: any) {
-        return ImageImageRestorationApiFp(this.configuration).getVersionsImageImageRestorationGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
  * ImageImageSuperResolutionApi - axios parameter creator
  * @export
  */
@@ -912,11 +704,11 @@ export const ImageImageSuperResolutionApiAxiosParamCreator = function (configura
          * 
          * @summary Apply model for the super-resolution task for a given models
          * @param {any} image 
-         * @param {string} [model] 
+         * @param {'idealo-psnr-small'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageSuperResolutionPost(image: any, model?: string, options: any = {}): RequestArgs {
+        applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', options: any = {}): RequestArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageImageSuperResolutionPost.');
@@ -994,11 +786,11 @@ export const ImageImageSuperResolutionApiFp = function(configuration?: Configura
          * 
          * @summary Apply model for the super-resolution task for a given models
          * @param {any} image 
-         * @param {string} [model] 
+         * @param {'idealo-psnr-small'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageSuperResolutionPost(image: any, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+        applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
             const localVarAxiosArgs = ImageImageSuperResolutionApiAxiosParamCreator(configuration).applyImageImageSuperResolutionPost(image, model, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -1031,11 +823,11 @@ export const ImageImageSuperResolutionApiFactory = function (configuration?: Con
          * 
          * @summary Apply model for the super-resolution task for a given models
          * @param {any} image 
-         * @param {string} [model] 
+         * @param {'idealo-psnr-small'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageImageSuperResolutionPost(image: any, model?: string, options?: any) {
+        applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', options?: any) {
             return ImageImageSuperResolutionApiFp(configuration).applyImageImageSuperResolutionPost(image, model, options)(axios, basePath);
         },
         /**
@@ -1061,12 +853,12 @@ export class ImageImageSuperResolutionApi extends BaseAPI {
      * 
      * @summary Apply model for the super-resolution task for a given models
      * @param {any} image 
-     * @param {string} [model] 
+     * @param {'idealo-psnr-small'} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ImageImageSuperResolutionApi
      */
-    public applyImageImageSuperResolutionPost(image: any, model?: string, options?: any) {
+    public applyImageImageSuperResolutionPost(image: any, model?: 'idealo-psnr-small', options?: any) {
         return ImageImageSuperResolutionApiFp(this.configuration).applyImageImageSuperResolutionPost(image, model, options)(this.axios, this.basePath);
     }
 
@@ -1459,11 +1251,11 @@ export const ImageTextOcrApiAxiosParamCreator = function (configuration?: Config
          * @summary Apply model for the ocr task for a given models
          * @param {any} image 
          * @param {string} [sourceLanguage] 
-         * @param {'tesseract-default' | 'tesseract-denoising' | 'easy-ocr'} [model] 
+         * @param {'tesseract-denoising' | 'easy-ocr' | 'tesseract-default'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options: any = {}): RequestArgs {
+        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options: any = {}): RequestArgs {
             // verify required parameter 'image' is not null or undefined
             if (image === null || image === undefined) {
                 throw new RequiredError('image','Required parameter image was null or undefined when calling applyImageTextOcrPost.');
@@ -1546,11 +1338,11 @@ export const ImageTextOcrApiFp = function(configuration?: Configuration) {
          * @summary Apply model for the ocr task for a given models
          * @param {any} image 
          * @param {string} [sourceLanguage] 
-         * @param {'tesseract-default' | 'tesseract-denoising' | 'easy-ocr'} [model] 
+         * @param {'tesseract-denoising' | 'easy-ocr' | 'tesseract-default'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
             const localVarAxiosArgs = ImageTextOcrApiAxiosParamCreator(configuration).applyImageTextOcrPost(image, sourceLanguage, model, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -1584,11 +1376,11 @@ export const ImageTextOcrApiFactory = function (configuration?: Configuration, b
          * @summary Apply model for the ocr task for a given models
          * @param {any} image 
          * @param {string} [sourceLanguage] 
-         * @param {'tesseract-default' | 'tesseract-denoising' | 'easy-ocr'} [model] 
+         * @param {'tesseract-denoising' | 'easy-ocr' | 'tesseract-default'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options?: any) {
+        applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options?: any) {
             return ImageTextOcrApiFp(configuration).applyImageTextOcrPost(image, sourceLanguage, model, options)(axios, basePath);
         },
         /**
@@ -1615,12 +1407,12 @@ export class ImageTextOcrApi extends BaseAPI {
      * @summary Apply model for the ocr task for a given models
      * @param {any} image 
      * @param {string} [sourceLanguage] 
-     * @param {'tesseract-default' | 'tesseract-denoising' | 'easy-ocr'} [model] 
+     * @param {'tesseract-denoising' | 'easy-ocr' | 'tesseract-default'} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ImageTextOcrApi
      */
-    public applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options?: any) {
+    public applyImageTextOcrPost(image: any, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options?: any) {
         return ImageTextOcrApiFp(this.configuration).applyImageTextOcrPost(image, sourceLanguage, model, options)(this.axios, this.basePath);
     }
 
@@ -1808,356 +1600,6 @@ export class TextTextAutocorrectApi extends BaseAPI {
      */
     public getVersionsTextTextAutocorrectGet(options?: any) {
         return TextTextAutocorrectApiFp(this.configuration).getVersionsTextTextAutocorrectGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
- * TextTextBooleanQuestionGenerationApi - axios parameter creator
- * @export
- */
-export const TextTextBooleanQuestionGenerationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the boolean-question-generation task for a given models
-         * @param {string} [text] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextBooleanQuestionGenerationPost(text?: string, model?: string, options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/boolean-question-generation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = text;
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for boolean-question-generation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextBooleanQuestionGenerationGet(options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/boolean-question-generation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TextTextBooleanQuestionGenerationApi - functional programming interface
- * @export
- */
-export const TextTextBooleanQuestionGenerationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the boolean-question-generation task for a given models
-         * @param {string} [text] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextBooleanQuestionGenerationPost(text?: string, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextBooleanQuestionGenerationApiAxiosParamCreator(configuration).applyTextTextBooleanQuestionGenerationPost(text, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for boolean-question-generation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextBooleanQuestionGenerationGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextBooleanQuestionGenerationApiAxiosParamCreator(configuration).getVersionsTextTextBooleanQuestionGenerationGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * TextTextBooleanQuestionGenerationApi - factory interface
- * @export
- */
-export const TextTextBooleanQuestionGenerationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the boolean-question-generation task for a given models
-         * @param {string} [text] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextBooleanQuestionGenerationPost(text?: string, model?: string, options?: any) {
-            return TextTextBooleanQuestionGenerationApiFp(configuration).applyTextTextBooleanQuestionGenerationPost(text, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for boolean-question-generation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextBooleanQuestionGenerationGet(options?: any) {
-            return TextTextBooleanQuestionGenerationApiFp(configuration).getVersionsTextTextBooleanQuestionGenerationGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * TextTextBooleanQuestionGenerationApi - object-oriented interface
- * @export
- * @class TextTextBooleanQuestionGenerationApi
- * @extends {BaseAPI}
- */
-export class TextTextBooleanQuestionGenerationApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the boolean-question-generation task for a given models
-     * @param {string} [text] 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextBooleanQuestionGenerationApi
-     */
-    public applyTextTextBooleanQuestionGenerationPost(text?: string, model?: string, options?: any) {
-        return TextTextBooleanQuestionGenerationApiFp(this.configuration).applyTextTextBooleanQuestionGenerationPost(text, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for boolean-question-generation
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextBooleanQuestionGenerationApi
-     */
-    public getVersionsTextTextBooleanQuestionGenerationGet(options?: any) {
-        return TextTextBooleanQuestionGenerationApiFp(this.configuration).getVersionsTextTextBooleanQuestionGenerationGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
- * TextTextDependencyTrackingApi - axios parameter creator
- * @export
- */
-export const TextTextDependencyTrackingApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the dependency-tracking task for a given models
-         * @param {string} [inputString] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextDependencyTrackingPost(inputString?: string, model?: string, options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/dependency-tracking/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (inputString !== undefined) {
-                localVarQueryParameter['input_string'] = inputString;
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for dependency-tracking
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextDependencyTrackingGet(options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/dependency-tracking/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TextTextDependencyTrackingApi - functional programming interface
- * @export
- */
-export const TextTextDependencyTrackingApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the dependency-tracking task for a given models
-         * @param {string} [inputString] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextDependencyTrackingPost(inputString?: string, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextDependencyTrackingApiAxiosParamCreator(configuration).applyTextTextDependencyTrackingPost(inputString, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for dependency-tracking
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextDependencyTrackingGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextDependencyTrackingApiAxiosParamCreator(configuration).getVersionsTextTextDependencyTrackingGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * TextTextDependencyTrackingApi - factory interface
- * @export
- */
-export const TextTextDependencyTrackingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the dependency-tracking task for a given models
-         * @param {string} [inputString] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextDependencyTrackingPost(inputString?: string, model?: string, options?: any) {
-            return TextTextDependencyTrackingApiFp(configuration).applyTextTextDependencyTrackingPost(inputString, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for dependency-tracking
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextDependencyTrackingGet(options?: any) {
-            return TextTextDependencyTrackingApiFp(configuration).getVersionsTextTextDependencyTrackingGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * TextTextDependencyTrackingApi - object-oriented interface
- * @export
- * @class TextTextDependencyTrackingApi
- * @extends {BaseAPI}
- */
-export class TextTextDependencyTrackingApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the dependency-tracking task for a given models
-     * @param {string} [inputString] 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextDependencyTrackingApi
-     */
-    public applyTextTextDependencyTrackingPost(inputString?: string, model?: string, options?: any) {
-        return TextTextDependencyTrackingApiFp(this.configuration).applyTextTextDependencyTrackingPost(inputString, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for dependency-tracking
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextDependencyTrackingApi
-     */
-    public getVersionsTextTextDependencyTrackingGet(options?: any) {
-        return TextTextDependencyTrackingApiFp(this.configuration).getVersionsTextTextDependencyTrackingGet(options)(this.axios, this.basePath);
     }
 
 }
@@ -3756,11 +3198,11 @@ export const TextTextNextWordPredictionApiAxiosParamCreator = function (configur
          * 
          * @summary Apply model for the next-word-prediction task for a given models
          * @param {string} [sentence] 
-         * @param {'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2'} [model] 
+         * @param {'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options: any = {}): RequestArgs {
+        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options: any = {}): RequestArgs {
             const localVarPath = `/text/text/next-word-prediction/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -3831,11 +3273,11 @@ export const TextTextNextWordPredictionApiFp = function(configuration?: Configur
          * 
          * @summary Apply model for the next-word-prediction task for a given models
          * @param {string} [sentence] 
-         * @param {'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2'} [model] 
+         * @param {'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
             const localVarAxiosArgs = TextTextNextWordPredictionApiAxiosParamCreator(configuration).applyTextTextNextWordPredictionPost(sentence, model, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -3868,11 +3310,11 @@ export const TextTextNextWordPredictionApiFactory = function (configuration?: Co
          * 
          * @summary Apply model for the next-word-prediction task for a given models
          * @param {string} [sentence] 
-         * @param {'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2'} [model] 
+         * @param {'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options?: any) {
+        applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options?: any) {
             return TextTextNextWordPredictionApiFp(configuration).applyTextTextNextWordPredictionPost(sentence, model, options)(axios, basePath);
         },
         /**
@@ -3898,12 +3340,12 @@ export class TextTextNextWordPredictionApi extends BaseAPI {
      * 
      * @summary Apply model for the next-word-prediction task for a given models
      * @param {string} [sentence] 
-     * @param {'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2'} [model] 
+     * @param {'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base'} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TextTextNextWordPredictionApi
      */
-    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options?: any) {
+    public applyTextTextNextWordPredictionPost(sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options?: any) {
         return TextTextNextWordPredictionApiFp(this.configuration).applyTextTextNextWordPredictionPost(sentence, model, options)(this.axios, this.basePath);
     }
 
@@ -4280,181 +3722,6 @@ export class TextTextProgrammingLanguageGenerationApi extends BaseAPI {
 
 
 /**
- * TextTextProgrammingLanguageIdentificationApi - axios parameter creator
- * @export
- */
-export const TextTextProgrammingLanguageIdentificationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the programming-language-identification task for a given models
-         * @param {string} [text] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextProgrammingLanguageIdentificationPost(text?: string, model?: string, options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/programming-language-identification/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = text;
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for programming-language-identification
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextProgrammingLanguageIdentificationGet(options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/programming-language-identification/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TextTextProgrammingLanguageIdentificationApi - functional programming interface
- * @export
- */
-export const TextTextProgrammingLanguageIdentificationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the programming-language-identification task for a given models
-         * @param {string} [text] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextProgrammingLanguageIdentificationPost(text?: string, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextProgrammingLanguageIdentificationApiAxiosParamCreator(configuration).applyTextTextProgrammingLanguageIdentificationPost(text, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for programming-language-identification
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextProgrammingLanguageIdentificationGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextProgrammingLanguageIdentificationApiAxiosParamCreator(configuration).getVersionsTextTextProgrammingLanguageIdentificationGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * TextTextProgrammingLanguageIdentificationApi - factory interface
- * @export
- */
-export const TextTextProgrammingLanguageIdentificationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the programming-language-identification task for a given models
-         * @param {string} [text] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextProgrammingLanguageIdentificationPost(text?: string, model?: string, options?: any) {
-            return TextTextProgrammingLanguageIdentificationApiFp(configuration).applyTextTextProgrammingLanguageIdentificationPost(text, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for programming-language-identification
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextProgrammingLanguageIdentificationGet(options?: any) {
-            return TextTextProgrammingLanguageIdentificationApiFp(configuration).getVersionsTextTextProgrammingLanguageIdentificationGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * TextTextProgrammingLanguageIdentificationApi - object-oriented interface
- * @export
- * @class TextTextProgrammingLanguageIdentificationApi
- * @extends {BaseAPI}
- */
-export class TextTextProgrammingLanguageIdentificationApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the programming-language-identification task for a given models
-     * @param {string} [text] 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextProgrammingLanguageIdentificationApi
-     */
-    public applyTextTextProgrammingLanguageIdentificationPost(text?: string, model?: string, options?: any) {
-        return TextTextProgrammingLanguageIdentificationApiFp(this.configuration).applyTextTextProgrammingLanguageIdentificationPost(text, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for programming-language-identification
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextProgrammingLanguageIdentificationApi
-     */
-    public getVersionsTextTextProgrammingLanguageIdentificationGet(options?: any) {
-        return TextTextProgrammingLanguageIdentificationApiFp(this.configuration).getVersionsTextTextProgrammingLanguageIdentificationGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
  * TextTextQuestionAnsweringApi - axios parameter creator
  * @export
  */
@@ -4465,11 +3732,11 @@ export const TextTextQuestionAnsweringApiAxiosParamCreator = function (configura
          * @summary Apply model for the question-answering task for a given models
          * @param {string} [context] 
          * @param {string} [question] 
-         * @param {'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad'} [model] 
+         * @param {'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options: any = {}): RequestArgs {
+        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options: any = {}): RequestArgs {
             const localVarPath = `/text/text/question-answering/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -4545,11 +3812,11 @@ export const TextTextQuestionAnsweringApiFp = function(configuration?: Configura
          * @summary Apply model for the question-answering task for a given models
          * @param {string} [context] 
          * @param {string} [question] 
-         * @param {'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad'} [model] 
+         * @param {'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
             const localVarAxiosArgs = TextTextQuestionAnsweringApiAxiosParamCreator(configuration).applyTextTextQuestionAnsweringPost(context, question, model, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -4583,11 +3850,11 @@ export const TextTextQuestionAnsweringApiFactory = function (configuration?: Con
          * @summary Apply model for the question-answering task for a given models
          * @param {string} [context] 
          * @param {string} [question] 
-         * @param {'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad'} [model] 
+         * @param {'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options?: any) {
+        applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options?: any) {
             return TextTextQuestionAnsweringApiFp(configuration).applyTextTextQuestionAnsweringPost(context, question, model, options)(axios, basePath);
         },
         /**
@@ -4614,12 +3881,12 @@ export class TextTextQuestionAnsweringApi extends BaseAPI {
      * @summary Apply model for the question-answering task for a given models
      * @param {string} [context] 
      * @param {string} [question] 
-     * @param {'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad'} [model] 
+     * @param {'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2'} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TextTextQuestionAnsweringApi
      */
-    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'deepset_bert-base-cased-squad2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'distilbert-base-cased-distilled-squad', options?: any) {
+    public applyTextTextQuestionAnsweringPost(context?: string, question?: string, model?: 'mrm8488-bert-tiny-5-finetuned-squadv2' | 'mfeb-albert-xxlarge-v2-squad2' | 'deepset-roberta-base-squad2' | 'distilbert-base-cased-distilled-squad' | 'deepset_bert-base-cased-squad2', options?: any) {
         return TextTextQuestionAnsweringApiFp(this.configuration).applyTextTextQuestionAnsweringPost(context, question, model, options)(this.axios, this.basePath);
     }
 
@@ -4632,181 +3899,6 @@ export class TextTextQuestionAnsweringApi extends BaseAPI {
      */
     public getVersionsTextTextQuestionAnsweringGet(options?: any) {
         return TextTextQuestionAnsweringApiFp(this.configuration).getVersionsTextTextQuestionAnsweringGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
- * TextTextSentencePairModelingApi - axios parameter creator
- * @export
- */
-export const TextTextSentencePairModelingApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the sentence-pair-modeling task for a given models
-         * @param {string} [sentence] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextSentencePairModelingPost(sentence?: string, model?: string, options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/sentence-pair-modeling/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (sentence !== undefined) {
-                localVarQueryParameter['sentence'] = sentence;
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for sentence-pair-modeling
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSentencePairModelingGet(options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/sentence-pair-modeling/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TextTextSentencePairModelingApi - functional programming interface
- * @export
- */
-export const TextTextSentencePairModelingApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the sentence-pair-modeling task for a given models
-         * @param {string} [sentence] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextSentencePairModelingPost(sentence?: string, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextSentencePairModelingApiAxiosParamCreator(configuration).applyTextTextSentencePairModelingPost(sentence, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for sentence-pair-modeling
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSentencePairModelingGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextSentencePairModelingApiAxiosParamCreator(configuration).getVersionsTextTextSentencePairModelingGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * TextTextSentencePairModelingApi - factory interface
- * @export
- */
-export const TextTextSentencePairModelingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the sentence-pair-modeling task for a given models
-         * @param {string} [sentence] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextSentencePairModelingPost(sentence?: string, model?: string, options?: any) {
-            return TextTextSentencePairModelingApiFp(configuration).applyTextTextSentencePairModelingPost(sentence, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for sentence-pair-modeling
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSentencePairModelingGet(options?: any) {
-            return TextTextSentencePairModelingApiFp(configuration).getVersionsTextTextSentencePairModelingGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * TextTextSentencePairModelingApi - object-oriented interface
- * @export
- * @class TextTextSentencePairModelingApi
- * @extends {BaseAPI}
- */
-export class TextTextSentencePairModelingApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the sentence-pair-modeling task for a given models
-     * @param {string} [sentence] 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextSentencePairModelingApi
-     */
-    public applyTextTextSentencePairModelingPost(sentence?: string, model?: string, options?: any) {
-        return TextTextSentencePairModelingApiFp(this.configuration).applyTextTextSentencePairModelingPost(sentence, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for sentence-pair-modeling
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextSentencePairModelingApi
-     */
-    public getVersionsTextTextSentencePairModelingGet(options?: any) {
-        return TextTextSentencePairModelingApiFp(this.configuration).getVersionsTextTextSentencePairModelingGet(options)(this.axios, this.basePath);
     }
 
 }
@@ -4997,11 +4089,11 @@ export const TextTextSentimentAnalysisApiAxiosParamCreator = function (configura
          * 
          * @summary Apply model for the sentiment-analysis task for a given models
          * @param {string} [text] 
-         * @param {'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli'} [model] 
+         * @param {'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options: any = {}): RequestArgs {
+        applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options: any = {}): RequestArgs {
             const localVarPath = `/text/text/sentiment-analysis/`;
             const localVarUrlObj = url.parse(localVarPath, true);
             let baseOptions;
@@ -5072,11 +4164,11 @@ export const TextTextSentimentAnalysisApiFp = function(configuration?: Configura
          * 
          * @summary Apply model for the sentiment-analysis task for a given models
          * @param {string} [text] 
-         * @param {'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli'} [model] 
+         * @param {'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+        applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
             const localVarAxiosArgs = TextTextSentimentAnalysisApiAxiosParamCreator(configuration).applyTextTextSentimentAnalysisPost(text, model, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -5109,11 +4201,11 @@ export const TextTextSentimentAnalysisApiFactory = function (configuration?: Con
          * 
          * @summary Apply model for the sentiment-analysis task for a given models
          * @param {string} [text] 
-         * @param {'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli'} [model] 
+         * @param {'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english'} [model] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options?: any) {
+        applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options?: any) {
             return TextTextSentimentAnalysisApiFp(configuration).applyTextTextSentimentAnalysisPost(text, model, options)(axios, basePath);
         },
         /**
@@ -5139,12 +4231,12 @@ export class TextTextSentimentAnalysisApi extends BaseAPI {
      * 
      * @summary Apply model for the sentiment-analysis task for a given models
      * @param {string} [text] 
-     * @param {'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli'} [model] 
+     * @param {'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english'} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TextTextSentimentAnalysisApi
      */
-    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', options?: any) {
+    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', options?: any) {
         return TextTextSentimentAnalysisApiFp(this.configuration).applyTextTextSentimentAnalysisPost(text, model, options)(this.axios, this.basePath);
     }
 
@@ -5346,579 +4438,6 @@ export class TextTextSimilarityApi extends BaseAPI {
 
 
 /**
- * TextTextSummarizationApi - axios parameter creator
- * @export
- */
-export const TextTextSummarizationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the summarization task for a given models
-         * @param {string} [text] 
-         * @param {string} [sourceLanguage] 
-         * @param {number} [maxLength] 
-         * @param {number} [minLength] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextSummarizationPost(text?: string, sourceLanguage?: string, maxLength?: number, minLength?: number, model?: string, options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/summarization/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = text;
-            }
-
-            if (sourceLanguage !== undefined) {
-                localVarQueryParameter['source_language'] = sourceLanguage;
-            }
-
-            if (maxLength !== undefined) {
-                localVarQueryParameter['max_length'] = maxLength;
-            }
-
-            if (minLength !== undefined) {
-                localVarQueryParameter['min_length'] = minLength;
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for summarization
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSummarizationGet(options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/summarization/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TextTextSummarizationApi - functional programming interface
- * @export
- */
-export const TextTextSummarizationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the summarization task for a given models
-         * @param {string} [text] 
-         * @param {string} [sourceLanguage] 
-         * @param {number} [maxLength] 
-         * @param {number} [minLength] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextSummarizationPost(text?: string, sourceLanguage?: string, maxLength?: number, minLength?: number, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextSummarizationApiAxiosParamCreator(configuration).applyTextTextSummarizationPost(text, sourceLanguage, maxLength, minLength, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for summarization
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSummarizationGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextSummarizationApiAxiosParamCreator(configuration).getVersionsTextTextSummarizationGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * TextTextSummarizationApi - factory interface
- * @export
- */
-export const TextTextSummarizationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the summarization task for a given models
-         * @param {string} [text] 
-         * @param {string} [sourceLanguage] 
-         * @param {number} [maxLength] 
-         * @param {number} [minLength] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextSummarizationPost(text?: string, sourceLanguage?: string, maxLength?: number, minLength?: number, model?: string, options?: any) {
-            return TextTextSummarizationApiFp(configuration).applyTextTextSummarizationPost(text, sourceLanguage, maxLength, minLength, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for summarization
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextSummarizationGet(options?: any) {
-            return TextTextSummarizationApiFp(configuration).getVersionsTextTextSummarizationGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * TextTextSummarizationApi - object-oriented interface
- * @export
- * @class TextTextSummarizationApi
- * @extends {BaseAPI}
- */
-export class TextTextSummarizationApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the summarization task for a given models
-     * @param {string} [text] 
-     * @param {string} [sourceLanguage] 
-     * @param {number} [maxLength] 
-     * @param {number} [minLength] 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextSummarizationApi
-     */
-    public applyTextTextSummarizationPost(text?: string, sourceLanguage?: string, maxLength?: number, minLength?: number, model?: string, options?: any) {
-        return TextTextSummarizationApiFp(this.configuration).applyTextTextSummarizationPost(text, sourceLanguage, maxLength, minLength, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for summarization
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextSummarizationApi
-     */
-    public getVersionsTextTextSummarizationGet(options?: any) {
-        return TextTextSummarizationApiFp(this.configuration).getVersionsTextTextSummarizationGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
- * TextTextTranslationApi - axios parameter creator
- * @export
- */
-export const TextTextTranslationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the translation task for a given models
-         * @param {string} [inputString] 
-         * @param {string} [sourceLanguage] 
-         * @param {string} [targetLanguage] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextTranslationPost(inputString?: string, sourceLanguage?: string, targetLanguage?: string, model?: string, options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/translation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (inputString !== undefined) {
-                localVarQueryParameter['input_string'] = inputString;
-            }
-
-            if (sourceLanguage !== undefined) {
-                localVarQueryParameter['source_language'] = sourceLanguage;
-            }
-
-            if (targetLanguage !== undefined) {
-                localVarQueryParameter['target_language'] = targetLanguage;
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for translation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTranslationGet(options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/translation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TextTextTranslationApi - functional programming interface
- * @export
- */
-export const TextTextTranslationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the translation task for a given models
-         * @param {string} [inputString] 
-         * @param {string} [sourceLanguage] 
-         * @param {string} [targetLanguage] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextTranslationPost(inputString?: string, sourceLanguage?: string, targetLanguage?: string, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextTranslationApiAxiosParamCreator(configuration).applyTextTextTranslationPost(inputString, sourceLanguage, targetLanguage, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for translation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTranslationGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextTranslationApiAxiosParamCreator(configuration).getVersionsTextTextTranslationGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * TextTextTranslationApi - factory interface
- * @export
- */
-export const TextTextTranslationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the translation task for a given models
-         * @param {string} [inputString] 
-         * @param {string} [sourceLanguage] 
-         * @param {string} [targetLanguage] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextTranslationPost(inputString?: string, sourceLanguage?: string, targetLanguage?: string, model?: string, options?: any) {
-            return TextTextTranslationApiFp(configuration).applyTextTextTranslationPost(inputString, sourceLanguage, targetLanguage, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for translation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTranslationGet(options?: any) {
-            return TextTextTranslationApiFp(configuration).getVersionsTextTextTranslationGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * TextTextTranslationApi - object-oriented interface
- * @export
- * @class TextTextTranslationApi
- * @extends {BaseAPI}
- */
-export class TextTextTranslationApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the translation task for a given models
-     * @param {string} [inputString] 
-     * @param {string} [sourceLanguage] 
-     * @param {string} [targetLanguage] 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextTranslationApi
-     */
-    public applyTextTextTranslationPost(inputString?: string, sourceLanguage?: string, targetLanguage?: string, model?: string, options?: any) {
-        return TextTextTranslationApiFp(this.configuration).applyTextTextTranslationPost(inputString, sourceLanguage, targetLanguage, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for translation
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextTranslationApi
-     */
-    public getVersionsTextTextTranslationGet(options?: any) {
-        return TextTextTranslationApiFp(this.configuration).getVersionsTextTextTranslationGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
- * TextTextTransliterationApi - axios parameter creator
- * @export
- */
-export const TextTextTransliterationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the transliteration task for a given models
-         * @param {string} [text] 
-         * @param {string} [language] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextTransliterationPost(text?: string, language?: string, model?: string, options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/transliteration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (text !== undefined) {
-                localVarQueryParameter['text'] = text;
-            }
-
-            if (language !== undefined) {
-                localVarQueryParameter['language'] = language;
-            }
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for transliteration
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTransliterationGet(options: any = {}): RequestArgs {
-            const localVarPath = `/text/text/transliteration/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * TextTextTransliterationApi - functional programming interface
- * @export
- */
-export const TextTextTransliterationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the transliteration task for a given models
-         * @param {string} [text] 
-         * @param {string} [language] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextTransliterationPost(text?: string, language?: string, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextTransliterationApiAxiosParamCreator(configuration).applyTextTextTransliterationPost(text, language, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for transliteration
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTransliterationGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = TextTextTransliterationApiAxiosParamCreator(configuration).getVersionsTextTextTransliterationGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * TextTextTransliterationApi - factory interface
- * @export
- */
-export const TextTextTransliterationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the transliteration task for a given models
-         * @param {string} [text] 
-         * @param {string} [language] 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyTextTextTransliterationPost(text?: string, language?: string, model?: string, options?: any) {
-            return TextTextTransliterationApiFp(configuration).applyTextTextTransliterationPost(text, language, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for transliteration
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsTextTextTransliterationGet(options?: any) {
-            return TextTextTransliterationApiFp(configuration).getVersionsTextTextTransliterationGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * TextTextTransliterationApi - object-oriented interface
- * @export
- * @class TextTextTransliterationApi
- * @extends {BaseAPI}
- */
-export class TextTextTransliterationApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the transliteration task for a given models
-     * @param {string} [text] 
-     * @param {string} [language] 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextTransliterationApi
-     */
-    public applyTextTextTransliterationPost(text?: string, language?: string, model?: string, options?: any) {
-        return TextTextTransliterationApiFp(this.configuration).applyTextTextTransliterationPost(text, language, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for transliteration
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof TextTextTransliterationApi
-     */
-    public getVersionsTextTextTransliterationGet(options?: any) {
-        return TextTextTransliterationApiFp(this.configuration).getVersionsTextTextTransliterationGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
  * TextTextWordAlignmentApi - axios parameter creator
  * @export
  */
@@ -6096,188 +4615,6 @@ export class TextTextWordAlignmentApi extends BaseAPI {
      */
     public getVersionsTextTextWordAlignmentGet(options?: any) {
         return TextTextWordAlignmentApiFp(this.configuration).getVersionsTextTextWordAlignmentGet(options)(this.axios, this.basePath);
-    }
-
-}
-
-
-/**
- * VideoVideoFrameInterpolationApi - axios parameter creator
- * @export
- */
-export const VideoVideoFrameInterpolationApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the frame-interpolation task for a given models
-         * @param {any} video 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyVideoVideoFrameInterpolationPost(video: any, model?: string, options: any = {}): RequestArgs {
-            // verify required parameter 'video' is not null or undefined
-            if (video === null || video === undefined) {
-                throw new RequiredError('video','Required parameter video was null or undefined when calling applyVideoVideoFrameInterpolationPost.');
-            }
-            const localVarPath = `/video/video/frame-interpolation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-            const localVarFormParams = new FormData();
-
-            if (model !== undefined) {
-                localVarQueryParameter['model'] = model;
-            }
-
-
-            if (video !== undefined) { 
-                localVarFormParams.append('video', video as any);
-            }
-    
-    
-            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            localVarRequestOptions.data = localVarFormParams;
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for frame-interpolation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsVideoVideoFrameInterpolationGet(options: any = {}): RequestArgs {
-            const localVarPath = `/video/video/frame-interpolation/`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-                localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * VideoVideoFrameInterpolationApi - functional programming interface
- * @export
- */
-export const VideoVideoFrameInterpolationApiFp = function(configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the frame-interpolation task for a given models
-         * @param {any} video 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyVideoVideoFrameInterpolationPost(video: any, model?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = VideoVideoFrameInterpolationApiAxiosParamCreator(configuration).applyVideoVideoFrameInterpolationPost(video, model, options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-        /**
-         * 
-         * @summary Get list of models available for frame-interpolation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsVideoVideoFrameInterpolationGet(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
-            const localVarAxiosArgs = VideoVideoFrameInterpolationApiAxiosParamCreator(configuration).getVersionsVideoVideoFrameInterpolationGet(options);
-            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
-                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
-                return axios.request(axiosRequestArgs);
-            };
-        },
-    }
-};
-
-/**
- * VideoVideoFrameInterpolationApi - factory interface
- * @export
- */
-export const VideoVideoFrameInterpolationApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    return {
-        /**
-         * 
-         * @summary Apply model for the frame-interpolation task for a given models
-         * @param {any} video 
-         * @param {string} [model] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        applyVideoVideoFrameInterpolationPost(video: any, model?: string, options?: any) {
-            return VideoVideoFrameInterpolationApiFp(configuration).applyVideoVideoFrameInterpolationPost(video, model, options)(axios, basePath);
-        },
-        /**
-         * 
-         * @summary Get list of models available for frame-interpolation
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getVersionsVideoVideoFrameInterpolationGet(options?: any) {
-            return VideoVideoFrameInterpolationApiFp(configuration).getVersionsVideoVideoFrameInterpolationGet(options)(axios, basePath);
-        },
-    };
-};
-
-/**
- * VideoVideoFrameInterpolationApi - object-oriented interface
- * @export
- * @class VideoVideoFrameInterpolationApi
- * @extends {BaseAPI}
- */
-export class VideoVideoFrameInterpolationApi extends BaseAPI {
-    /**
-     * 
-     * @summary Apply model for the frame-interpolation task for a given models
-     * @param {any} video 
-     * @param {string} [model] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof VideoVideoFrameInterpolationApi
-     */
-    public applyVideoVideoFrameInterpolationPost(video: any, model?: string, options?: any) {
-        return VideoVideoFrameInterpolationApiFp(this.configuration).applyVideoVideoFrameInterpolationPost(video, model, options)(this.axios, this.basePath);
-    }
-
-    /**
-     * 
-     * @summary Get list of models available for frame-interpolation
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof VideoVideoFrameInterpolationApi
-     */
-    public getVersionsVideoVideoFrameInterpolationGet(options?: any) {
-        return VideoVideoFrameInterpolationApiFp(this.configuration).getVersionsVideoVideoFrameInterpolationGet(options)(this.axios, this.basePath);
     }
 
 }

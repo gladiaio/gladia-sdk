@@ -52,7 +52,7 @@ export class TextTextSentimentAnalysisApi {
      * @param text 
      * @param model 
      */
-    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: object;  },
     { response: JQueryXHR; errorThrown: string }
     > {

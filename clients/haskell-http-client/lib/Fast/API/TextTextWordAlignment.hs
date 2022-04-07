@@ -75,8 +75,8 @@ instance HasOptionalParam ApplyTextTextWordAlignmentPost InputStringLanguage1 wh
 instance HasOptionalParam ApplyTextTextWordAlignmentPost InputStringLanguage2 where
   applyOptionalParam req (InputStringLanguage2 xs) =
     req `setQuery` toQuery ("input_string_language_2", Just xs)
-instance HasOptionalParam ApplyTextTextWordAlignmentPost Model23 where
-  applyOptionalParam req (Model23 xs) =
+instance HasOptionalParam ApplyTextTextWordAlignmentPost Model24 where
+  applyOptionalParam req (Model24 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextWordAlignmentPost MimeJSON

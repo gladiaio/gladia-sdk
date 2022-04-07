@@ -87,15 +87,6 @@ newtype InputStringLanguage1 = InputStringLanguage1 { unInputStringLanguage1 :: 
 -- ** InputStringLanguage2
 newtype InputStringLanguage2 = InputStringLanguage2 { unInputStringLanguage2 :: Text } deriving (P.Eq, P.Show)
 
--- ** Language
-newtype Language = Language { unLanguage :: Text } deriving (P.Eq, P.Show)
-
--- ** MaxLength
-newtype MaxLength = MaxLength { unMaxLength :: Int } deriving (P.Eq, P.Show)
-
--- ** MinLength
-newtype MinLength = MinLength { unMinLength :: Int } deriving (P.Eq, P.Show)
-
 -- ** Model
 newtype Model = Model { unModel :: E'Model } deriving (P.Eq, P.Show)
 
@@ -144,6 +135,9 @@ newtype Model22 = Model22 { unModel22 :: E'Model22 } deriving (P.Eq, P.Show)
 -- ** Model23
 newtype Model23 = Model23 { unModel23 :: E'Model23 } deriving (P.Eq, P.Show)
 
+-- ** Model24
+newtype Model24 = Model24 { unModel24 :: E'Model24 } deriving (P.Eq, P.Show)
+
 -- ** Model3
 newtype Model3 = Model3 { unModel3 :: E'Model3 } deriving (P.Eq, P.Show)
 
@@ -165,9 +159,6 @@ newtype Model8 = Model8 { unModel8 :: E'Model8 } deriving (P.Eq, P.Show)
 -- ** Model9
 newtype Model9 = Model9 { unModel9 :: E'Model9 } deriving (P.Eq, P.Show)
 
--- ** ModelText
-newtype ModelText = ModelText { unModelText :: Text } deriving (P.Eq, P.Show)
-
 -- ** ParamText
 newtype ParamText = ParamText { unParamText :: Text } deriving (P.Eq, P.Show)
 
@@ -185,12 +176,6 @@ newtype Sentence2 = Sentence2 { unSentence2 :: Text } deriving (P.Eq, P.Show)
 
 -- ** SourceLanguage
 newtype SourceLanguage = SourceLanguage { unSourceLanguage :: Text } deriving (P.Eq, P.Show)
-
--- ** TargetLanguage
-newtype TargetLanguage = TargetLanguage { unTargetLanguage :: Text } deriving (P.Eq, P.Show)
-
--- ** Video
-newtype Video = Video { unVideo :: FilePath } deriving (P.Eq, P.Show)
 
 -- ** Word
 newtype Word = Word { unWord :: Text } deriving (P.Eq, P.Show)
@@ -289,37 +274,6 @@ mkBodyApplyImageImageFaceBluringPost
 mkBodyApplyImageImageFaceBluringPost bodyApplyImageImageFaceBluringPostImage =
   BodyApplyImageImageFaceBluringPost
   { bodyApplyImageImageFaceBluringPostImage
-  }
-
--- ** BodyApplyImageImageRestorationPost
--- | BodyApplyImageImageRestorationPost
--- Body_apply_image_image_restoration__post
--- 
-data BodyApplyImageImageRestorationPost = BodyApplyImageImageRestorationPost
-  { bodyApplyImageImageRestorationPostImage :: !(FilePath) -- ^ /Required/ "image"
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON BodyApplyImageImageRestorationPost
-instance A.FromJSON BodyApplyImageImageRestorationPost where
-  parseJSON = A.withObject "BodyApplyImageImageRestorationPost" $ \o ->
-    BodyApplyImageImageRestorationPost
-      <$> (o .:  "image")
-
--- | ToJSON BodyApplyImageImageRestorationPost
-instance A.ToJSON BodyApplyImageImageRestorationPost where
-  toJSON BodyApplyImageImageRestorationPost {..} =
-   _omitNulls
-      [ "image" .= bodyApplyImageImageRestorationPostImage
-      ]
-
-
--- | Construct a value of type 'BodyApplyImageImageRestorationPost' (by applying it's required fields, if any)
-mkBodyApplyImageImageRestorationPost
-  :: FilePath -- ^ 'bodyApplyImageImageRestorationPostImage' 
-  -> BodyApplyImageImageRestorationPost
-mkBodyApplyImageImageRestorationPost bodyApplyImageImageRestorationPostImage =
-  BodyApplyImageImageRestorationPost
-  { bodyApplyImageImageRestorationPostImage
   }
 
 -- ** BodyApplyImageImageSuperResolutionPost
@@ -446,37 +400,6 @@ mkBodyApplyImageTextOcrPost bodyApplyImageTextOcrPostImage =
   { bodyApplyImageTextOcrPostImage
   }
 
--- ** BodyApplyVideoVideoFrameInterpolationPost
--- | BodyApplyVideoVideoFrameInterpolationPost
--- Body_apply_video_video_frame_interpolation__post
--- 
-data BodyApplyVideoVideoFrameInterpolationPost = BodyApplyVideoVideoFrameInterpolationPost
-  { bodyApplyVideoVideoFrameInterpolationPostVideo :: !(FilePath) -- ^ /Required/ "video"
-  } deriving (P.Show, P.Eq, P.Typeable)
-
--- | FromJSON BodyApplyVideoVideoFrameInterpolationPost
-instance A.FromJSON BodyApplyVideoVideoFrameInterpolationPost where
-  parseJSON = A.withObject "BodyApplyVideoVideoFrameInterpolationPost" $ \o ->
-    BodyApplyVideoVideoFrameInterpolationPost
-      <$> (o .:  "video")
-
--- | ToJSON BodyApplyVideoVideoFrameInterpolationPost
-instance A.ToJSON BodyApplyVideoVideoFrameInterpolationPost where
-  toJSON BodyApplyVideoVideoFrameInterpolationPost {..} =
-   _omitNulls
-      [ "video" .= bodyApplyVideoVideoFrameInterpolationPostVideo
-      ]
-
-
--- | Construct a value of type 'BodyApplyVideoVideoFrameInterpolationPost' (by applying it's required fields, if any)
-mkBodyApplyVideoVideoFrameInterpolationPost
-  :: FilePath -- ^ 'bodyApplyVideoVideoFrameInterpolationPostVideo' 
-  -> BodyApplyVideoVideoFrameInterpolationPost
-mkBodyApplyVideoVideoFrameInterpolationPost bodyApplyVideoVideoFrameInterpolationPostVideo =
-  BodyApplyVideoVideoFrameInterpolationPost
-  { bodyApplyVideoVideoFrameInterpolationPostVideo
-  }
-
 -- ** HTTPValidationError
 -- | HTTPValidationError
 -- HTTPValidationError
@@ -556,8 +479,8 @@ mkValidationError validationErrorLoc validationErrorMsg validationErrorType =
 
 -- | Enum of 'Text'
 data E'Model
-  = E'Model'Xception -- ^ @"xception"@
-  | E'Model'Mobilenet -- ^ @"mobilenet"@
+  = E'Model'Mobilenet -- ^ @"mobilenet"@
+  | E'Model'Xception -- ^ @"xception"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model where toJSON = A.toJSON . fromE'Model
@@ -569,14 +492,14 @@ instance MimeRender MimeMultipartFormData E'Model where mimeRender _ = mimeRende
 -- | unwrap 'E'Model' enum
 fromE'Model :: E'Model -> Text
 fromE'Model = \case
-  E'Model'Xception -> "xception"
   E'Model'Mobilenet -> "mobilenet"
+  E'Model'Xception -> "xception"
 
 -- | parse 'E'Model' enum
 toE'Model :: Text -> P.Either String E'Model
 toE'Model = \case
-  "xception" -> P.Right E'Model'Xception
   "mobilenet" -> P.Right E'Model'Mobilenet
+  "xception" -> P.Right E'Model'Xception
   s -> P.Left $ "toE'Model: enum parse failure: " P.++ P.show s
 
 
@@ -584,7 +507,7 @@ toE'Model = \case
 
 -- | Enum of 'Text'
 data E'Model10
-  = E'Model10'Hate_speech_CNERG_dehatebert_mono_english -- ^ @"Hate-speech-CNERG-dehatebert-mono-english"@
+  = E'Model10'Dbmdz_bert_large_cased_finetuned_conll03_english -- ^ @"dbmdz-bert-large-cased-finetuned-conll03-english"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model10 where toJSON = A.toJSON . fromE'Model10
@@ -596,12 +519,12 @@ instance MimeRender MimeMultipartFormData E'Model10 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model10' enum
 fromE'Model10 :: E'Model10 -> Text
 fromE'Model10 = \case
-  E'Model10'Hate_speech_CNERG_dehatebert_mono_english -> "Hate-speech-CNERG-dehatebert-mono-english"
+  E'Model10'Dbmdz_bert_large_cased_finetuned_conll03_english -> "dbmdz-bert-large-cased-finetuned-conll03-english"
 
 -- | parse 'E'Model10' enum
 toE'Model10 :: Text -> P.Either String E'Model10
 toE'Model10 = \case
-  "Hate-speech-CNERG-dehatebert-mono-english" -> P.Right E'Model10'Hate_speech_CNERG_dehatebert_mono_english
+  "dbmdz-bert-large-cased-finetuned-conll03-english" -> P.Right E'Model10'Dbmdz_bert_large_cased_finetuned_conll03_english
   s -> P.Left $ "toE'Model10: enum parse failure: " P.++ P.show s
 
 
@@ -609,8 +532,7 @@ toE'Model10 = \case
 
 -- | Enum of 'Text'
 data E'Model11
-  = E'Model11'MiniLM_L6_v2 -- ^ @"keybert-paraphrase-MiniLM-L6-v2"@
-  | E'Model11'Multilingual_MiniLM_L12_v2 -- ^ @"keybert-paraphrase-multilingual-MiniLM-L12-v2"@
+  = E'Model11'Hate_speech_CNERG_dehatebert_mono_english -- ^ @"Hate-speech-CNERG-dehatebert-mono-english"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model11 where toJSON = A.toJSON . fromE'Model11
@@ -622,14 +544,12 @@ instance MimeRender MimeMultipartFormData E'Model11 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model11' enum
 fromE'Model11 :: E'Model11 -> Text
 fromE'Model11 = \case
-  E'Model11'MiniLM_L6_v2 -> "keybert-paraphrase-MiniLM-L6-v2"
-  E'Model11'Multilingual_MiniLM_L12_v2 -> "keybert-paraphrase-multilingual-MiniLM-L12-v2"
+  E'Model11'Hate_speech_CNERG_dehatebert_mono_english -> "Hate-speech-CNERG-dehatebert-mono-english"
 
 -- | parse 'E'Model11' enum
 toE'Model11 :: Text -> P.Either String E'Model11
 toE'Model11 = \case
-  "keybert-paraphrase-MiniLM-L6-v2" -> P.Right E'Model11'MiniLM_L6_v2
-  "keybert-paraphrase-multilingual-MiniLM-L12-v2" -> P.Right E'Model11'Multilingual_MiniLM_L12_v2
+  "Hate-speech-CNERG-dehatebert-mono-english" -> P.Right E'Model11'Hate_speech_CNERG_dehatebert_mono_english
   s -> P.Left $ "toE'Model11: enum parse failure: " P.++ P.show s
 
 
@@ -637,7 +557,8 @@ toE'Model11 = \case
 
 -- | Enum of 'Text'
 data E'Model12
-  = E'Model12'Toftrup_etal_2021 -- ^ @"toftrup-etal-2021"@
+  = E'Model12'MiniLM_L6_v2 -- ^ @"keybert-paraphrase-MiniLM-L6-v2"@
+  | E'Model12'Multilingual_MiniLM_L12_v2 -- ^ @"keybert-paraphrase-multilingual-MiniLM-L12-v2"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model12 where toJSON = A.toJSON . fromE'Model12
@@ -649,12 +570,14 @@ instance MimeRender MimeMultipartFormData E'Model12 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model12' enum
 fromE'Model12 :: E'Model12 -> Text
 fromE'Model12 = \case
-  E'Model12'Toftrup_etal_2021 -> "toftrup-etal-2021"
+  E'Model12'MiniLM_L6_v2 -> "keybert-paraphrase-MiniLM-L6-v2"
+  E'Model12'Multilingual_MiniLM_L12_v2 -> "keybert-paraphrase-multilingual-MiniLM-L12-v2"
 
 -- | parse 'E'Model12' enum
 toE'Model12 :: Text -> P.Either String E'Model12
 toE'Model12 = \case
-  "toftrup-etal-2021" -> P.Right E'Model12'Toftrup_etal_2021
+  "keybert-paraphrase-MiniLM-L6-v2" -> P.Right E'Model12'MiniLM_L6_v2
+  "keybert-paraphrase-multilingual-MiniLM-L12-v2" -> P.Right E'Model12'Multilingual_MiniLM_L12_v2
   s -> P.Left $ "toE'Model12: enum parse failure: " P.++ P.show s
 
 
@@ -662,7 +585,7 @@ toE'Model12 = \case
 
 -- | Enum of 'Text'
 data E'Model13
-  = E'Model13'EleutherAI_gpt_neo_2_7B -- ^ @"EleutherAI-gpt-neo-2_7B"@
+  = E'Model13'Toftrup_etal_2021 -- ^ @"toftrup-etal-2021"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model13 where toJSON = A.toJSON . fromE'Model13
@@ -674,12 +597,12 @@ instance MimeRender MimeMultipartFormData E'Model13 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model13' enum
 fromE'Model13 :: E'Model13 -> Text
 fromE'Model13 = \case
-  E'Model13'EleutherAI_gpt_neo_2_7B -> "EleutherAI-gpt-neo-2_7B"
+  E'Model13'Toftrup_etal_2021 -> "toftrup-etal-2021"
 
 -- | parse 'E'Model13' enum
 toE'Model13 :: Text -> P.Either String E'Model13
 toE'Model13 = \case
-  "EleutherAI-gpt-neo-2_7B" -> P.Right E'Model13'EleutherAI_gpt_neo_2_7B
+  "toftrup-etal-2021" -> P.Right E'Model13'Toftrup_etal_2021
   s -> P.Left $ "toE'Model13: enum parse failure: " P.++ P.show s
 
 
@@ -687,7 +610,7 @@ toE'Model13 = \case
 
 -- | Enum of 'Text'
 data E'Model14
-  = E'Model14'Wordnet -- ^ @"wordnet"@
+  = E'Model14'EleutherAI_gpt_neo_2_7B -- ^ @"EleutherAI-gpt-neo-2_7B"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model14 where toJSON = A.toJSON . fromE'Model14
@@ -699,12 +622,12 @@ instance MimeRender MimeMultipartFormData E'Model14 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model14' enum
 fromE'Model14 :: E'Model14 -> Text
 fromE'Model14 = \case
-  E'Model14'Wordnet -> "wordnet"
+  E'Model14'EleutherAI_gpt_neo_2_7B -> "EleutherAI-gpt-neo-2_7B"
 
 -- | parse 'E'Model14' enum
 toE'Model14 :: Text -> P.Either String E'Model14
 toE'Model14 = \case
-  "wordnet" -> P.Right E'Model14'Wordnet
+  "EleutherAI-gpt-neo-2_7B" -> P.Right E'Model14'EleutherAI_gpt_neo_2_7B
   s -> P.Left $ "toE'Model14: enum parse failure: " P.++ P.show s
 
 
@@ -712,7 +635,7 @@ toE'Model14 = \case
 
 -- | Enum of 'Text'
 data E'Model15
-  = E'Model15'Bert_base_uncased -- ^ @"bert-base-uncased"@
+  = E'Model15'Wordnet -- ^ @"wordnet"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model15 where toJSON = A.toJSON . fromE'Model15
@@ -724,12 +647,12 @@ instance MimeRender MimeMultipartFormData E'Model15 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model15' enum
 fromE'Model15 :: E'Model15 -> Text
 fromE'Model15 = \case
-  E'Model15'Bert_base_uncased -> "bert-base-uncased"
+  E'Model15'Wordnet -> "wordnet"
 
 -- | parse 'E'Model15' enum
 toE'Model15 :: Text -> P.Either String E'Model15
 toE'Model15 = \case
-  "bert-base-uncased" -> P.Right E'Model15'Bert_base_uncased
+  "wordnet" -> P.Right E'Model15'Wordnet
   s -> P.Left $ "toE'Model15: enum parse failure: " P.++ P.show s
 
 
@@ -738,9 +661,6 @@ toE'Model15 = \case
 -- | Enum of 'Text'
 data E'Model16
   = E'Model16'Bert_base_uncased -- ^ @"bert-base-uncased"@
-  | E'Model16'Roberta_base -- ^ @"roberta-base"@
-  | E'Model16'Distilbert_base_uncased -- ^ @"distilbert-base-uncased"@
-  | E'Model16'Albert_base_v2 -- ^ @"albert-base-v2"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model16 where toJSON = A.toJSON . fromE'Model16
@@ -753,17 +673,11 @@ instance MimeRender MimeMultipartFormData E'Model16 where mimeRender _ = mimeRen
 fromE'Model16 :: E'Model16 -> Text
 fromE'Model16 = \case
   E'Model16'Bert_base_uncased -> "bert-base-uncased"
-  E'Model16'Roberta_base -> "roberta-base"
-  E'Model16'Distilbert_base_uncased -> "distilbert-base-uncased"
-  E'Model16'Albert_base_v2 -> "albert-base-v2"
 
 -- | parse 'E'Model16' enum
 toE'Model16 :: Text -> P.Either String E'Model16
 toE'Model16 = \case
   "bert-base-uncased" -> P.Right E'Model16'Bert_base_uncased
-  "roberta-base" -> P.Right E'Model16'Roberta_base
-  "distilbert-base-uncased" -> P.Right E'Model16'Distilbert_base_uncased
-  "albert-base-v2" -> P.Right E'Model16'Albert_base_v2
   s -> P.Left $ "toE'Model16: enum parse failure: " P.++ P.show s
 
 
@@ -771,7 +685,10 @@ toE'Model16 = \case
 
 -- | Enum of 'Text'
 data E'Model17
-  = E'Model17'Inflect -- ^ @"inflect"@
+  = E'Model17'Bert_base_uncased -- ^ @"bert-base-uncased"@
+  | E'Model17'Albert_base_v2 -- ^ @"albert-base-v2"@
+  | E'Model17'Distilbert_base_uncased -- ^ @"distilbert-base-uncased"@
+  | E'Model17'Roberta_base -- ^ @"roberta-base"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model17 where toJSON = A.toJSON . fromE'Model17
@@ -783,12 +700,18 @@ instance MimeRender MimeMultipartFormData E'Model17 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model17' enum
 fromE'Model17 :: E'Model17 -> Text
 fromE'Model17 = \case
-  E'Model17'Inflect -> "inflect"
+  E'Model17'Bert_base_uncased -> "bert-base-uncased"
+  E'Model17'Albert_base_v2 -> "albert-base-v2"
+  E'Model17'Distilbert_base_uncased -> "distilbert-base-uncased"
+  E'Model17'Roberta_base -> "roberta-base"
 
 -- | parse 'E'Model17' enum
 toE'Model17 :: Text -> P.Either String E'Model17
 toE'Model17 = \case
-  "inflect" -> P.Right E'Model17'Inflect
+  "bert-base-uncased" -> P.Right E'Model17'Bert_base_uncased
+  "albert-base-v2" -> P.Right E'Model17'Albert_base_v2
+  "distilbert-base-uncased" -> P.Right E'Model17'Distilbert_base_uncased
+  "roberta-base" -> P.Right E'Model17'Roberta_base
   s -> P.Left $ "toE'Model17: enum parse failure: " P.++ P.show s
 
 
@@ -796,7 +719,7 @@ toE'Model17 = \case
 
 -- | Enum of 'Text'
 data E'Model18
-  = E'Model18'Sentdex_GPyT -- ^ @"sentdex-GPyT"@
+  = E'Model18'Inflect -- ^ @"inflect"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model18 where toJSON = A.toJSON . fromE'Model18
@@ -808,12 +731,12 @@ instance MimeRender MimeMultipartFormData E'Model18 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model18' enum
 fromE'Model18 :: E'Model18 -> Text
 fromE'Model18 = \case
-  E'Model18'Sentdex_GPyT -> "sentdex-GPyT"
+  E'Model18'Inflect -> "inflect"
 
 -- | parse 'E'Model18' enum
 toE'Model18 :: Text -> P.Either String E'Model18
 toE'Model18 = \case
-  "sentdex-GPyT" -> P.Right E'Model18'Sentdex_GPyT
+  "inflect" -> P.Right E'Model18'Inflect
   s -> P.Left $ "toE'Model18: enum parse failure: " P.++ P.show s
 
 
@@ -821,11 +744,7 @@ toE'Model18 = \case
 
 -- | Enum of 'Text'
 data E'Model19
-  = E'Model19'Deepset_bert_base_cased_squad2 -- ^ @"deepset_bert-base-cased-squad2"@
-  | E'Model19'Mfeb_albert_xxlarge_v2_squad2 -- ^ @"mfeb-albert-xxlarge-v2-squad2"@
-  | E'Model19'Deepset_roberta_base_squad2 -- ^ @"deepset-roberta-base-squad2"@
-  | E'Model19'Mrm8488_bert_tiny_5_finetuned_squadv2 -- ^ @"mrm8488-bert-tiny-5-finetuned-squadv2"@
-  | E'Model19'Distilbert_base_cased_distilled_squad -- ^ @"distilbert-base-cased-distilled-squad"@
+  = E'Model19'Sentdex_GPyT -- ^ @"sentdex-GPyT"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model19 where toJSON = A.toJSON . fromE'Model19
@@ -837,20 +756,12 @@ instance MimeRender MimeMultipartFormData E'Model19 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model19' enum
 fromE'Model19 :: E'Model19 -> Text
 fromE'Model19 = \case
-  E'Model19'Deepset_bert_base_cased_squad2 -> "deepset_bert-base-cased-squad2"
-  E'Model19'Mfeb_albert_xxlarge_v2_squad2 -> "mfeb-albert-xxlarge-v2-squad2"
-  E'Model19'Deepset_roberta_base_squad2 -> "deepset-roberta-base-squad2"
-  E'Model19'Mrm8488_bert_tiny_5_finetuned_squadv2 -> "mrm8488-bert-tiny-5-finetuned-squadv2"
-  E'Model19'Distilbert_base_cased_distilled_squad -> "distilbert-base-cased-distilled-squad"
+  E'Model19'Sentdex_GPyT -> "sentdex-GPyT"
 
 -- | parse 'E'Model19' enum
 toE'Model19 :: Text -> P.Either String E'Model19
 toE'Model19 = \case
-  "deepset_bert-base-cased-squad2" -> P.Right E'Model19'Deepset_bert_base_cased_squad2
-  "mfeb-albert-xxlarge-v2-squad2" -> P.Right E'Model19'Mfeb_albert_xxlarge_v2_squad2
-  "deepset-roberta-base-squad2" -> P.Right E'Model19'Deepset_roberta_base_squad2
-  "mrm8488-bert-tiny-5-finetuned-squadv2" -> P.Right E'Model19'Mrm8488_bert_tiny_5_finetuned_squadv2
-  "distilbert-base-cased-distilled-squad" -> P.Right E'Model19'Distilbert_base_cased_distilled_squad
+  "sentdex-GPyT" -> P.Right E'Model19'Sentdex_GPyT
   s -> P.Left $ "toE'Model19: enum parse failure: " P.++ P.show s
 
 
@@ -858,8 +769,8 @@ toE'Model19 = \case
 
 -- | Enum of 'Text'
 data E'Model2
-  = E'Model2'Artistic -- ^ @"deoldify-artistic"@
-  | E'Model2'Stable -- ^ @"deoldify-stable"@
+  = E'Model2'Stable -- ^ @"deoldify-stable"@
+  | E'Model2'Artistic -- ^ @"deoldify-artistic"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model2 where toJSON = A.toJSON . fromE'Model2
@@ -871,14 +782,14 @@ instance MimeRender MimeMultipartFormData E'Model2 where mimeRender _ = mimeRend
 -- | unwrap 'E'Model2' enum
 fromE'Model2 :: E'Model2 -> Text
 fromE'Model2 = \case
-  E'Model2'Artistic -> "deoldify-artistic"
   E'Model2'Stable -> "deoldify-stable"
+  E'Model2'Artistic -> "deoldify-artistic"
 
 -- | parse 'E'Model2' enum
 toE'Model2 :: Text -> P.Either String E'Model2
 toE'Model2 = \case
-  "deoldify-artistic" -> P.Right E'Model2'Artistic
   "deoldify-stable" -> P.Right E'Model2'Stable
+  "deoldify-artistic" -> P.Right E'Model2'Artistic
   s -> P.Left $ "toE'Model2: enum parse failure: " P.++ P.show s
 
 
@@ -886,7 +797,11 @@ toE'Model2 = \case
 
 -- | Enum of 'Text'
 data E'Model20
-  = E'Model20'Ramsrigouthamg_t5_large_paraphraser_diverse_high_quality -- ^ @"ramsrigouthamg-t5-large-paraphraser-diverse-high-quality"@
+  = E'Model20'Mrm8488_bert_tiny_5_finetuned_squadv2 -- ^ @"mrm8488-bert-tiny-5-finetuned-squadv2"@
+  | E'Model20'Mfeb_albert_xxlarge_v2_squad2 -- ^ @"mfeb-albert-xxlarge-v2-squad2"@
+  | E'Model20'Deepset_roberta_base_squad2 -- ^ @"deepset-roberta-base-squad2"@
+  | E'Model20'Distilbert_base_cased_distilled_squad -- ^ @"distilbert-base-cased-distilled-squad"@
+  | E'Model20'Deepset_bert_base_cased_squad2 -- ^ @"deepset_bert-base-cased-squad2"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model20 where toJSON = A.toJSON . fromE'Model20
@@ -898,12 +813,20 @@ instance MimeRender MimeMultipartFormData E'Model20 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model20' enum
 fromE'Model20 :: E'Model20 -> Text
 fromE'Model20 = \case
-  E'Model20'Ramsrigouthamg_t5_large_paraphraser_diverse_high_quality -> "ramsrigouthamg-t5-large-paraphraser-diverse-high-quality"
+  E'Model20'Mrm8488_bert_tiny_5_finetuned_squadv2 -> "mrm8488-bert-tiny-5-finetuned-squadv2"
+  E'Model20'Mfeb_albert_xxlarge_v2_squad2 -> "mfeb-albert-xxlarge-v2-squad2"
+  E'Model20'Deepset_roberta_base_squad2 -> "deepset-roberta-base-squad2"
+  E'Model20'Distilbert_base_cased_distilled_squad -> "distilbert-base-cased-distilled-squad"
+  E'Model20'Deepset_bert_base_cased_squad2 -> "deepset_bert-base-cased-squad2"
 
 -- | parse 'E'Model20' enum
 toE'Model20 :: Text -> P.Either String E'Model20
 toE'Model20 = \case
-  "ramsrigouthamg-t5-large-paraphraser-diverse-high-quality" -> P.Right E'Model20'Ramsrigouthamg_t5_large_paraphraser_diverse_high_quality
+  "mrm8488-bert-tiny-5-finetuned-squadv2" -> P.Right E'Model20'Mrm8488_bert_tiny_5_finetuned_squadv2
+  "mfeb-albert-xxlarge-v2-squad2" -> P.Right E'Model20'Mfeb_albert_xxlarge_v2_squad2
+  "deepset-roberta-base-squad2" -> P.Right E'Model20'Deepset_roberta_base_squad2
+  "distilbert-base-cased-distilled-squad" -> P.Right E'Model20'Distilbert_base_cased_distilled_squad
+  "deepset_bert-base-cased-squad2" -> P.Right E'Model20'Deepset_bert_base_cased_squad2
   s -> P.Left $ "toE'Model20: enum parse failure: " P.++ P.show s
 
 
@@ -911,10 +834,7 @@ toE'Model20 = \case
 
 -- | Enum of 'Text'
 data E'Model21
-  = E'Model21'Nlptown_bert_base_multilingual_uncased_sentiment -- ^ @"nlptown-bert-base-multilingual-uncased-sentiment"@
-  | E'Model21'Distilbert_base_uncased -- ^ @"distilbert-base-uncased"@
-  | E'Model21'Distilbert_base_uncased_finetuned_sst_2_english -- ^ @"distilbert-base-uncased-finetuned-sst-2-english"@
-  | E'Model21'Zero_shot_classification_facebook_bart_large_mnli -- ^ @"zero-shot-classification-facebook-bart-large-mnli"@
+  = E'Model21'Ramsrigouthamg_t5_large_paraphraser_diverse_high_quality -- ^ @"ramsrigouthamg-t5-large-paraphraser-diverse-high-quality"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model21 where toJSON = A.toJSON . fromE'Model21
@@ -926,18 +846,12 @@ instance MimeRender MimeMultipartFormData E'Model21 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model21' enum
 fromE'Model21 :: E'Model21 -> Text
 fromE'Model21 = \case
-  E'Model21'Nlptown_bert_base_multilingual_uncased_sentiment -> "nlptown-bert-base-multilingual-uncased-sentiment"
-  E'Model21'Distilbert_base_uncased -> "distilbert-base-uncased"
-  E'Model21'Distilbert_base_uncased_finetuned_sst_2_english -> "distilbert-base-uncased-finetuned-sst-2-english"
-  E'Model21'Zero_shot_classification_facebook_bart_large_mnli -> "zero-shot-classification-facebook-bart-large-mnli"
+  E'Model21'Ramsrigouthamg_t5_large_paraphraser_diverse_high_quality -> "ramsrigouthamg-t5-large-paraphraser-diverse-high-quality"
 
 -- | parse 'E'Model21' enum
 toE'Model21 :: Text -> P.Either String E'Model21
 toE'Model21 = \case
-  "nlptown-bert-base-multilingual-uncased-sentiment" -> P.Right E'Model21'Nlptown_bert_base_multilingual_uncased_sentiment
-  "distilbert-base-uncased" -> P.Right E'Model21'Distilbert_base_uncased
-  "distilbert-base-uncased-finetuned-sst-2-english" -> P.Right E'Model21'Distilbert_base_uncased_finetuned_sst_2_english
-  "zero-shot-classification-facebook-bart-large-mnli" -> P.Right E'Model21'Zero_shot_classification_facebook_bart_large_mnli
+  "ramsrigouthamg-t5-large-paraphraser-diverse-high-quality" -> P.Right E'Model21'Ramsrigouthamg_t5_large_paraphraser_diverse_high_quality
   s -> P.Left $ "toE'Model21: enum parse failure: " P.++ P.show s
 
 
@@ -945,7 +859,10 @@ toE'Model21 = \case
 
 -- | Enum of 'Text'
 data E'Model22
-  = E'Model22'All_MiniLM_L6_v2 -- ^ @"all-MiniLM-L6-v2"@
+  = E'Model22'Zero_shot_classification_facebook_bart_large_mnli -- ^ @"zero-shot-classification-facebook-bart-large-mnli"@
+  | E'Model22'Distilbert_base_uncased -- ^ @"distilbert-base-uncased"@
+  | E'Model22'Nlptown_bert_base_multilingual_uncased_sentiment -- ^ @"nlptown-bert-base-multilingual-uncased-sentiment"@
+  | E'Model22'Distilbert_base_uncased_finetuned_sst_2_english -- ^ @"distilbert-base-uncased-finetuned-sst-2-english"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model22 where toJSON = A.toJSON . fromE'Model22
@@ -957,12 +874,18 @@ instance MimeRender MimeMultipartFormData E'Model22 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model22' enum
 fromE'Model22 :: E'Model22 -> Text
 fromE'Model22 = \case
-  E'Model22'All_MiniLM_L6_v2 -> "all-MiniLM-L6-v2"
+  E'Model22'Zero_shot_classification_facebook_bart_large_mnli -> "zero-shot-classification-facebook-bart-large-mnli"
+  E'Model22'Distilbert_base_uncased -> "distilbert-base-uncased"
+  E'Model22'Nlptown_bert_base_multilingual_uncased_sentiment -> "nlptown-bert-base-multilingual-uncased-sentiment"
+  E'Model22'Distilbert_base_uncased_finetuned_sst_2_english -> "distilbert-base-uncased-finetuned-sst-2-english"
 
 -- | parse 'E'Model22' enum
 toE'Model22 :: Text -> P.Either String E'Model22
 toE'Model22 = \case
-  "all-MiniLM-L6-v2" -> P.Right E'Model22'All_MiniLM_L6_v2
+  "zero-shot-classification-facebook-bart-large-mnli" -> P.Right E'Model22'Zero_shot_classification_facebook_bart_large_mnli
+  "distilbert-base-uncased" -> P.Right E'Model22'Distilbert_base_uncased
+  "nlptown-bert-base-multilingual-uncased-sentiment" -> P.Right E'Model22'Nlptown_bert_base_multilingual_uncased_sentiment
+  "distilbert-base-uncased-finetuned-sst-2-english" -> P.Right E'Model22'Distilbert_base_uncased_finetuned_sst_2_english
   s -> P.Left $ "toE'Model22: enum parse failure: " P.++ P.show s
 
 
@@ -970,7 +893,7 @@ toE'Model22 = \case
 
 -- | Enum of 'Text'
 data E'Model23
-  = E'Model23'Bert_base_multilingual_cased -- ^ @"bert-base-multilingual-cased"@
+  = E'Model23'All_MiniLM_L6_v2 -- ^ @"all-MiniLM-L6-v2"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model23 where toJSON = A.toJSON . fromE'Model23
@@ -982,13 +905,38 @@ instance MimeRender MimeMultipartFormData E'Model23 where mimeRender _ = mimeRen
 -- | unwrap 'E'Model23' enum
 fromE'Model23 :: E'Model23 -> Text
 fromE'Model23 = \case
-  E'Model23'Bert_base_multilingual_cased -> "bert-base-multilingual-cased"
+  E'Model23'All_MiniLM_L6_v2 -> "all-MiniLM-L6-v2"
 
 -- | parse 'E'Model23' enum
 toE'Model23 :: Text -> P.Either String E'Model23
 toE'Model23 = \case
-  "bert-base-multilingual-cased" -> P.Right E'Model23'Bert_base_multilingual_cased
+  "all-MiniLM-L6-v2" -> P.Right E'Model23'All_MiniLM_L6_v2
   s -> P.Left $ "toE'Model23: enum parse failure: " P.++ P.show s
+
+
+-- ** E'Model24
+
+-- | Enum of 'Text'
+data E'Model24
+  = E'Model24'Bert_base_multilingual_cased -- ^ @"bert-base-multilingual-cased"@
+  deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
+
+instance A.ToJSON E'Model24 where toJSON = A.toJSON . fromE'Model24
+instance A.FromJSON E'Model24 where parseJSON o = P.either P.fail (pure . P.id) . toE'Model24 =<< A.parseJSON o
+instance WH.ToHttpApiData E'Model24 where toQueryParam = WH.toQueryParam . fromE'Model24
+instance WH.FromHttpApiData E'Model24 where parseQueryParam o = WH.parseQueryParam o >>= P.left T.pack . toE'Model24
+instance MimeRender MimeMultipartFormData E'Model24 where mimeRender _ = mimeRenderDefaultMultipartFormData
+
+-- | unwrap 'E'Model24' enum
+fromE'Model24 :: E'Model24 -> Text
+fromE'Model24 = \case
+  E'Model24'Bert_base_multilingual_cased -> "bert-base-multilingual-cased"
+
+-- | parse 'E'Model24' enum
+toE'Model24 :: Text -> P.Either String E'Model24
+toE'Model24 = \case
+  "bert-base-multilingual-cased" -> P.Right E'Model24'Bert_base_multilingual_cased
+  s -> P.Left $ "toE'Model24: enum parse failure: " P.++ P.show s
 
 
 -- ** E'Model3
@@ -1020,7 +968,7 @@ toE'Model3 = \case
 
 -- | Enum of 'Text'
 data E'Model4
-  = E'Model4'V1 -- ^ @"v1"@
+  = E'Model4'Idealo_psnr_small -- ^ @"idealo-psnr-small"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model4 where toJSON = A.toJSON . fromE'Model4
@@ -1032,12 +980,12 @@ instance MimeRender MimeMultipartFormData E'Model4 where mimeRender _ = mimeRend
 -- | unwrap 'E'Model4' enum
 fromE'Model4 :: E'Model4 -> Text
 fromE'Model4 = \case
-  E'Model4'V1 -> "v1"
+  E'Model4'Idealo_psnr_small -> "idealo-psnr-small"
 
 -- | parse 'E'Model4' enum
 toE'Model4 :: Text -> P.Either String E'Model4
 toE'Model4 = \case
-  "v1" -> P.Right E'Model4'V1
+  "idealo-psnr-small" -> P.Right E'Model4'Idealo_psnr_small
   s -> P.Left $ "toE'Model4: enum parse failure: " P.++ P.show s
 
 
@@ -1045,7 +993,7 @@ toE'Model4 = \case
 
 -- | Enum of 'Text'
 data E'Model5
-  = E'Model5'Ramesh_aditya -- ^ @"ramesh-aditya"@
+  = E'Model5'V1 -- ^ @"v1"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model5 where toJSON = A.toJSON . fromE'Model5
@@ -1057,12 +1005,12 @@ instance MimeRender MimeMultipartFormData E'Model5 where mimeRender _ = mimeRend
 -- | unwrap 'E'Model5' enum
 fromE'Model5 :: E'Model5 -> Text
 fromE'Model5 = \case
-  E'Model5'Ramesh_aditya -> "ramesh-aditya"
+  E'Model5'V1 -> "v1"
 
 -- | parse 'E'Model5' enum
 toE'Model5 :: Text -> P.Either String E'Model5
 toE'Model5 = \case
-  "ramesh-aditya" -> P.Right E'Model5'Ramesh_aditya
+  "v1" -> P.Right E'Model5'V1
   s -> P.Left $ "toE'Model5: enum parse failure: " P.++ P.show s
 
 
@@ -1070,9 +1018,7 @@ toE'Model5 = \case
 
 -- | Enum of 'Text'
 data E'Model6
-  = E'Model6'Tesseract_default -- ^ @"tesseract-default"@
-  | E'Model6'Tesseract_denoising -- ^ @"tesseract-denoising"@
-  | E'Model6'Easy_ocr -- ^ @"easy-ocr"@
+  = E'Model6'Ramesh_aditya -- ^ @"ramesh-aditya"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model6 where toJSON = A.toJSON . fromE'Model6
@@ -1084,16 +1030,12 @@ instance MimeRender MimeMultipartFormData E'Model6 where mimeRender _ = mimeRend
 -- | unwrap 'E'Model6' enum
 fromE'Model6 :: E'Model6 -> Text
 fromE'Model6 = \case
-  E'Model6'Tesseract_default -> "tesseract-default"
-  E'Model6'Tesseract_denoising -> "tesseract-denoising"
-  E'Model6'Easy_ocr -> "easy-ocr"
+  E'Model6'Ramesh_aditya -> "ramesh-aditya"
 
 -- | parse 'E'Model6' enum
 toE'Model6 :: Text -> P.Either String E'Model6
 toE'Model6 = \case
-  "tesseract-default" -> P.Right E'Model6'Tesseract_default
-  "tesseract-denoising" -> P.Right E'Model6'Tesseract_denoising
-  "easy-ocr" -> P.Right E'Model6'Easy_ocr
+  "ramesh-aditya" -> P.Right E'Model6'Ramesh_aditya
   s -> P.Left $ "toE'Model6: enum parse failure: " P.++ P.show s
 
 
@@ -1101,7 +1043,9 @@ toE'Model6 = \case
 
 -- | Enum of 'Text'
 data E'Model7
-  = E'Model7'Flexudy_t5_base_multi_sentence_doctor -- ^ @"flexudy-t5-base-multi-sentence-doctor"@
+  = E'Model7'Tesseract_denoising -- ^ @"tesseract-denoising"@
+  | E'Model7'Easy_ocr -- ^ @"easy-ocr"@
+  | E'Model7'Tesseract_default -- ^ @"tesseract-default"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model7 where toJSON = A.toJSON . fromE'Model7
@@ -1113,12 +1057,16 @@ instance MimeRender MimeMultipartFormData E'Model7 where mimeRender _ = mimeRend
 -- | unwrap 'E'Model7' enum
 fromE'Model7 :: E'Model7 -> Text
 fromE'Model7 = \case
-  E'Model7'Flexudy_t5_base_multi_sentence_doctor -> "flexudy-t5-base-multi-sentence-doctor"
+  E'Model7'Tesseract_denoising -> "tesseract-denoising"
+  E'Model7'Easy_ocr -> "easy-ocr"
+  E'Model7'Tesseract_default -> "tesseract-default"
 
 -- | parse 'E'Model7' enum
 toE'Model7 :: Text -> P.Either String E'Model7
 toE'Model7 = \case
-  "flexudy-t5-base-multi-sentence-doctor" -> P.Right E'Model7'Flexudy_t5_base_multi_sentence_doctor
+  "tesseract-denoising" -> P.Right E'Model7'Tesseract_denoising
+  "easy-ocr" -> P.Right E'Model7'Easy_ocr
+  "tesseract-default" -> P.Right E'Model7'Tesseract_default
   s -> P.Left $ "toE'Model7: enum parse failure: " P.++ P.show s
 
 
@@ -1126,7 +1074,7 @@ toE'Model7 = \case
 
 -- | Enum of 'Text'
 data E'Model8
-  = E'Model8'Mrm8488_t5_base_finetuned_emotion -- ^ @"mrm8488-t5-base-finetuned-emotion"@
+  = E'Model8'Flexudy_t5_base_multi_sentence_doctor -- ^ @"flexudy-t5-base-multi-sentence-doctor"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model8 where toJSON = A.toJSON . fromE'Model8
@@ -1138,12 +1086,12 @@ instance MimeRender MimeMultipartFormData E'Model8 where mimeRender _ = mimeRend
 -- | unwrap 'E'Model8' enum
 fromE'Model8 :: E'Model8 -> Text
 fromE'Model8 = \case
-  E'Model8'Mrm8488_t5_base_finetuned_emotion -> "mrm8488-t5-base-finetuned-emotion"
+  E'Model8'Flexudy_t5_base_multi_sentence_doctor -> "flexudy-t5-base-multi-sentence-doctor"
 
 -- | parse 'E'Model8' enum
 toE'Model8 :: Text -> P.Either String E'Model8
 toE'Model8 = \case
-  "mrm8488-t5-base-finetuned-emotion" -> P.Right E'Model8'Mrm8488_t5_base_finetuned_emotion
+  "flexudy-t5-base-multi-sentence-doctor" -> P.Right E'Model8'Flexudy_t5_base_multi_sentence_doctor
   s -> P.Left $ "toE'Model8: enum parse failure: " P.++ P.show s
 
 
@@ -1151,7 +1099,7 @@ toE'Model8 = \case
 
 -- | Enum of 'Text'
 data E'Model9
-  = E'Model9'Dbmdz_bert_large_cased_finetuned_conll03_english -- ^ @"dbmdz-bert-large-cased-finetuned-conll03-english"@
+  = E'Model9'Mrm8488_t5_base_finetuned_emotion -- ^ @"mrm8488-t5-base-finetuned-emotion"@
   deriving (P.Show, P.Eq, P.Typeable, P.Ord, P.Bounded, P.Enum)
 
 instance A.ToJSON E'Model9 where toJSON = A.toJSON . fromE'Model9
@@ -1163,12 +1111,12 @@ instance MimeRender MimeMultipartFormData E'Model9 where mimeRender _ = mimeRend
 -- | unwrap 'E'Model9' enum
 fromE'Model9 :: E'Model9 -> Text
 fromE'Model9 = \case
-  E'Model9'Dbmdz_bert_large_cased_finetuned_conll03_english -> "dbmdz-bert-large-cased-finetuned-conll03-english"
+  E'Model9'Mrm8488_t5_base_finetuned_emotion -> "mrm8488-t5-base-finetuned-emotion"
 
 -- | parse 'E'Model9' enum
 toE'Model9 :: Text -> P.Either String E'Model9
 toE'Model9 = \case
-  "dbmdz-bert-large-cased-finetuned-conll03-english" -> P.Right E'Model9'Dbmdz_bert_large_cased_finetuned_conll03_english
+  "mrm8488-t5-base-finetuned-emotion" -> P.Right E'Model9'Mrm8488_t5_base_finetuned_emotion
   s -> P.Left $ "toE'Model9: enum parse failure: " P.++ P.show s
 
 

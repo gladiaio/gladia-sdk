@@ -69,8 +69,6 @@ Class | Method | HTTP request | Description
 *ImageImageColorizationApi* | [**getVersionsImageImageColorizationGet**](docs//ImageImageColorizationApi.md#getversionsimageimagecolorizationget) | **GET** /image/image/colorization/ | Get list of models available for colorization
 *ImageImageFaceBluringApi* | [**applyImageImageFaceBluringPost**](docs//ImageImageFaceBluringApi.md#applyimageimagefacebluringpost) | **POST** /image/image/face-bluring/ | Apply model for the face-bluring task for a given models
 *ImageImageFaceBluringApi* | [**getVersionsImageImageFaceBluringGet**](docs//ImageImageFaceBluringApi.md#getversionsimageimagefacebluringget) | **GET** /image/image/face-bluring/ | Get list of models available for face-bluring
-*ImageImageRestorationApi* | [**applyImageImageRestorationPost**](docs//ImageImageRestorationApi.md#applyimageimagerestorationpost) | **POST** /image/image/restoration/ | Apply model for the restoration task for a given models
-*ImageImageRestorationApi* | [**getVersionsImageImageRestorationGet**](docs//ImageImageRestorationApi.md#getversionsimageimagerestorationget) | **GET** /image/image/restoration/ | Get list of models available for restoration
 *ImageImageSuperResolutionApi* | [**applyImageImageSuperResolutionPost**](docs//ImageImageSuperResolutionApi.md#applyimageimagesuperresolutionpost) | **POST** /image/image/super-resolution/ | Apply model for the super-resolution task for a given models
 *ImageImageSuperResolutionApi* | [**getVersionsImageImageSuperResolutionGet**](docs//ImageImageSuperResolutionApi.md#getversionsimageimagesuperresolutionget) | **GET** /image/image/super-resolution/ | Get list of models available for super-resolution
 *ImageImageUncolorizationApi* | [**applyImageImageUncolorizationPost**](docs//ImageImageUncolorizationApi.md#applyimageimageuncolorizationpost) | **POST** /image/image/uncolorization/ | Apply model for the uncolorization task for a given models
@@ -81,10 +79,6 @@ Class | Method | HTTP request | Description
 *ImageTextOcrApi* | [**getVersionsImageTextOcrGet**](docs//ImageTextOcrApi.md#getversionsimagetextocrget) | **GET** /image/text/ocr/ | Get list of models available for ocr
 *TextTextAutocorrectApi* | [**applyTextTextAutocorrectPost**](docs//TextTextAutocorrectApi.md#applytexttextautocorrectpost) | **POST** /text/text/autocorrect/ | Apply model for the autocorrect task for a given models
 *TextTextAutocorrectApi* | [**getVersionsTextTextAutocorrectGet**](docs//TextTextAutocorrectApi.md#getversionstexttextautocorrectget) | **GET** /text/text/autocorrect/ | Get list of models available for autocorrect
-*TextTextBooleanQuestionGenerationApi* | [**applyTextTextBooleanQuestionGenerationPost**](docs//TextTextBooleanQuestionGenerationApi.md#applytexttextbooleanquestiongenerationpost) | **POST** /text/text/boolean-question-generation/ | Apply model for the boolean-question-generation task for a given models
-*TextTextBooleanQuestionGenerationApi* | [**getVersionsTextTextBooleanQuestionGenerationGet**](docs//TextTextBooleanQuestionGenerationApi.md#getversionstexttextbooleanquestiongenerationget) | **GET** /text/text/boolean-question-generation/ | Get list of models available for boolean-question-generation
-*TextTextDependencyTrackingApi* | [**applyTextTextDependencyTrackingPost**](docs//TextTextDependencyTrackingApi.md#applytexttextdependencytrackingpost) | **POST** /text/text/dependency-tracking/ | Apply model for the dependency-tracking task for a given models
-*TextTextDependencyTrackingApi* | [**getVersionsTextTextDependencyTrackingGet**](docs//TextTextDependencyTrackingApi.md#getversionstexttextdependencytrackingget) | **GET** /text/text/dependency-tracking/ | Get list of models available for dependency-tracking
 *TextTextEmotionRecognitionApi* | [**applyTextTextEmotionRecognitionPost**](docs//TextTextEmotionRecognitionApi.md#applytexttextemotionrecognitionpost) | **POST** /text/text/emotion-recognition/ | Apply model for the emotion-recognition task for a given models
 *TextTextEmotionRecognitionApi* | [**getVersionsTextTextEmotionRecognitionGet**](docs//TextTextEmotionRecognitionApi.md#getversionstexttextemotionrecognitionget) | **GET** /text/text/emotion-recognition/ | Get list of models available for emotion-recognition
 *TextTextEntityExtractionApi* | [**applyTextTextEntityExtractionPost**](docs//TextTextEntityExtractionApi.md#applytexttextentityextractionpost) | **POST** /text/text/entity-extraction/ | Apply model for the entity-extraction task for a given models
@@ -109,28 +103,16 @@ Class | Method | HTTP request | Description
 *TextTextPluralApi* | [**getVersionsTextTextPluralGet**](docs//TextTextPluralApi.md#getversionstexttextpluralget) | **GET** /text/text/plural/ | Get list of models available for plural
 *TextTextProgrammingLanguageGenerationApi* | [**applyTextTextProgrammingLanguageGenerationPost**](docs//TextTextProgrammingLanguageGenerationApi.md#applytexttextprogramminglanguagegenerationpost) | **POST** /text/text/programming-language-generation/ | Apply model for the programming-language-generation task for a given models
 *TextTextProgrammingLanguageGenerationApi* | [**getVersionsTextTextProgrammingLanguageGenerationGet**](docs//TextTextProgrammingLanguageGenerationApi.md#getversionstexttextprogramminglanguagegenerationget) | **GET** /text/text/programming-language-generation/ | Get list of models available for programming-language-generation
-*TextTextProgrammingLanguageIdentificationApi* | [**applyTextTextProgrammingLanguageIdentificationPost**](docs//TextTextProgrammingLanguageIdentificationApi.md#applytexttextprogramminglanguageidentificationpost) | **POST** /text/text/programming-language-identification/ | Apply model for the programming-language-identification task for a given models
-*TextTextProgrammingLanguageIdentificationApi* | [**getVersionsTextTextProgrammingLanguageIdentificationGet**](docs//TextTextProgrammingLanguageIdentificationApi.md#getversionstexttextprogramminglanguageidentificationget) | **GET** /text/text/programming-language-identification/ | Get list of models available for programming-language-identification
 *TextTextQuestionAnsweringApi* | [**applyTextTextQuestionAnsweringPost**](docs//TextTextQuestionAnsweringApi.md#applytexttextquestionansweringpost) | **POST** /text/text/question-answering/ | Apply model for the question-answering task for a given models
 *TextTextQuestionAnsweringApi* | [**getVersionsTextTextQuestionAnsweringGet**](docs//TextTextQuestionAnsweringApi.md#getversionstexttextquestionansweringget) | **GET** /text/text/question-answering/ | Get list of models available for question-answering
-*TextTextSentencePairModelingApi* | [**applyTextTextSentencePairModelingPost**](docs//TextTextSentencePairModelingApi.md#applytexttextsentencepairmodelingpost) | **POST** /text/text/sentence-pair-modeling/ | Apply model for the sentence-pair-modeling task for a given models
-*TextTextSentencePairModelingApi* | [**getVersionsTextTextSentencePairModelingGet**](docs//TextTextSentencePairModelingApi.md#getversionstexttextsentencepairmodelingget) | **GET** /text/text/sentence-pair-modeling/ | Get list of models available for sentence-pair-modeling
 *TextTextSentenceParaphraserApi* | [**applyTextTextSentenceParaphraserPost**](docs//TextTextSentenceParaphraserApi.md#applytexttextsentenceparaphraserpost) | **POST** /text/text/sentence-paraphraser/ | Apply model for the sentence-paraphraser task for a given models
 *TextTextSentenceParaphraserApi* | [**getVersionsTextTextSentenceParaphraserGet**](docs//TextTextSentenceParaphraserApi.md#getversionstexttextsentenceparaphraserget) | **GET** /text/text/sentence-paraphraser/ | Get list of models available for sentence-paraphraser
 *TextTextSentimentAnalysisApi* | [**applyTextTextSentimentAnalysisPost**](docs//TextTextSentimentAnalysisApi.md#applytexttextsentimentanalysispost) | **POST** /text/text/sentiment-analysis/ | Apply model for the sentiment-analysis task for a given models
 *TextTextSentimentAnalysisApi* | [**getVersionsTextTextSentimentAnalysisGet**](docs//TextTextSentimentAnalysisApi.md#getversionstexttextsentimentanalysisget) | **GET** /text/text/sentiment-analysis/ | Get list of models available for sentiment-analysis
 *TextTextSimilarityApi* | [**applyTextTextSimilarityPost**](docs//TextTextSimilarityApi.md#applytexttextsimilaritypost) | **POST** /text/text/similarity/ | Apply model for the similarity task for a given models
 *TextTextSimilarityApi* | [**getVersionsTextTextSimilarityGet**](docs//TextTextSimilarityApi.md#getversionstexttextsimilarityget) | **GET** /text/text/similarity/ | Get list of models available for similarity
-*TextTextSummarizationApi* | [**applyTextTextSummarizationPost**](docs//TextTextSummarizationApi.md#applytexttextsummarizationpost) | **POST** /text/text/summarization/ | Apply model for the summarization task for a given models
-*TextTextSummarizationApi* | [**getVersionsTextTextSummarizationGet**](docs//TextTextSummarizationApi.md#getversionstexttextsummarizationget) | **GET** /text/text/summarization/ | Get list of models available for summarization
-*TextTextTranslationApi* | [**applyTextTextTranslationPost**](docs//TextTextTranslationApi.md#applytexttexttranslationpost) | **POST** /text/text/translation/ | Apply model for the translation task for a given models
-*TextTextTranslationApi* | [**getVersionsTextTextTranslationGet**](docs//TextTextTranslationApi.md#getversionstexttexttranslationget) | **GET** /text/text/translation/ | Get list of models available for translation
-*TextTextTransliterationApi* | [**applyTextTextTransliterationPost**](docs//TextTextTransliterationApi.md#applytexttexttransliterationpost) | **POST** /text/text/transliteration/ | Apply model for the transliteration task for a given models
-*TextTextTransliterationApi* | [**getVersionsTextTextTransliterationGet**](docs//TextTextTransliterationApi.md#getversionstexttexttransliterationget) | **GET** /text/text/transliteration/ | Get list of models available for transliteration
 *TextTextWordAlignmentApi* | [**applyTextTextWordAlignmentPost**](docs//TextTextWordAlignmentApi.md#applytexttextwordalignmentpost) | **POST** /text/text/word-alignment/ | Apply model for the word-alignment task for a given models
 *TextTextWordAlignmentApi* | [**getVersionsTextTextWordAlignmentGet**](docs//TextTextWordAlignmentApi.md#getversionstexttextwordalignmentget) | **GET** /text/text/word-alignment/ | Get list of models available for word-alignment
-*VideoVideoFrameInterpolationApi* | [**applyVideoVideoFrameInterpolationPost**](docs//VideoVideoFrameInterpolationApi.md#applyvideovideoframeinterpolationpost) | **POST** /video/video/frame-interpolation/ | Apply model for the frame-interpolation task for a given models
-*VideoVideoFrameInterpolationApi* | [**getVersionsVideoVideoFrameInterpolationGet**](docs//VideoVideoFrameInterpolationApi.md#getversionsvideovideoframeinterpolationget) | **GET** /video/video/frame-interpolation/ | Get list of models available for frame-interpolation
 
 
 ## Documentation For Models
@@ -138,12 +120,10 @@ Class | Method | HTTP request | Description
  - [BodyApplyImageImageBackgroundRemovalPost](docs//BodyApplyImageImageBackgroundRemovalPost.md)
  - [BodyApplyImageImageColorizationPost](docs//BodyApplyImageImageColorizationPost.md)
  - [BodyApplyImageImageFaceBluringPost](docs//BodyApplyImageImageFaceBluringPost.md)
- - [BodyApplyImageImageRestorationPost](docs//BodyApplyImageImageRestorationPost.md)
  - [BodyApplyImageImageSuperResolutionPost](docs//BodyApplyImageImageSuperResolutionPost.md)
  - [BodyApplyImageImageUncolorizationPost](docs//BodyApplyImageImageUncolorizationPost.md)
  - [BodyApplyImageTextAsciifyPost](docs//BodyApplyImageTextAsciifyPost.md)
  - [BodyApplyImageTextOcrPost](docs//BodyApplyImageTextOcrPost.md)
- - [BodyApplyVideoVideoFrameInterpolationPost](docs//BodyApplyVideoVideoFrameInterpolationPost.md)
  - [HTTPValidationError](docs//HTTPValidationError.md)
  - [ValidationError](docs//ValidationError.md)
 

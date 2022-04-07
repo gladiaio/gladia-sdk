@@ -43,9 +43,9 @@ export class ImageImageBackgroundRemovalService {
      * @param model 
      
      */
-    public applyImageImageBackgroundRemovalPost(image: Blob, model?: 'xception' | 'mobilenet', observe?: 'body', headers?: Headers): Observable<object>;
-    public applyImageImageBackgroundRemovalPost(image: Blob, model?: 'xception' | 'mobilenet', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
-    public applyImageImageBackgroundRemovalPost(image: Blob, model?: 'xception' | 'mobilenet', observe: any = 'body', headers: Headers = {}): Observable<any> {
+    public applyImageImageBackgroundRemovalPost(image: Blob, model?: 'mobilenet' | 'xception', observe?: 'body', headers?: Headers): Observable<object>;
+    public applyImageImageBackgroundRemovalPost(image: Blob, model?: 'mobilenet' | 'xception', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
+    public applyImageImageBackgroundRemovalPost(image: Blob, model?: 'mobilenet' | 'xception', observe: any = 'body', headers: Headers = {}): Observable<any> {
         if (!image){
             throw new Error('Required parameter image was null or undefined when calling applyImageImageBackgroundRemovalPost.');
         }

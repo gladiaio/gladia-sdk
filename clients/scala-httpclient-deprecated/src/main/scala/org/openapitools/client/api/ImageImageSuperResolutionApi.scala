@@ -80,7 +80,7 @@ class ImageImageSuperResolutionApi(
    * 
    *
    * @param image  
-   * @param model  (optional, default to esrgan)
+   * @param model  (optional, default to idealo-psnr-small)
    * @return Any
    */
   def applyImageImageSuperResolutionPost(image: File, model: Option[String] = None): Option[Any] = {
@@ -96,7 +96,7 @@ class ImageImageSuperResolutionApi(
    * 
    *
    * @param image  
-   * @param model  (optional, default to esrgan)
+   * @param model  (optional, default to idealo-psnr-small)
    * @return Future(Any)
    */
   def applyImageImageSuperResolutionPostAsync(image: File, model: Option[String] = None): Future[Any] = {

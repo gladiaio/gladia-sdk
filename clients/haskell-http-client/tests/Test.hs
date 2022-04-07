@@ -23,12 +23,10 @@ main =
       propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageImageBackgroundRemovalPost)
       propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageImageColorizationPost)
       propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageImageFaceBluringPost)
-      propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageImageRestorationPost)
       propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageImageSuperResolutionPost)
       propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageImageUncolorizationPost)
       propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageTextAsciifyPost)
       propMimeEq MimeJSON (Proxy :: Proxy BodyApplyImageTextOcrPost)
-      propMimeEq MimeJSON (Proxy :: Proxy BodyApplyVideoVideoFrameInterpolationPost)
       propMimeEq MimeJSON (Proxy :: Proxy HTTPValidationError)
       propMimeEq MimeJSON (Proxy :: Proxy ValidationError)
       

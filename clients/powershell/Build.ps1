@@ -58,7 +58,7 @@ $Manifest = @{
     Description = 'Org.OpenAPITools - the PowerShell module for FastAPI'
 
     RootModule = 'Org.OpenAPITools.psm1'
-    Guid = '{FCC66EE2-6DFB-4EAE-9A7C-985309BC62AF}' # Has to be static, otherwise each new build will be considered different module
+    Guid = '{76236A05-BE86-43BD-88E0-2DD01C574BE6}' # Has to be static, otherwise each new build will be considered different module
 
     PowerShellVersion = '3.0'
 

@@ -46,7 +46,7 @@ OASImageImageBackgroundRemovalApi api = new OASImageImageBackgroundRemovalApi();
 
 Map<String, Object> params = new Map<String, Object>{
     'image' => Blob.valueOf('Sample text file\nContents'),
-    'model' => xception
+    'model' => mobilenet
 };
 
 try {
@@ -70,8 +70,6 @@ Class | Method | HTTP request | Description
 *OASImageImageColorizationApi* | [**getVersionsImageImageColorizationGet**](OASImageImageColorizationApi.md#getVersionsImageImageColorizationGet) | **GET** /image/image/colorization/ | Get list of models available for colorization
 *OASImageImageFaceBluringApi* | [**applyImageImageFaceBluringPost**](OASImageImageFaceBluringApi.md#applyImageImageFaceBluringPost) | **POST** /image/image/face-bluring/ | Apply model for the face-bluring task for a given models
 *OASImageImageFaceBluringApi* | [**getVersionsImageImageFaceBluringGet**](OASImageImageFaceBluringApi.md#getVersionsImageImageFaceBluringGet) | **GET** /image/image/face-bluring/ | Get list of models available for face-bluring
-*OASImageImageRestorationApi* | [**applyImageImageRestorationPost**](OASImageImageRestorationApi.md#applyImageImageRestorationPost) | **POST** /image/image/restoration/ | Apply model for the restoration task for a given models
-*OASImageImageRestorationApi* | [**getVersionsImageImageRestorationGet**](OASImageImageRestorationApi.md#getVersionsImageImageRestorationGet) | **GET** /image/image/restoration/ | Get list of models available for restoration
 *OASImageImageSuperResolutionApi* | [**applyImageImageSuperResolutionPost**](OASImageImageSuperResolutionApi.md#applyImageImageSuperResolutionPost) | **POST** /image/image/super-resolution/ | Apply model for the super-resolution task for a given models
 *OASImageImageSuperResolutionApi* | [**getVersionsImageImageSuperResolutionGet**](OASImageImageSuperResolutionApi.md#getVersionsImageImageSuperResolutionGet) | **GET** /image/image/super-resolution/ | Get list of models available for super-resolution
 *OASImageImageUncolorizationApi* | [**applyImageImageUncolorizationPost**](OASImageImageUncolorizationApi.md#applyImageImageUncolorizationPost) | **POST** /image/image/uncolorization/ | Apply model for the uncolorization task for a given models
@@ -82,10 +80,6 @@ Class | Method | HTTP request | Description
 *OASImageTextOcrApi* | [**getVersionsImageTextOcrGet**](OASImageTextOcrApi.md#getVersionsImageTextOcrGet) | **GET** /image/text/ocr/ | Get list of models available for ocr
 *OASTextTextAutocorrectApi* | [**applyTextTextAutocorrectPost**](OASTextTextAutocorrectApi.md#applyTextTextAutocorrectPost) | **POST** /text/text/autocorrect/ | Apply model for the autocorrect task for a given models
 *OASTextTextAutocorrectApi* | [**getVersionsTextTextAutocorrectGet**](OASTextTextAutocorrectApi.md#getVersionsTextTextAutocorrectGet) | **GET** /text/text/autocorrect/ | Get list of models available for autocorrect
-*OASTextTextBooleanQuestionGenerationApi* | [**applyTextTextBooleanQuestionGenerationPost**](OASTextTextBooleanQuestionGenerationApi.md#applyTextTextBooleanQuestionGenerationPost) | **POST** /text/text/boolean-question-generation/ | Apply model for the boolean-question-generation task for a given models
-*OASTextTextBooleanQuestionGenerationApi* | [**getVersionsTextTextBooleanQuestionGenerationGet**](OASTextTextBooleanQuestionGenerationApi.md#getVersionsTextTextBooleanQuestionGenerationGet) | **GET** /text/text/boolean-question-generation/ | Get list of models available for boolean-question-generation
-*OASTextTextDependencyTrackingApi* | [**applyTextTextDependencyTrackingPost**](OASTextTextDependencyTrackingApi.md#applyTextTextDependencyTrackingPost) | **POST** /text/text/dependency-tracking/ | Apply model for the dependency-tracking task for a given models
-*OASTextTextDependencyTrackingApi* | [**getVersionsTextTextDependencyTrackingGet**](OASTextTextDependencyTrackingApi.md#getVersionsTextTextDependencyTrackingGet) | **GET** /text/text/dependency-tracking/ | Get list of models available for dependency-tracking
 *OASTextTextEmotionRecognitionApi* | [**applyTextTextEmotionRecognitionPost**](OASTextTextEmotionRecognitionApi.md#applyTextTextEmotionRecognitionPost) | **POST** /text/text/emotion-recognition/ | Apply model for the emotion-recognition task for a given models
 *OASTextTextEmotionRecognitionApi* | [**getVersionsTextTextEmotionRecognitionGet**](OASTextTextEmotionRecognitionApi.md#getVersionsTextTextEmotionRecognitionGet) | **GET** /text/text/emotion-recognition/ | Get list of models available for emotion-recognition
 *OASTextTextEntityExtractionApi* | [**applyTextTextEntityExtractionPost**](OASTextTextEntityExtractionApi.md#applyTextTextEntityExtractionPost) | **POST** /text/text/entity-extraction/ | Apply model for the entity-extraction task for a given models
@@ -110,28 +104,16 @@ Class | Method | HTTP request | Description
 *OASTextTextPluralApi* | [**getVersionsTextTextPluralGet**](OASTextTextPluralApi.md#getVersionsTextTextPluralGet) | **GET** /text/text/plural/ | Get list of models available for plural
 *OASTextTextProgrammingLanguageGenerationApi* | [**applyTextTextProgrammingLanguageGenerationPost**](OASTextTextProgrammingLanguageGenerationApi.md#applyTextTextProgrammingLanguageGenerationPost) | **POST** /text/text/programming-language-generation/ | Apply model for the programming-language-generation task for a given models
 *OASTextTextProgrammingLanguageGenerationApi* | [**getVersionsTextTextProgrammingLanguageGenerationGet**](OASTextTextProgrammingLanguageGenerationApi.md#getVersionsTextTextProgrammingLanguageGenerationGet) | **GET** /text/text/programming-language-generation/ | Get list of models available for programming-language-generation
-*OASTextTextProgrammingLanguageIdentificationApi* | [**applyTextTextProgrammingLanguageIdentificationPost**](OASTextTextProgrammingLanguageIdentificationApi.md#applyTextTextProgrammingLanguageIdentificationPost) | **POST** /text/text/programming-language-identification/ | Apply model for the programming-language-identification task for a given models
-*OASTextTextProgrammingLanguageIdentificationApi* | [**getVersionsTextTextProgrammingLanguageIdentificationGet**](OASTextTextProgrammingLanguageIdentificationApi.md#getVersionsTextTextProgrammingLanguageIdentificationGet) | **GET** /text/text/programming-language-identification/ | Get list of models available for programming-language-identification
 *OASTextTextQuestionAnsweringApi* | [**applyTextTextQuestionAnsweringPost**](OASTextTextQuestionAnsweringApi.md#applyTextTextQuestionAnsweringPost) | **POST** /text/text/question-answering/ | Apply model for the question-answering task for a given models
 *OASTextTextQuestionAnsweringApi* | [**getVersionsTextTextQuestionAnsweringGet**](OASTextTextQuestionAnsweringApi.md#getVersionsTextTextQuestionAnsweringGet) | **GET** /text/text/question-answering/ | Get list of models available for question-answering
-*OASTextTextSentencePairModelingApi* | [**applyTextTextSentencePairModelingPost**](OASTextTextSentencePairModelingApi.md#applyTextTextSentencePairModelingPost) | **POST** /text/text/sentence-pair-modeling/ | Apply model for the sentence-pair-modeling task for a given models
-*OASTextTextSentencePairModelingApi* | [**getVersionsTextTextSentencePairModelingGet**](OASTextTextSentencePairModelingApi.md#getVersionsTextTextSentencePairModelingGet) | **GET** /text/text/sentence-pair-modeling/ | Get list of models available for sentence-pair-modeling
 *OASTextTextSentenceParaphraserApi* | [**applyTextTextSentenceParaphraserPost**](OASTextTextSentenceParaphraserApi.md#applyTextTextSentenceParaphraserPost) | **POST** /text/text/sentence-paraphraser/ | Apply model for the sentence-paraphraser task for a given models
 *OASTextTextSentenceParaphraserApi* | [**getVersionsTextTextSentenceParaphraserGet**](OASTextTextSentenceParaphraserApi.md#getVersionsTextTextSentenceParaphraserGet) | **GET** /text/text/sentence-paraphraser/ | Get list of models available for sentence-paraphraser
 *OASTextTextSentimentAnalysisApi* | [**applyTextTextSentimentAnalysisPost**](OASTextTextSentimentAnalysisApi.md#applyTextTextSentimentAnalysisPost) | **POST** /text/text/sentiment-analysis/ | Apply model for the sentiment-analysis task for a given models
 *OASTextTextSentimentAnalysisApi* | [**getVersionsTextTextSentimentAnalysisGet**](OASTextTextSentimentAnalysisApi.md#getVersionsTextTextSentimentAnalysisGet) | **GET** /text/text/sentiment-analysis/ | Get list of models available for sentiment-analysis
 *OASTextTextSimilarityApi* | [**applyTextTextSimilarityPost**](OASTextTextSimilarityApi.md#applyTextTextSimilarityPost) | **POST** /text/text/similarity/ | Apply model for the similarity task for a given models
 *OASTextTextSimilarityApi* | [**getVersionsTextTextSimilarityGet**](OASTextTextSimilarityApi.md#getVersionsTextTextSimilarityGet) | **GET** /text/text/similarity/ | Get list of models available for similarity
-*OASTextTextSummarizationApi* | [**applyTextTextSummarizationPost**](OASTextTextSummarizationApi.md#applyTextTextSummarizationPost) | **POST** /text/text/summarization/ | Apply model for the summarization task for a given models
-*OASTextTextSummarizationApi* | [**getVersionsTextTextSummarizationGet**](OASTextTextSummarizationApi.md#getVersionsTextTextSummarizationGet) | **GET** /text/text/summarization/ | Get list of models available for summarization
-*OASTextTextTranslationApi* | [**applyTextTextTranslationPost**](OASTextTextTranslationApi.md#applyTextTextTranslationPost) | **POST** /text/text/translation/ | Apply model for the translation task for a given models
-*OASTextTextTranslationApi* | [**getVersionsTextTextTranslationGet**](OASTextTextTranslationApi.md#getVersionsTextTextTranslationGet) | **GET** /text/text/translation/ | Get list of models available for translation
-*OASTextTextTransliterationApi* | [**applyTextTextTransliterationPost**](OASTextTextTransliterationApi.md#applyTextTextTransliterationPost) | **POST** /text/text/transliteration/ | Apply model for the transliteration task for a given models
-*OASTextTextTransliterationApi* | [**getVersionsTextTextTransliterationGet**](OASTextTextTransliterationApi.md#getVersionsTextTextTransliterationGet) | **GET** /text/text/transliteration/ | Get list of models available for transliteration
 *OASTextTextWordAlignmentApi* | [**applyTextTextWordAlignmentPost**](OASTextTextWordAlignmentApi.md#applyTextTextWordAlignmentPost) | **POST** /text/text/word-alignment/ | Apply model for the word-alignment task for a given models
 *OASTextTextWordAlignmentApi* | [**getVersionsTextTextWordAlignmentGet**](OASTextTextWordAlignmentApi.md#getVersionsTextTextWordAlignmentGet) | **GET** /text/text/word-alignment/ | Get list of models available for word-alignment
-*OASVideoVideoFrameInterpolationApi* | [**applyVideoVideoFrameInterpolationPost**](OASVideoVideoFrameInterpolationApi.md#applyVideoVideoFrameInterpolationPost) | **POST** /video/video/frame-interpolation/ | Apply model for the frame-interpolation task for a given models
-*OASVideoVideoFrameInterpolationApi* | [**getVersionsVideoVideoFrameInterpolationGet**](OASVideoVideoFrameInterpolationApi.md#getVersionsVideoVideoFrameInterpolationGet) | **GET** /video/video/frame-interpolation/ | Get list of models available for frame-interpolation
 
 
 ## Documentation for Models
@@ -139,12 +121,10 @@ Class | Method | HTTP request | Description
  - [OASBodyApplyImageImageBackgroundRemo](OASBodyApplyImageImageBackgroundRemo.md)
  - [OASBodyApplyImageImageColorizationPo](OASBodyApplyImageImageColorizationPo.md)
  - [OASBodyApplyImageImageFaceBluringPos](OASBodyApplyImageImageFaceBluringPos.md)
- - [OASBodyApplyImageImageRestorationPos](OASBodyApplyImageImageRestorationPos.md)
  - [OASBodyApplyImageImageSuperResolutio](OASBodyApplyImageImageSuperResolutio.md)
  - [OASBodyApplyImageImageUncolorization](OASBodyApplyImageImageUncolorization.md)
  - [OASBodyApplyImageTextAsciifyPost](OASBodyApplyImageTextAsciifyPost.md)
  - [OASBodyApplyImageTextOcrPost](OASBodyApplyImageTextOcrPost.md)
- - [OASBodyApplyVideoVideoFrameInterpola](OASBodyApplyVideoVideoFrameInterpola.md)
  - [OASHTTPValidationError](OASHTTPValidationError.md)
  - [OASValidationError](OASValidationError.md)
 

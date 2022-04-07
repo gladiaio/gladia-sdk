@@ -29,7 +29,7 @@ public class OASImageImageSuperResolutionApi {
      * Apply model for the super-resolution task for a given models
      * 
      * @param image  (required)
-     * @param model  (optional, default to 'esrgan')
+     * @param model  (optional, default to idealo-psnr-small)
      * @return Object
      * @throws OAS.ApiException if fails to make API call
      */

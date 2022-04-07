@@ -62,14 +62,6 @@ Method | HTTP request | Description
 *getVersionsImageImageFaceBluringGetSync* | *GET* /image/image/face-bluring/ | Get list of models available for face-bluring.
 *getVersionsImageImageFaceBluringGetASync* | *GET* /image/image/face-bluring/ | Get list of models available for face-bluring.
 
-### ImageImageRestorationManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyImageImageRestorationPostSync* | *POST* /image/image/restoration/ | Apply model for the restoration task for a given models.
-*applyImageImageRestorationPostASync* | *POST* /image/image/restoration/ | Apply model for the restoration task for a given models.
-*getVersionsImageImageRestorationGetSync* | *GET* /image/image/restoration/ | Get list of models available for restoration.
-*getVersionsImageImageRestorationGetASync* | *GET* /image/image/restoration/ | Get list of models available for restoration.
-
 ### ImageImageSuperResolutionManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -109,22 +101,6 @@ Method | HTTP request | Description
 *applyTextTextAutocorrectPostASync* | *POST* /text/text/autocorrect/ | Apply model for the autocorrect task for a given models.
 *getVersionsTextTextAutocorrectGetSync* | *GET* /text/text/autocorrect/ | Get list of models available for autocorrect.
 *getVersionsTextTextAutocorrectGetASync* | *GET* /text/text/autocorrect/ | Get list of models available for autocorrect.
-
-### TextTextBooleanQuestionGenerationManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyTextTextBooleanQuestionGenerationPostSync* | *POST* /text/text/boolean-question-generation/ | Apply model for the boolean-question-generation task for a given models.
-*applyTextTextBooleanQuestionGenerationPostASync* | *POST* /text/text/boolean-question-generation/ | Apply model for the boolean-question-generation task for a given models.
-*getVersionsTextTextBooleanQuestionGenerationGetSync* | *GET* /text/text/boolean-question-generation/ | Get list of models available for boolean-question-generation.
-*getVersionsTextTextBooleanQuestionGenerationGetASync* | *GET* /text/text/boolean-question-generation/ | Get list of models available for boolean-question-generation.
-
-### TextTextDependencyTrackingManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyTextTextDependencyTrackingPostSync* | *POST* /text/text/dependency-tracking/ | Apply model for the dependency-tracking task for a given models.
-*applyTextTextDependencyTrackingPostASync* | *POST* /text/text/dependency-tracking/ | Apply model for the dependency-tracking task for a given models.
-*getVersionsTextTextDependencyTrackingGetSync* | *GET* /text/text/dependency-tracking/ | Get list of models available for dependency-tracking.
-*getVersionsTextTextDependencyTrackingGetASync* | *GET* /text/text/dependency-tracking/ | Get list of models available for dependency-tracking.
 
 ### TextTextEmotionRecognitionManager
 Method | HTTP request | Description
@@ -222,14 +198,6 @@ Method | HTTP request | Description
 *getVersionsTextTextProgrammingLanguageGenerationGetSync* | *GET* /text/text/programming-language-generation/ | Get list of models available for programming-language-generation.
 *getVersionsTextTextProgrammingLanguageGenerationGetASync* | *GET* /text/text/programming-language-generation/ | Get list of models available for programming-language-generation.
 
-### TextTextProgrammingLanguageIdentificationManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyTextTextProgrammingLanguageIdentificationPostSync* | *POST* /text/text/programming-language-identification/ | Apply model for the programming-language-identification task for a given models.
-*applyTextTextProgrammingLanguageIdentificationPostASync* | *POST* /text/text/programming-language-identification/ | Apply model for the programming-language-identification task for a given models.
-*getVersionsTextTextProgrammingLanguageIdentificationGetSync* | *GET* /text/text/programming-language-identification/ | Get list of models available for programming-language-identification.
-*getVersionsTextTextProgrammingLanguageIdentificationGetASync* | *GET* /text/text/programming-language-identification/ | Get list of models available for programming-language-identification.
-
 ### TextTextQuestionAnsweringManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -237,14 +205,6 @@ Method | HTTP request | Description
 *applyTextTextQuestionAnsweringPostASync* | *POST* /text/text/question-answering/ | Apply model for the question-answering task for a given models.
 *getVersionsTextTextQuestionAnsweringGetSync* | *GET* /text/text/question-answering/ | Get list of models available for question-answering.
 *getVersionsTextTextQuestionAnsweringGetASync* | *GET* /text/text/question-answering/ | Get list of models available for question-answering.
-
-### TextTextSentencePairModelingManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyTextTextSentencePairModelingPostSync* | *POST* /text/text/sentence-pair-modeling/ | Apply model for the sentence-pair-modeling task for a given models.
-*applyTextTextSentencePairModelingPostASync* | *POST* /text/text/sentence-pair-modeling/ | Apply model for the sentence-pair-modeling task for a given models.
-*getVersionsTextTextSentencePairModelingGetSync* | *GET* /text/text/sentence-pair-modeling/ | Get list of models available for sentence-pair-modeling.
-*getVersionsTextTextSentencePairModelingGetASync* | *GET* /text/text/sentence-pair-modeling/ | Get list of models available for sentence-pair-modeling.
 
 ### TextTextSentenceParaphraserManager
 Method | HTTP request | Description
@@ -270,30 +230,6 @@ Method | HTTP request | Description
 *getVersionsTextTextSimilarityGetSync* | *GET* /text/text/similarity/ | Get list of models available for similarity.
 *getVersionsTextTextSimilarityGetASync* | *GET* /text/text/similarity/ | Get list of models available for similarity.
 
-### TextTextSummarizationManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyTextTextSummarizationPostSync* | *POST* /text/text/summarization/ | Apply model for the summarization task for a given models.
-*applyTextTextSummarizationPostASync* | *POST* /text/text/summarization/ | Apply model for the summarization task for a given models.
-*getVersionsTextTextSummarizationGetSync* | *GET* /text/text/summarization/ | Get list of models available for summarization.
-*getVersionsTextTextSummarizationGetASync* | *GET* /text/text/summarization/ | Get list of models available for summarization.
-
-### TextTextTranslationManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyTextTextTranslationPostSync* | *POST* /text/text/translation/ | Apply model for the translation task for a given models.
-*applyTextTextTranslationPostASync* | *POST* /text/text/translation/ | Apply model for the translation task for a given models.
-*getVersionsTextTextTranslationGetSync* | *GET* /text/text/translation/ | Get list of models available for translation.
-*getVersionsTextTextTranslationGetASync* | *GET* /text/text/translation/ | Get list of models available for translation.
-
-### TextTextTransliterationManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyTextTextTransliterationPostSync* | *POST* /text/text/transliteration/ | Apply model for the transliteration task for a given models.
-*applyTextTextTransliterationPostASync* | *POST* /text/text/transliteration/ | Apply model for the transliteration task for a given models.
-*getVersionsTextTextTransliterationGetSync* | *GET* /text/text/transliteration/ | Get list of models available for transliteration.
-*getVersionsTextTextTransliterationGetASync* | *GET* /text/text/transliteration/ | Get list of models available for transliteration.
-
 ### TextTextWordAlignmentManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -302,14 +238,6 @@ Method | HTTP request | Description
 *getVersionsTextTextWordAlignmentGetSync* | *GET* /text/text/word-alignment/ | Get list of models available for word-alignment.
 *getVersionsTextTextWordAlignmentGetASync* | *GET* /text/text/word-alignment/ | Get list of models available for word-alignment.
 
-### VideoVideoFrameInterpolationManager
-Method | HTTP request | Description
-------------- | ------------- | -------------
-*applyVideoVideoFrameInterpolationPostSync* | *POST* /video/video/frame-interpolation/ | Apply model for the frame-interpolation task for a given models.
-*applyVideoVideoFrameInterpolationPostASync* | *POST* /video/video/frame-interpolation/ | Apply model for the frame-interpolation task for a given models.
-*getVersionsVideoVideoFrameInterpolationGetSync* | *GET* /video/video/frame-interpolation/ | Get list of models available for frame-interpolation.
-*getVersionsVideoVideoFrameInterpolationGetASync* | *GET* /video/video/frame-interpolation/ | Get list of models available for frame-interpolation.
-
 
 ## What are the Model files for the data structures/objects?
 Class | Description
@@ -317,12 +245,10 @@ Class | Description
  *Body_apply_image_image_background_removal__post* | 
  *Body_apply_image_image_colorization__post* | 
  *Body_apply_image_image_face_bluring__post* | 
- *Body_apply_image_image_restoration__post* | 
  *Body_apply_image_image_super_resolution__post* | 
  *Body_apply_image_image_uncolorization__post* | 
  *Body_apply_image_text_asciify__post* | 
  *Body_apply_image_text_ocr__post* | 
- *Body_apply_video_video_frame_interpolation__post* | 
  *HTTPValidationError* | 
  *ValidationError* | 
 

@@ -38,7 +38,7 @@ module OpenapiClient
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TextTextSentimentAnalysisApi.apply_text_text_sentiment_analysis_post ...'
       end
-      allowable_values = ["nlptown-bert-base-multilingual-uncased-sentiment", "distilbert-base-uncased", "distilbert-base-uncased-finetuned-sst-2-english", "zero-shot-classification-facebook-bart-large-mnli"]
+      allowable_values = ["zero-shot-classification-facebook-bart-large-mnli", "distilbert-base-uncased", "nlptown-bert-base-multilingual-uncased-sentiment", "distilbert-base-uncased-finetuned-sst-2-english"]
       if @api_client.config.client_side_validation && opts[:'model'] && !allowable_values.include?(opts[:'model'])
         fail ArgumentError, "invalid value for \"model\", must be one of #{allowable_values}"
       end

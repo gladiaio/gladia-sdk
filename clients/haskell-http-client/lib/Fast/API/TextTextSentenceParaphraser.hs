@@ -72,8 +72,8 @@ data ApplyTextTextSentenceParaphraserPost
 instance HasOptionalParam ApplyTextTextSentenceParaphraserPost Context where
   applyOptionalParam req (Context xs) =
     req `setQuery` toQuery ("context", Just xs)
-instance HasOptionalParam ApplyTextTextSentenceParaphraserPost Model20 where
-  applyOptionalParam req (Model20 xs) =
+instance HasOptionalParam ApplyTextTextSentenceParaphraserPost Model21 where
+  applyOptionalParam req (Model21 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextSentenceParaphraserPost MimeJSON

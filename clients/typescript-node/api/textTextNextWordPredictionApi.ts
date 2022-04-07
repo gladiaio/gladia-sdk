@@ -75,7 +75,7 @@ export class TextTextNextWordPredictionApi {
      * @param sentence 
      * @param model 
      */
-    public async applyTextTextNextWordPredictionPost (sentence?: string, model?: 'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
+    public async applyTextTextNextWordPredictionPost (sentence?: string, model?: 'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/text/text/next-word-prediction/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -86,7 +86,7 @@ export class TextTextNextWordPredictionApi {
         }
 
         if (model !== undefined) {
-            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'bert-base-uncased' | 'roberta-base' | 'distilbert-base-uncased' | 'albert-base-v2'");
+            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'bert-base-uncased' | 'albert-base-v2' | 'distilbert-base-uncased' | 'roberta-base'");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

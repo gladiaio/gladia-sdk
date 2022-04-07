@@ -38,7 +38,7 @@ ImageImageSuperResolutionApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    ApplyImageImageSuperResolutionPost = function(image, model='esrgan', ...){
+    ApplyImageImageSuperResolutionPost = function(image, model='idealo-psnr-small', ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()

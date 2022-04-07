@@ -76,7 +76,7 @@ export class ImageTextOcrApi {
      * @param sourceLanguage 
      * @param model 
      */
-    public async applyImageTextOcrPost (image: Buffer, sourceLanguage?: string, model?: 'tesseract-default' | 'tesseract-denoising' | 'easy-ocr', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
+    public async applyImageTextOcrPost (image: Buffer, sourceLanguage?: string, model?: 'tesseract-denoising' | 'easy-ocr' | 'tesseract-default', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/image/text/ocr/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -92,7 +92,7 @@ export class ImageTextOcrApi {
         }
 
         if (model !== undefined) {
-            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'tesseract-default' | 'tesseract-denoising' | 'easy-ocr'");
+            localVarQueryParameters['model'] = ObjectSerializer.serialize(model, "'tesseract-denoising' | 'easy-ocr' | 'tesseract-default'");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

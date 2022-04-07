@@ -1,33 +1,33 @@
 -module(openapi_api).
 
--export([ apply_video_video_frame_interpolation_post/1
-        , get_versions_video_video_frame_interpolation_get/0
+-export([ apply_text_text_word_alignment_post/0
+        , get_versions_text_text_word_alignment_get/0
         ]).
 
 -define(BASE_URL, "").
 
-%% @doc Apply model for the frame-interpolation task for a given models
+%% @doc Apply model for the word-alignment task for a given models
 %% 
--spec apply_video_video_frame_interpolation_post(binary()) ->
+-spec apply_text_text_word_alignment_post() ->
   openapi_utils:response().
-apply_video_video_frame_interpolation_post(Video) ->
+apply_text_text_word_alignment_post() ->
   Method      = post,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/video/video/frame-interpolation/"],
-  Body        = {form, [{<<"video">>, Video]++openapi_utils:optional_params([], _OptionalParams)},
-  ContentType = hd(["multipart/form-data"]),
-  QueryString = [<<"model=">>, Model, <<"&">>],
+  Path        = ["/text/text/word-alignment/"],
+  Body        = [],
+  ContentType = "text/plain",
+  QueryString = [<<"input_string_language_1=">>, InputStringLanguage1, <<"&">>, <<"input_string_language_2=">>, InputStringLanguage2, <<"&">>, <<"model=">>, Model, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString], jsx:encode(Body), ContentType).
 
-%% @doc Get list of models available for frame-interpolation
+%% @doc Get list of models available for word-alignment
 %% 
--spec get_versions_video_video_frame_interpolation_get() ->
+-spec get_versions_text_text_word_alignment_get() ->
   openapi_utils:response().
-get_versions_video_video_frame_interpolation_get() ->
+get_versions_text_text_word_alignment_get() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/video/video/frame-interpolation/"],
+  Path        = ["/text/text/word-alignment/"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 

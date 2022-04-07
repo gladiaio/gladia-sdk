@@ -72,8 +72,8 @@ data ApplyTextTextNamedEntityRecognitionPost
 instance HasOptionalParam ApplyTextTextNamedEntityRecognitionPost ParamText where
   applyOptionalParam req (ParamText xs) =
     req `setQuery` toQuery ("text", Just xs)
-instance HasOptionalParam ApplyTextTextNamedEntityRecognitionPost Model9 where
-  applyOptionalParam req (Model9 xs) =
+instance HasOptionalParam ApplyTextTextNamedEntityRecognitionPost Model10 where
+  applyOptionalParam req (Model10 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextNamedEntityRecognitionPost MimeJSON

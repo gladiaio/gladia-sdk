@@ -121,13 +121,13 @@ class ImageImageSuperResolutionApi
      * Apply model for the super-resolution task for a given models
      *
      * @param  \SplFileObject $image image (required)
-     * @param  string $model model (optional, default to 'esrgan')
+     * @param  string $model model (optional, default to 'idealo-psnr-small')
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object|\OpenAPI\Client\Model\HTTPValidationError
      */
-    public function applyImageImageSuperResolutionPost($image, $model = 'esrgan')
+    public function applyImageImageSuperResolutionPost($image, $model = 'idealo-psnr-small')
     {
         list($response) = $this->applyImageImageSuperResolutionPostWithHttpInfo($image, $model);
         return $response;
@@ -139,13 +139,13 @@ class ImageImageSuperResolutionApi
      * Apply model for the super-resolution task for a given models
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'esrgan')
+     * @param  string $model (optional, default to 'idealo-psnr-small')
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object|\OpenAPI\Client\Model\HTTPValidationError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function applyImageImageSuperResolutionPostWithHttpInfo($image, $model = 'esrgan')
+    public function applyImageImageSuperResolutionPostWithHttpInfo($image, $model = 'idealo-psnr-small')
     {
         $request = $this->applyImageImageSuperResolutionPostRequest($image, $model);
 
@@ -248,12 +248,12 @@ class ImageImageSuperResolutionApi
      * Apply model for the super-resolution task for a given models
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'esrgan')
+     * @param  string $model (optional, default to 'idealo-psnr-small')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function applyImageImageSuperResolutionPostAsync($image, $model = 'esrgan')
+    public function applyImageImageSuperResolutionPostAsync($image, $model = 'idealo-psnr-small')
     {
         return $this->applyImageImageSuperResolutionPostAsyncWithHttpInfo($image, $model)
             ->then(
@@ -269,12 +269,12 @@ class ImageImageSuperResolutionApi
      * Apply model for the super-resolution task for a given models
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'esrgan')
+     * @param  string $model (optional, default to 'idealo-psnr-small')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function applyImageImageSuperResolutionPostAsyncWithHttpInfo($image, $model = 'esrgan')
+    public function applyImageImageSuperResolutionPostAsyncWithHttpInfo($image, $model = 'idealo-psnr-small')
     {
         $returnType = 'object';
         $request = $this->applyImageImageSuperResolutionPostRequest($image, $model);
@@ -317,12 +317,12 @@ class ImageImageSuperResolutionApi
      * Create request for operation 'applyImageImageSuperResolutionPost'
      *
      * @param  \SplFileObject $image (required)
-     * @param  string $model (optional, default to 'esrgan')
+     * @param  string $model (optional, default to 'idealo-psnr-small')
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function applyImageImageSuperResolutionPostRequest($image, $model = 'esrgan')
+    protected function applyImageImageSuperResolutionPostRequest($image, $model = 'idealo-psnr-small')
     {
         // verify the required parameter 'image' is set
         if ($image === null || (is_array($image) && count($image) === 0)) {

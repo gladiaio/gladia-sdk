@@ -299,15 +299,12 @@ case $state in
             "applyImageImageBackgroundRemovalPost[Apply model for the background-removal task for a given models]" \
             "getVersionsImageImageBackgroundRemovalGet[Get list of models available for background-removal]"             "applyImageImageColorizationPost[Apply model for the colorization task for a given models]" \
             "getVersionsImageImageColorizationGet[Get list of models available for colorization]"             "applyImageImageFaceBluringPost[Apply model for the face-bluring task for a given models]" \
-            "getVersionsImageImageFaceBluringGet[Get list of models available for face-bluring]"             "applyImageImageRestorationPost[Apply model for the restoration task for a given models]" \
-            "getVersionsImageImageRestorationGet[Get list of models available for restoration]"             "applyImageImageSuperResolutionPost[Apply model for the super-resolution task for a given models]" \
+            "getVersionsImageImageFaceBluringGet[Get list of models available for face-bluring]"             "applyImageImageSuperResolutionPost[Apply model for the super-resolution task for a given models]" \
             "getVersionsImageImageSuperResolutionGet[Get list of models available for super-resolution]"             "applyImageImageUncolorizationPost[Apply model for the uncolorization task for a given models]" \
             "getVersionsImageImageUncolorizationGet[Get list of models available for uncolorization]"             "applyImageTextAsciifyPost[Apply model for the asciify task for a given models]" \
             "getVersionsImageTextAsciifyGet[Get list of models available for asciify]"             "applyImageTextOcrPost[Apply model for the ocr task for a given models]" \
             "getVersionsImageTextOcrGet[Get list of models available for ocr]"             "applyTextTextAutocorrectPost[Apply model for the autocorrect task for a given models]" \
-            "getVersionsTextTextAutocorrectGet[Get list of models available for autocorrect]"             "applyTextTextBooleanQuestionGenerationPost[Apply model for the boolean-question-generation task for a given models]" \
-            "getVersionsTextTextBooleanQuestionGenerationGet[Get list of models available for boolean-question-generation]"             "applyTextTextDependencyTrackingPost[Apply model for the dependency-tracking task for a given models]" \
-            "getVersionsTextTextDependencyTrackingGet[Get list of models available for dependency-tracking]"             "applyTextTextEmotionRecognitionPost[Apply model for the emotion-recognition task for a given models]" \
+            "getVersionsTextTextAutocorrectGet[Get list of models available for autocorrect]"             "applyTextTextEmotionRecognitionPost[Apply model for the emotion-recognition task for a given models]" \
             "getVersionsTextTextEmotionRecognitionGet[Get list of models available for emotion-recognition]"             "applyTextTextEntityExtractionPost[Apply model for the entity-extraction task for a given models]" \
             "getVersionsTextTextEntityExtractionGet[Get list of models available for entity-extraction]"             "applyTextTextHateSpeechDetectionPost[Apply model for the hate-speech-detection task for a given models]" \
             "getVersionsTextTextHateSpeechDetectionGet[Get list of models available for hate-speech-detection]"             "applyTextTextKeywordExtractionPost[Apply model for the keyword-extraction task for a given models]" \
@@ -319,18 +316,12 @@ case $state in
             "getVersionsTextTextNextSentencePredictionGet[Get list of models available for next-sentence-prediction]"             "applyTextTextNextWordPredictionPost[Apply model for the next-word-prediction task for a given models]" \
             "getVersionsTextTextNextWordPredictionGet[Get list of models available for next-word-prediction]"             "applyTextTextPluralPost[Apply model for the plural task for a given models]" \
             "getVersionsTextTextPluralGet[Get list of models available for plural]"             "applyTextTextProgrammingLanguageGenerationPost[Apply model for the programming-language-generation task for a given models]" \
-            "getVersionsTextTextProgrammingLanguageGenerationGet[Get list of models available for programming-language-generation]"             "applyTextTextProgrammingLanguageIdentificationPost[Apply model for the programming-language-identification task for a given models]" \
-            "getVersionsTextTextProgrammingLanguageIdentificationGet[Get list of models available for programming-language-identification]"             "applyTextTextQuestionAnsweringPost[Apply model for the question-answering task for a given models]" \
-            "getVersionsTextTextQuestionAnsweringGet[Get list of models available for question-answering]"             "applyTextTextSentencePairModelingPost[Apply model for the sentence-pair-modeling task for a given models]" \
-            "getVersionsTextTextSentencePairModelingGet[Get list of models available for sentence-pair-modeling]"             "applyTextTextSentenceParaphraserPost[Apply model for the sentence-paraphraser task for a given models]" \
+            "getVersionsTextTextProgrammingLanguageGenerationGet[Get list of models available for programming-language-generation]"             "applyTextTextQuestionAnsweringPost[Apply model for the question-answering task for a given models]" \
+            "getVersionsTextTextQuestionAnsweringGet[Get list of models available for question-answering]"             "applyTextTextSentenceParaphraserPost[Apply model for the sentence-paraphraser task for a given models]" \
             "getVersionsTextTextSentenceParaphraserGet[Get list of models available for sentence-paraphraser]"             "applyTextTextSentimentAnalysisPost[Apply model for the sentiment-analysis task for a given models]" \
             "getVersionsTextTextSentimentAnalysisGet[Get list of models available for sentiment-analysis]"             "applyTextTextSimilarityPost[Apply model for the similarity task for a given models]" \
-            "getVersionsTextTextSimilarityGet[Get list of models available for similarity]"             "applyTextTextSummarizationPost[Apply model for the summarization task for a given models]" \
-            "getVersionsTextTextSummarizationGet[Get list of models available for summarization]"             "applyTextTextTranslationPost[Apply model for the translation task for a given models]" \
-            "getVersionsTextTextTranslationGet[Get list of models available for translation]"             "applyTextTextTransliterationPost[Apply model for the transliteration task for a given models]" \
-            "getVersionsTextTextTransliterationGet[Get list of models available for transliteration]"             "applyTextTextWordAlignmentPost[Apply model for the word-alignment task for a given models]" \
-            "getVersionsTextTextWordAlignmentGet[Get list of models available for word-alignment]"             "applyVideoVideoFrameInterpolationPost[Apply model for the frame-interpolation task for a given models]" \
-            "getVersionsVideoVideoFrameInterpolationGet[Get list of models available for frame-interpolation]" 
+            "getVersionsTextTextSimilarityGet[Get list of models available for similarity]"             "applyTextTextWordAlignmentPost[Apply model for the word-alignment task for a given models]" \
+            "getVersionsTextTextWordAlignmentGet[Get list of models available for word-alignment]" 
     _arguments "(--help)--help[Print information about operation]"
 
     ret=0
@@ -371,19 +362,6 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getVersionsImageImageFaceBluringGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      applyImageImageRestorationPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsImageImageRestorationGet)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -451,34 +429,6 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getVersionsTextTextAutocorrectGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      applyTextTextBooleanQuestionGenerationPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "text=:[QUERY] "
-"model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsTextTextBooleanQuestionGenerationGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      applyTextTextDependencyTrackingPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "input_string=:[QUERY] "
-"model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsTextTextDependencyTrackingGet)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -654,20 +604,6 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      applyTextTextProgrammingLanguageIdentificationPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "text=:[QUERY] "
-"model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsTextTextProgrammingLanguageIdentificationGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       applyTextTextQuestionAnsweringPost)
         local -a _op_arguments
         _op_arguments=(
@@ -678,20 +614,6 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getVersionsTextTextQuestionAnsweringGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      applyTextTextSentencePairModelingPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "sentence=:[QUERY] "
-"model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsTextTextSentencePairModelingGet)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -740,54 +662,6 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      applyTextTextSummarizationPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "text=:[QUERY] "
-"source_language=:[QUERY] "
-"max_length=:[QUERY] "
-"min_length=:[QUERY] "
-"model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsTextTextSummarizationGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      applyTextTextTranslationPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "input_string=:[QUERY] "
-"source_language=:[QUERY] "
-"target_language=:[QUERY] "
-"model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsTextTextTranslationGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      applyTextTextTransliterationPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "text=:[QUERY] "
-"language=:[QUERY] "
-"model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsTextTextTransliterationGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       applyTextTextWordAlignmentPost)
         local -a _op_arguments
         _op_arguments=(
@@ -798,19 +672,6 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getVersionsTextTextWordAlignmentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      applyVideoVideoFrameInterpolationPost)
-        local -a _op_arguments
-        _op_arguments=(
-                    "model=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getVersionsVideoVideoFrameInterpolationGet)
         local -a _op_arguments
         _op_arguments=(
                               )

@@ -80,7 +80,7 @@ class ImageImageBackgroundRemovalApi(
    * 
    *
    * @param image  
-   * @param model  (optional, default to rembg)
+   * @param model  (optional, default to xception)
    * @return Any
    */
   def applyImageImageBackgroundRemovalPost(image: File, model: Option[String] = None): Option[Any] = {
@@ -96,7 +96,7 @@ class ImageImageBackgroundRemovalApi(
    * 
    *
    * @param image  
-   * @param model  (optional, default to rembg)
+   * @param model  (optional, default to xception)
    * @return Future(Any)
    */
   def applyImageImageBackgroundRemovalPostAsync(image: File, model: Option[String] = None): Future[Any] = {

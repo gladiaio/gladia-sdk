@@ -38,7 +38,7 @@ ImageImageBackgroundRemovalApi <- R6::R6Class(
         self$apiClient <- ApiClient$new()
       }
     },
-    ApplyImageImageBackgroundRemovalPost = function(image, model='rembg', ...){
+    ApplyImageImageBackgroundRemovalPost = function(image, model='xception', ...){
       args <- list(...)
       queryParams <- list()
       headerParams <- c()

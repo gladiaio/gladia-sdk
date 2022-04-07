@@ -72,8 +72,8 @@ data ApplyTextTextSentimentAnalysisPost
 instance HasOptionalParam ApplyTextTextSentimentAnalysisPost ParamText where
   applyOptionalParam req (ParamText xs) =
     req `setQuery` toQuery ("text", Just xs)
-instance HasOptionalParam ApplyTextTextSentimentAnalysisPost Model21 where
-  applyOptionalParam req (Model21 xs) =
+instance HasOptionalParam ApplyTextTextSentimentAnalysisPost Model22 where
+  applyOptionalParam req (Model22 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextSentimentAnalysisPost MimeJSON

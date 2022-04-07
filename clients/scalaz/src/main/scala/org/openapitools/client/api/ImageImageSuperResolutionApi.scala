@@ -27,7 +27,7 @@ object ImageImageSuperResolutionApi {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def applyImageImageSuperResolutionPost(host: String, image: File, model: String = esrgan)(implicit modelQuery: QueryParam[String]): Task[Any] = {
+  def applyImageImageSuperResolutionPost(host: String, image: File, model: String = idealo-psnr-small)(implicit modelQuery: QueryParam[String]): Task[Any] = {
     implicit val returnTypeDecoder: EntityDecoder[Any] = jsonOf[Any]
 
     val path = "/image/image/super-resolution/"
@@ -76,7 +76,7 @@ class HttpServiceImageImageSuperResolutionApi(service: HttpService) {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def applyImageImageSuperResolutionPost(image: File, model: String = esrgan)(implicit modelQuery: QueryParam[String]): Task[Any] = {
+  def applyImageImageSuperResolutionPost(image: File, model: String = idealo-psnr-small)(implicit modelQuery: QueryParam[String]): Task[Any] = {
     implicit val returnTypeDecoder: EntityDecoder[Any] = jsonOf[Any]
 
     val path = "/image/image/super-resolution/"

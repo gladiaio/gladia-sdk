@@ -26,25 +26,20 @@ set(SRCS
     model/body_apply_image_image_background_removal__post.c
     model/body_apply_image_image_colorization__post.c
     model/body_apply_image_image_face_bluring__post.c
-    model/body_apply_image_image_restoration__post.c
     model/body_apply_image_image_super_resolution__post.c
     model/body_apply_image_image_uncolorization__post.c
     model/body_apply_image_text_asciify__post.c
     model/body_apply_image_text_ocr__post.c
-    model/body_apply_video_video_frame_interpolation__post.c
     model/http_validation_error.c
     model/validation_error.c
     api/ImageImageBackgroundRemovalAPI.c
     api/ImageImageColorizationAPI.c
     api/ImageImageFaceBluringAPI.c
-    api/ImageImageRestorationAPI.c
     api/ImageImageSuperResolutionAPI.c
     api/ImageImageUncolorizationAPI.c
     api/ImageTextAsciifyAPI.c
     api/ImageTextOcrAPI.c
     api/TextTextAutocorrectAPI.c
-    api/TextTextBooleanQuestionGenerationAPI.c
-    api/TextTextDependencyTrackingAPI.c
     api/TextTextEmotionRecognitionAPI.c
     api/TextTextEntityExtractionAPI.c
     api/TextTextHateSpeechDetectionAPI.c
@@ -57,17 +52,11 @@ set(SRCS
     api/TextTextNextWordPredictionAPI.c
     api/TextTextPluralAPI.c
     api/TextTextProgrammingLanguageGenerationAPI.c
-    api/TextTextProgrammingLanguageIdentificationAPI.c
     api/TextTextQuestionAnsweringAPI.c
-    api/TextTextSentencePairModelingAPI.c
     api/TextTextSentenceParaphraserAPI.c
     api/TextTextSentimentAnalysisAPI.c
     api/TextTextSimilarityAPI.c
-    api/TextTextSummarizationAPI.c
-    api/TextTextTranslationAPI.c
-    api/TextTextTransliterationAPI.c
     api/TextTextWordAlignmentAPI.c
-    api/VideoVideoFrameInterpolationAPI.c
 
 )
 
@@ -79,25 +68,20 @@ set(HDRS
     model/body_apply_image_image_background_removal__post.h
     model/body_apply_image_image_colorization__post.h
     model/body_apply_image_image_face_bluring__post.h
-    model/body_apply_image_image_restoration__post.h
     model/body_apply_image_image_super_resolution__post.h
     model/body_apply_image_image_uncolorization__post.h
     model/body_apply_image_text_asciify__post.h
     model/body_apply_image_text_ocr__post.h
-    model/body_apply_video_video_frame_interpolation__post.h
     model/http_validation_error.h
     model/validation_error.h
     api/ImageImageBackgroundRemovalAPI.h
     api/ImageImageColorizationAPI.h
     api/ImageImageFaceBluringAPI.h
-    api/ImageImageRestorationAPI.h
     api/ImageImageSuperResolutionAPI.h
     api/ImageImageUncolorizationAPI.h
     api/ImageTextAsciifyAPI.h
     api/ImageTextOcrAPI.h
     api/TextTextAutocorrectAPI.h
-    api/TextTextBooleanQuestionGenerationAPI.h
-    api/TextTextDependencyTrackingAPI.h
     api/TextTextEmotionRecognitionAPI.h
     api/TextTextEntityExtractionAPI.h
     api/TextTextHateSpeechDetectionAPI.h
@@ -110,17 +94,11 @@ set(HDRS
     api/TextTextNextWordPredictionAPI.h
     api/TextTextPluralAPI.h
     api/TextTextProgrammingLanguageGenerationAPI.h
-    api/TextTextProgrammingLanguageIdentificationAPI.h
     api/TextTextQuestionAnsweringAPI.h
-    api/TextTextSentencePairModelingAPI.h
     api/TextTextSentenceParaphraserAPI.h
     api/TextTextSentimentAnalysisAPI.h
     api/TextTextSimilarityAPI.h
-    api/TextTextSummarizationAPI.h
-    api/TextTextTranslationAPI.h
-    api/TextTextTransliterationAPI.h
     api/TextTextWordAlignmentAPI.h
-    api/VideoVideoFrameInterpolationAPI.h
 
 )
 

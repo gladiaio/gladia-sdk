@@ -54,7 +54,7 @@ sub new {
 # Apply model for the background-removal task for a given models
 # 
 # @param string $image  (required)
-# @param string $model  (optional, default to 'rembg')
+# @param string $model  (optional, default to 'xception')
 {
     my $params = {
     'image' => {

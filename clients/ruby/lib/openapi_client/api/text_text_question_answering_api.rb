@@ -40,7 +40,7 @@ module OpenapiClient
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TextTextQuestionAnsweringApi.apply_text_text_question_answering_post ...'
       end
-      allowable_values = ["deepset_bert-base-cased-squad2", "mfeb-albert-xxlarge-v2-squad2", "deepset-roberta-base-squad2", "mrm8488-bert-tiny-5-finetuned-squadv2", "distilbert-base-cased-distilled-squad"]
+      allowable_values = ["mrm8488-bert-tiny-5-finetuned-squadv2", "mfeb-albert-xxlarge-v2-squad2", "deepset-roberta-base-squad2", "distilbert-base-cased-distilled-squad", "deepset_bert-base-cased-squad2"]
       if @api_client.config.client_side_validation && opts[:'model'] && !allowable_values.include?(opts[:'model'])
         fail ArgumentError, "invalid value for \"model\", must be one of #{allowable_values}"
       end

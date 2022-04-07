@@ -46,7 +46,7 @@ export default class ImageImageBackgroundRemovalApi {
      * Apply model for the background-removal task for a given models
      * @param {File} image 
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.model  (default to 'rembg')
+     * @param {module:model/String} opts.model  (default to 'xception')
      * @param {module:api/ImageImageBackgroundRemovalApi~applyImageImageBackgroundRemovalPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */

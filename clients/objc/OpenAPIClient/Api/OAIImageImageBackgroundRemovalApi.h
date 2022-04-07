@@ -27,7 +27,7 @@ extern NSInteger kOAIImageImageBackgroundRemovalApiMissingParamErrorCode;
 /// 
 ///
 /// @param image 
-/// @param model  (optional) (default to @"rembg")
+/// @param model  (optional) (default to @"xception")
 /// 
 ///  code:200 message:"Successful Response",
 ///  code:422 message:"Validation Error"

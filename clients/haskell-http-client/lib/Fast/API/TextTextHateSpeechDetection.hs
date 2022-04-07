@@ -72,8 +72,8 @@ data ApplyTextTextHateSpeechDetectionPost
 instance HasOptionalParam ApplyTextTextHateSpeechDetectionPost ParamText where
   applyOptionalParam req (ParamText xs) =
     req `setQuery` toQuery ("text", Just xs)
-instance HasOptionalParam ApplyTextTextHateSpeechDetectionPost Model10 where
-  applyOptionalParam req (Model10 xs) =
+instance HasOptionalParam ApplyTextTextHateSpeechDetectionPost Model11 where
+  applyOptionalParam req (Model11 xs) =
     req `setQuery` toQuery ("model", Just xs)
 -- | @application/json@
 instance Produces ApplyTextTextHateSpeechDetectionPost MimeJSON

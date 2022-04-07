@@ -43,9 +43,9 @@ export class TextTextSentimentAnalysisService {
      * @param model 
      
      */
-    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', observe?: 'body', headers?: Headers): Observable<object>;
-    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
-    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased' | 'distilbert-base-uncased-finetuned-sst-2-english' | 'zero-shot-classification-facebook-bart-large-mnli', observe: any = 'body', headers: Headers = {}): Observable<any> {
+    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', observe?: 'body', headers?: Headers): Observable<object>;
+    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', observe?: 'response', headers?: Headers): Observable<HttpResponse<object>>;
+    public applyTextTextSentimentAnalysisPost(text?: string, model?: 'zero-shot-classification-facebook-bart-large-mnli' | 'distilbert-base-uncased' | 'nlptown-bert-base-multilingual-uncased-sentiment' | 'distilbert-base-uncased-finetuned-sst-2-english', observe: any = 'body', headers: Headers = {}): Observable<any> {
         let queryParameters: string[] = [];
         if (text !== undefined) {
             queryParameters.push("text="+encodeURIComponent(String(text)));

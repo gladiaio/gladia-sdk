@@ -32,3 +32,13 @@ Note that you do not include the `openapi.json` extension within the URL.
 
 
 SDKs will be generated in the [clients directory](clients)
+
+## Examples
+    
+To verify that the SDKs are working, you can follow those examples:
+
+* [Python client](./clients/python/README.md)
+* [JavaScript client](./clients/javascript/README.md)
+* [Golang client](./clients/golang/README.md)
+
+(For more examples, see the [clients directory](./clients/))

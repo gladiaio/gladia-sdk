@@ -17,7 +17,7 @@ We recommend to first clean the  [clients directory](clients) to prevent any dep
 rm -rf clients/*
 ```
 
-Then provide the gladia API URL (by default it's `http://localhost:8080`) to the following command:
+Then set `GLADIA_API_URL` in your environment as the URL of the Gladia's API (by default it's `http://localhost:8080`) and provide it to the following command:
 ```sh
 cd generator ; python generate_sdk.py $GLADIA_API_URL
 ```

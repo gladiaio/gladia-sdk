@@ -2,6 +2,13 @@
 
 Automatic SDK generation from Gladia's OpenAPI definition.
 
+## Requirements
+
+Before running this script, you need to have the following dependencies:
+* Python 3.6+
+    * `easyargs==0.9.*`
+* Docker 20.03+
+
 ## Installation
 
 ```sh

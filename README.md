@@ -10,7 +10,7 @@ git clone https://github.com/gladiaio/gladia-sdk.git ; cd gladia-sdk
 
 ## Usage
 
-You first need to start the [Gladia's API](https://github.com/gladiaio/gladia) by following [it README](https://github.com/gladiaio/gladia#magic-start).
+You first need to start the [Gladia's API](https://github.com/gladiaio/gladia) by following [its README](https://github.com/gladiaio/gladia#magic-start).
 
 We recommend to first clean the  [clients directory](clients) to prevent any deprecated SDK:
 ```sh
